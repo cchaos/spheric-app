@@ -1,0 +1,14 @@
+#nav_main {
+	// stretch full to sides of window
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#nav_main_username {
+	// set the user (right side) to be the same width as the user sidebar
+	a {
+  	width: 25vw;
+  	border-left: 1px solid rgba(white, .2);
+  	justify-content: space-between;
+	}
+}

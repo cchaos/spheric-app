@@ -12,14 +12,26 @@
   </head>
   <body>
     <div class="grid-frame vertical">
-      <div class="grid-content shrink" style="padding: 0;">
-        <ul class="primary condense menu-bar">
-          <li><a ui-sref="home"><strong>Foundation for Apps</strong></a></li>
-          <li><a ui-sref="tournaments">Tournaments</a></li>
-        </ul>
-      </div>
-      <div ui-view class="grid-content">
-      </div>
+      <nav id="nav_main" class="grid-content shrink">
+        <div class="menu-group primary">
+          <div class="menu-group-left">
+            <ul class="primary condense menu-bar">
+              <li><a><strong>Spheric</strong></a></li>
+              <li class="active"><a ui-sref="home">Dashboard</a></li>
+              <li><a ui-sref="tournaments">Tournaments</a></li>
+              <li><a>Groups</a></li>
+              <li><a>Messages</a></li>
+            </ul>
+          </div>
+          <div id="nav_main_username" class="menu-group">
+            <ul class="icon-right primary menu-bar">
+              <li><a href="#"><img zf-iconic="" icon="person" size="small" class="iconic-color-primary">username</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <main ui-view class="grid-block">
+      </main>
     </div>
   </body>
 </html>
