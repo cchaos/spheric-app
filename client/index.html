@@ -14,24 +14,28 @@
     <div class="grid-frame vertical">
       <nav id="nav_main" class="grid-content shrink">
         <div class="menu-group primary-custom">
-          <div id="nav_main_links" class="menu-group-left">
-            <ul class="menu-bar primary condense label-corner-custom">
-              <li class="logo"><img src="assets/img/logo-nav_main.svg" alt="Spheric"></li>
-              <li class="is-active"><a ui-sref="home">Dashboard</a></li>
-              <li><a ui-sref="tournaments">Tournaments</a></li>
-              <li><a>Groups</a></li>
-              <li><a>Messages <span class="menu-bar-label">5</span></a></li>
-            </ul>
+          <div class="menu-group">
+          	<ul id="nav_main_brand" class="menu-bar primary condense">
+          	  <li class="toggle"><a zf-hard-toggle="nav_main_links">MENU</a></li>
+          	  <li class="logo"><img src="assets/img/logo-nav_main.svg" alt="Spheric"></li>
+          	</ul>
+          	<zf-panel id="nav_main_links">
+            	<ul class="menu-bar primary vertical condense label-corner-custom">
+                <li class="close"><a zf-close="">× Close</a></li>
+            	  <li class="is-active"><a ui-sref="home">Dashboard</a></li>
+            	  <li><a ui-sref="tournaments">Tournaments</a></li>
+            	  <li><a>Groups</a></li>
+            	  <li><a>Messages <span class="menu-bar-label">5</span></a></li>
+            	</ul>
+          	</zf-panel>
           </div>
-          <div id="nav_main_user" class="menu-group">
-            <ul class="menu-bar icon-right primary">
-              <li class="is-active"><a href="#"><img zf-iconic="" icon="person" size="small" class="iconic-color-primary">username</a></li>
-            </ul>
-          </div>
+          <ul id="nav_main_user" class="menu-bar icon-right primary">
+            <li class="is-active"><a zf-hard-toggle="sidebar"><img zf-iconic="" icon="person" size="small" class="iconic-color-primary">username</a></li>
+          </ul>
         </div>
       </nav>
 
-      <main ui-view class="grid-block noscroll">
+      <main ui-view class="grid-block">
       </main>
     </div>
   </body>

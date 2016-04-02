@@ -5,6 +5,10 @@
 //
 */
 
+// custom breakpoint where all links become visible
+$nav-main-breakpoint: rem-calc(860);
+$nav-sidebar-width: 3;
+
 #nav_main {
 	// stretch full to sides of window
 	padding-left: 0;
@@ -59,24 +63,57 @@
   }
 }
 
+#nav_main_brand {
+  @include breakpoint($nav-main-breakpoint) {
+    .toggle {
+      display: none;
+    }
+  }
+}
 
-// add triangle pointing up to active nav item
-#nav_main_links .is-active a::after {
-  @include css-triangle(
-    $triangle-size: 4px,
-    $triangle-color: $white,
-    $triangle-direction: bottom
-  );
-  // position it so it doesn't alter layout
-  position: absolute;
-  left: calc(50% - 4px);
+// Pull the main links out into a sliding panel on small screens
+#nav_main_links {
+  // extend panels
+  @extend .panel;
+  background-color: $primary-color;
+
+  // put them back into the menu-bar when breakpoint is hit
+  @include breakpoint($nav-main-breakpoint) {
+    display: block;
+    @include grid-panel-reset;
+
+    .menu-bar {
+      flex-flow: row nowrap;
+    }
+
+    .close {
+      display: none;
+    }
+
+    // add triangle pointing up to active nav item
+    .is-active a::after {
+      @include css-triangle(
+        $triangle-size: 4px,
+        $triangle-color: $white,
+        $triangle-direction: bottom
+      );
+      // position it so it doesn't alter layout
+      position: absolute;
+      left: calc(50% - 4px);
+    }
+  }
 }
 
 #nav_main_user {
-	// set the user (right side) to be the same width as the user sidebar
-	a {
-  	width: 25vw; // TODO: create variable
-  	border-left: 1px solid rgba(white, .2);
-  	justify-content: space-between;
-	}
+  @include breakpoint($nav-main-breakpoint) {
+  	// set the user (right side) to be the same width as the user sidebar
+    @include grid-block($nav-sidebar-width);
+    li {
+      flex-basis: 100%;
+    }
+  	a {
+    	border-left: 1px solid rgba(white, .2);
+    	justify-content: space-between;
+  	}
+  }
 }

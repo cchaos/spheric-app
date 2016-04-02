@@ -5,17 +5,23 @@
 //
 */
 
-$sidebar-breakpoint: medium;
+$sidebar-breakpoint: $nav-main-breakpoint;
+$sidebar-width: $nav-sidebar-width;
 
 .sidebar {
+  &.panel {
+    background-color: $gray-light;
+  }
+
   // always display once breakpoint is hit
   @include breakpoint($sidebar-breakpoint) {
     @include grid-panel-reset;
-    @include grid-block(3);
-  }
+    @include grid-block($sidebar-width);
 
-  &.panel {
-    background-color: $gray-light;
+    // hard remove drop shadow in case active class stays with during window resize
+    &.is-active {
+      box-shadow: none !important;
+    }
   }
 }
 
