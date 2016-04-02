@@ -46,7 +46,6 @@
 // ----------------------
 // Navigation
 // ----------------------
-   @import "2_elements/nav_main";
 // Blocks
 // ----------------------
 // Extras
@@ -60,10 +59,8 @@
 // distinct section of an interface.
 // -------------------------
 */
-// Global
-// ----------------------
-// App Style
-// ----------------------
+   @import "3_fixtures/nav_main",
+           "3_fixtures/sidebar";
 
 
 /*

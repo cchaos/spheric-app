@@ -1,0 +1,26 @@
+/*
+//
+// SIDEBAR
+// For user-specific info
+//
+*/
+
+$sidebar-breakpoint: medium;
+
+.sidebar {
+  // always display once breakpoint is hit
+  @include breakpoint($sidebar-breakpoint) {
+    @include grid-panel-reset;
+    @include grid-block(3);
+  }
+
+  &.panel {
+    background-color: $gray-light;
+  }
+}
+
+// hide the buttons when not hideable
+.sidebar .close-button,
+.toggle-sidebar {
+  @include hide-for($sidebar-breakpoint);
+}
