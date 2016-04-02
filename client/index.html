@@ -13,19 +13,19 @@
   <body>
     <div class="grid-frame vertical">
       <nav id="nav_main" class="grid-content shrink">
-        <div class="menu-group primary">
-          <div class="menu-group-left">
-            <ul class="primary condense menu-bar">
-              <li><a><strong>Spheric</strong></a></li>
-              <li class="active"><a ui-sref="home">Dashboard</a></li>
+        <div class="menu-group primary-custom">
+          <div id="nav_main_links" class="menu-group-left">
+            <ul class="menu-bar primary condense label-corner-custom">
+              <li class="logo"><img src="assets/img/logo-nav_main.svg" alt="Spheric"></li>
+              <li class="is-active"><a ui-sref="home">Dashboard</a></li>
               <li><a ui-sref="tournaments">Tournaments</a></li>
               <li><a>Groups</a></li>
-              <li><a>Messages</a></li>
+              <li><a>Messages <span class="menu-bar-label">5</span></a></li>
             </ul>
           </div>
-          <div id="nav_main_username" class="menu-group">
-            <ul class="icon-right primary menu-bar">
-              <li><a href="#"><img zf-iconic="" icon="person" size="small" class="iconic-color-primary">username</a></li>
+          <div id="nav_main_user" class="menu-group">
+            <ul class="menu-bar icon-right primary">
+              <li class="is-active"><a href="#"><img zf-iconic="" icon="person" size="small" class="iconic-color-primary">username</a></li>
             </ul>
           </div>
         </div>

@@ -1,6 +1,99 @@
+/*
+ * This is a manifest file that'll be compiled into app.css, which will include all the files
+ * listed below.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ */
+
 // Foundation for Apps
 @import "settings";
 @import "foundation";
 
-// Components
-@import "components/nav_main";
+/*
+//
+// 1. CORE
+// HTML tags & more abstract elements like color palettes,
+// fonts and invisible aspects like animations
+// -------------------------
+*/
+// External
+// ----------------------
+// Global
+// ----------------------
+   @import "1_core/animation";
+// Typography
+// ----------------------
+   @import "1_core/typography";
+// Images
+// ----------------------
+// Buttons
+// ----------------------
+// Forms
+// ----------------------
+// Tables
+// ----------------------
+
+
+/*
+//
+// 2. ELEMENTS
+// Relatively simple combinations of the CORE built for reuse
+// -------------------------
+*/
+// Layout
+// ----------------------
+// Navigation
+// ----------------------
+   @import "2_elements/nav_main";
+// Blocks
+// ----------------------
+// Extras
+// -------------------------
+
+
+/*
+//
+// 3. FIXTURES
+// Groups of elements joined together to form a relatively complex,
+// distinct section of an interface.
+// -------------------------
+*/
+// Global
+// ----------------------
+// App Style
+// ----------------------
+
+
+/*
+//
+// 4. TEMPLATES
+// Very concrete and provide context to all these relatively abstract Fixtures and elements.
+// -------------------------
+*/
+
+
+/*
+//
+// 5. PAGES
+// The highest level of fidelity and the most tangible.
+// -------------------------
+*/
+
+
+/*
+//
+// 6. LIBRARIES
+// This is where you want to import external library css styles
+// and any overrides if available
+// -------------------------
+*/
+
+
+/*
+//
+// 7. ENDING UTILITIES
+// Required utility classes that must come at the end of the document.
+// -------------------------
+*/

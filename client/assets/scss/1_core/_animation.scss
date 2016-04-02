@@ -1,0 +1,13 @@
+/*
+//
+// ANIMATIONS
+//
+*/
+
+// CUSTOM MIXINS
+// ---------------------
+
+// basic transition
+@mixin basic-transition($property: all) {
+  transition: $property .25s ease;
+}

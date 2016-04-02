@@ -1,0 +1,82 @@
+/*
+//
+// MAIN NAVIGATION
+// Based on Foundation's menu-bar
+//
+*/
+
+#nav_main {
+	// stretch full to sides of window
+	padding-left: 0;
+	padding-right: 0;
+
+	.logo > img {
+	  // override menu bar image sizing
+  	width: auto;
+  	height: auto;
+  	// add padding
+  	padding-left: $menubar-item-padding;
+  	padding-right: $menubar-item-padding;
+	}
+
+	// Use Foundation's mixin for colors(style) since there will be a lot of adjustments
+	.primary-custom {
+    background-color: $primary-color;
+    .menu-bar {
+      @include menu-bar-style(
+        $background: $primary-color,
+        $background-hover: transparent,
+        $background-active: transparent,
+        $color: rgba($white,.5),
+        $color-hover: $white,
+        $color-active: $white,
+        $autocolor: false
+      );
+    }
+  }
+
+  .label-corner-custom {
+    // Use Foundation's mixin for labels since there will be a lot of adjustments
+    @include menu-bar-labels(
+      $x: right,
+      $y: top,
+      $size: 1rem,
+      $background: $alert-color
+    );
+    // pull label closer to text (overlapping just slightly)
+    > li > a {
+      padding-right: $menubar-item-padding*1.7;
+      // match the same padding on the left
+      padding-left: $menubar-item-padding*1.7;
+    }
+    .menu-bar-label {
+      // Foundation doesn't correctly align label-corner to the top
+    	top: $menubar-item-padding/1.7;
+    	// alter font
+    	font-size: .7rem;
+    	font-weight: $font-weight-bold;
+  	}
+  }
+}
+
+
+// add triangle pointing up to active nav item
+#nav_main_links .is-active a::after {
+  @include css-triangle(
+    $triangle-size: 4px,
+    $triangle-color: $white,
+    $triangle-direction: bottom
+  );
+  // position it so it doesn't alter layout
+  position: absolute;
+  left: calc(50% - 4px);
+}
+
+#nav_main_user {
+	// set the user (right side) to be the same width as the user sidebar
+	a {
+  	width: 25vw; // TODO: create variable
+  	border-left: 1px solid rgba(white, .2);
+  	justify-content: space-between;
+	}
+}
