@@ -10,13 +10,13 @@
   margin: 1rem 0;
 
   height: .5rem;
-  min-width: 1px;
+  min-width: .5rem;
   border-radius: $global-rounded;
 
-  background: linear-gradient(to right, rgba($primary-color, 0) 6%, rgba($primary-color, 1));
+  background: linear-gradient(to right, spheric-color('primary', 0) 6%, spheric-color('primary', 1));
 }
 
 // COLORS
-.meter.progress {
-  background: linear-gradient(to right, rgba($warning-color, 0) 6%, rgba($warning-color, 1));
+.meter.accent {
+  background: linear-gradient(to right, spheric-color('accent', 0) 6%, spheric-color('accent', 1));
 }
