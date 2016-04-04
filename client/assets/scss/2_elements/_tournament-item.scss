@@ -18,6 +18,11 @@
       }
     }
 
+    .stat,
+    .date {
+      flex: 0 0 auto;
+    }
+
     .expand {
       flex-basis: 100%;
     }
@@ -43,6 +48,14 @@
   h5 {
     margin-top: 0;
     color: #4b5862;
+  }
+
+  .text {
+    @include force-truncate(70%);
+
+    > * {
+      @include force-truncate;
+    }
   }
 
   .date {
