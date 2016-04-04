@@ -44,7 +44,7 @@ $nav-sidebar-width: 3;
     @include menu-bar-labels(
       $x: right,
       $y: top,
-      $size: 1rem,
+      $size: 1.2rem,
       $background: $alert-color
     );
     // pull label closer to text (overlapping just slightly)

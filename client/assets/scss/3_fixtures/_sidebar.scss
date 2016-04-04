@@ -8,9 +8,12 @@
 $sidebar-breakpoint: $nav-main-breakpoint;
 $sidebar-width: $nav-sidebar-width;
 
+$sidebar-background: spheric-color('light');
+$sidebar-foreground: spheric-color('dark', 'secondary');
+
 .sidebar {
   &.panel {
-    background-color: $gray-light;
+    background-color: $sidebar-background;
   }
 
   // always display once breakpoint is hit
@@ -46,12 +49,12 @@ $sidebar-width: $nav-sidebar-width;
     width: 90%;
     margin: 0 auto;
     height: 1px;
-    background-color: rgba(#9ca8b0, .25);
+    background-color: color-opacity($sidebar-foreground, 'barely');
   }
 
   header {
     @include block-list-header(
-      $color: #9ca8b0,
+      $color: color-opacity($sidebar-foreground, 'tertiary'),
       $font-size: .8rem,
       $uppercase: true,
       $offset: 0
@@ -59,17 +62,18 @@ $sidebar-width: $nav-sidebar-width;
 
     text-align: center;
     margin-top: 2rem;
+    margin-bottom: 1rem;
   }
 
   li {
     @include block-list-item(
-      $color: $body-font-color,
-      $color-hover: $body-font-color,
-      $color-disabled: rgba($body-font-color, .5),
+      $color: $sidebar-foreground,
+      $color-hover: $sidebar-foreground,
+      $color-disabled: color-opacity($sidebar-foreground, 'tertiary'),
       $background: transparent,
-      $background-hover: rgba(#b8c2c8, .25),
+      $background-hover: color-shade($sidebar-background, $shade: 4),
       $border: none,
-      $padding: 1rem
+      $padding: $global-padding
     );
   }
 }

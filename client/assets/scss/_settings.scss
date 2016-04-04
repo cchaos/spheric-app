@@ -82,7 +82,7 @@ $gray-light: #dee5ea;
 $white: #f1f5f8;
 
 // This sets 1rem to be 16px
-// $rem-base: 16px;
+$rem-base: 14px;
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
@@ -90,7 +90,7 @@ $white: #f1f5f8;
 // Since the typical default browser font-size is 16px, that makes the calculation for grid size.
 // If you want your base font-size to be different and not have it affect the grid breakpoints,
 // set $rem-base to $base-font-size and make sure $base-font-size is a px value.
-// $base-font-size: 100%;
+$base-font-size: $rem-base;
 
 // $base-line-height is 24px while $base-font-size is 16px
 // $base-line-height: 1.5;
@@ -115,8 +115,8 @@ $global-radius: 2px;
 // $global-rounded: 1000px;
 
 // We use this for default spacing
-// $global-padding: 1rem;
-// $global-spacing: rem-calc(15);
+$global-padding: 1.275rem;
+$global-spacing: $global-padding;
 
 // 3. Breakpoints
 // - - - - - - - - - - - - - - -
@@ -176,7 +176,7 @@ $header-font-color: $body-font-color;
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: $font-weight-normal;
-// $paragraph-font-size: 1rem;
+$paragraph-font-size: .875rem;
 // $paragraph-line-height: 1.6;
 // $paragraph-margin-bottom: rem-calc(20);
 // $paragraph-aside-font-size: rem-calc(14);
@@ -426,7 +426,7 @@ $header-font-color: $body-font-color;
 // 16. Menu Bar
 // - - - - - - - - - - - - - - -
 
-$menubar-fontsize: .8rem;
+// $menubar-fontsize: 1rem;
 // $menubar-background: #fff;
 // $menubar-background-hover: smartscale($menubar-background, 7%);
 // $menubar-background-active: $menubar-background-hover;

@@ -4,9 +4,7 @@ url: /
 ---
 
 <section class="page-content grid-block">
-  <div class="grid-content">
-    <h1>This is the main content</h1>
-  </div>
+  <div class="grid-block" ng-include="'templates/partials/_guide_colors.html'"></div>
 </section>
 
 <zf-panel id="sidebar" class="sidebar" position="right">
@@ -15,7 +13,7 @@ url: /
   	<section class="sidebar-block-list">
       <header>Current</header>
         <ul>
-          <li class="tournament-item current"><a href="#">
+          <li class="tournament-item"><a href="#">
             <span class="text">
               <h5>District Unite Is Awesome</h5>
               <h6>Awesome Team</h6>
@@ -32,7 +30,7 @@ url: /
   	<section class="sidebar-block-list">
       <header>Upcoming</header>
         <ul>
-          <li class="tournament-item upcoming"><a href="#">
+          <li class="tournament-item"><a href="#">
             <span class="text">
               <h5>District Unite Is Awesome</h5>
               <h6>Awesome Team</h6>
@@ -47,9 +45,33 @@ url: /
   	<section class="sidebar-block-list">
       <header>Activity</header>
         <ul>
-          <li><a href="#">List item 1</a></li>
-          <li><a href="#">List item 1</a></li>
-          <li><a href="#">List item 1</a></li>
+          <li class="activity-item"><a href="#">
+            <span class="timestamp">2 min ago</span>
+            <span class="text">
+              <h5>District Unite Is Awesome</h5>
+              <p>Cornhole farm-to-table four loko, venmo craft beer green juice banh mi.</p>
+            </span>
+          </a></li>
+          <li class="activity-item"><a href="#">
+            <span class="timestamp">2 min ago</span>
+            <span class="text">
+              <h5>District Unite Is Awesome</h5>
+              <p>Cornhole farm-to-table four loko, venmo craft beer green juice banh mi.</p>
+            </span>
+            <span class="image">
+              <i class="icon fa fa-trophy"></i><br>
+            </span>
+          </a></li>
+          <li class="activity-item"><a href="#">
+            <span class="timestamp">2 min ago</span>
+            <span class="text">
+              <h5>District Unite Is Awesome</h5>
+              <p>Cornhole farm-to-table four loko, venmo craft beer green juice banh mi.</p>
+            </span>
+            <span class="image">
+              <i class="icon fa fa-user"></i><br>
+            </span>
+          </a></li>
         </ul>
     </section>
   </div>
