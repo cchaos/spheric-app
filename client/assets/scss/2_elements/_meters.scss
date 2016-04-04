@@ -1,0 +1,22 @@
+/*
+//
+// METERS
+// aka Progress Bars
+//
+*/
+
+.meter {
+  display: block;
+  margin: 1rem 0;
+
+  height: .5rem;
+  min-width: 1px;
+  border-radius: $global-rounded;
+
+  background: linear-gradient(to right, rgba($primary-color, 0) 6%, rgba($primary-color, 1));
+}
+
+// COLORS
+.meter.progress {
+  background: linear-gradient(to right, rgba($warning-color, 0) 6%, rgba($warning-color, 1));
+}

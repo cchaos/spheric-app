@@ -30,3 +30,46 @@ $sidebar-width: $nav-sidebar-width;
 .toggle-sidebar {
   @include hide-for($sidebar-breakpoint);
 }
+
+
+// SIDEBAR BLOCK LIST
+// based on Foundation's block-list via mixins
+
+.sidebar-block-list {
+  // This gets you basic styles
+  @include block-list-container();
+
+  // add a border to the bottom that doesn't span the whole width
+  &:not(:last-child)::after {
+    content: "";
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    height: 1px;
+    background-color: rgba(#9ca8b0, .25);
+  }
+
+  header {
+    @include block-list-header(
+      $color: #9ca8b0,
+      $font-size: .8rem,
+      $uppercase: true,
+      $offset: 0
+    );
+
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  li {
+    @include block-list-item(
+      $color: $body-font-color,
+      $color-hover: $body-font-color,
+      $color-disabled: rgba($body-font-color, .5),
+      $background: transparent,
+      $background-hover: rgba(#b8c2c8, .25),
+      $border: none,
+      $padding: 1rem
+    );
+  }
+}

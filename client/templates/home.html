@@ -12,6 +12,45 @@ url: /
 <zf-panel id="sidebar" class="sidebar" position="right">
   <a zf-close="" class="close-button">×</a>
   <div class="grid-content">
-  	<p>This is a basic panel.</p>
+  	<section class="sidebar-block-list">
+      <header>Current</header>
+        <ul>
+          <li class="tournament-item current"><a href="#">
+            <span class="text">
+              <h5>District Unite</h5>
+              <h6>Awesome Team</h6>
+            </span>
+            <span class="stat">
+              43/50
+            </span>
+            <span class="expand">
+              <span class="meter progress" style="width: 80%"></span>
+            </span>
+          </a></li>
+        </ul>
+    </section>
+  	<section class="sidebar-block-list">
+      <header>Upcoming</header>
+        <ul>
+          <li class="tournament-item upcoming"><a href="#">
+            <span class="text">
+              <h5>District Unite Is Awesome</h5>
+              <h6>Awesome Team</h6>
+            </span>
+            <span class="date">
+              <i class="icon">Icon</i><br>
+              Feb 26
+            </span>
+          </a></li>
+        </ul>
+    </section>
+  	<section class="sidebar-block-list">
+      <header>Activity</header>
+        <ul>
+          <li><a href="#">List item 1</a></li>
+          <li><a href="#">List item 1</a></li>
+          <li><a href="#">List item 1</a></li>
+        </ul>
+    </section>
   </div>
 </zf-panel>
