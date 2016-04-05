@@ -12,8 +12,6 @@
 @import "settings";
 @import "foundation";
 
-@import "colors";
-
 /*
 //
 // 1. CORE
@@ -25,6 +23,7 @@
 // ----------------------
 // Global
 // ----------------------
+   @import "1_core/colors"; // custom colors and functionss
    @import "1_core/animation";
 // Typography
 // ----------------------
@@ -83,6 +82,7 @@
 // The highest level of fidelity and the most tangible.
 // -------------------------
 */
+   @import "5_pages/guide";
 
 
 /*

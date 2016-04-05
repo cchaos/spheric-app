@@ -69,17 +69,18 @@
 // - - - - - - - - - - - - - - -
 
 // Application Colors
+// Set them here then, then use the named variable in the map/functions
 $primary-color: #0088ca;
-$secondary-color: #f1f5f8;
-$alert-color: #d65b4a;
 $info-color: #da932c;
 $success-color: #4faf51;
-$warning-color: $info-color; // Warning and Info are the same color (orange)
-$dark-color: #323c42;
-$gray: #9ca8b0;
-$gray-dark: #4b5862;
+$alert-color: #d65b4a;
+$warning-color: $alert-color;
+
+$secondary-color: #f1f5f8;
 $gray-light: #dee5ea;
-$white: #f1f5f8;
+$gray: spheric-color('dark', 1, 50);
+$dark-color: #4b5862;
+$gray-dark: $dark-color;
 
 // This sets 1rem to be 16px
 $rem-base: 14px;

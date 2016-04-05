@@ -9,6 +9,9 @@
 $nav-main-breakpoint: rem-calc(860);
 $nav-sidebar-width: 3;
 
+$nav-main-background: spheric-color('primary');
+$nav-main-foreground: spheric-color('white');
+
 #nav_main {
 	// stretch full to sides of window
 	padding-left: 0;
@@ -25,15 +28,15 @@ $nav-sidebar-width: 3;
 
 	// Use Foundation's mixin for colors(style) since there will be a lot of adjustments
 	.primary-custom {
-    background-color: $primary-color;
+    background-color: $nav-main-background;
     .menu-bar {
       @include menu-bar-style(
-        $background: $primary-color,
+        $background: $nav-main-background,
         $background-hover: transparent,
         $background-active: transparent,
-        $color: rgba($white,.5),
-        $color-hover: $white,
-        $color-active: $white,
+        $color: color-opacity($nav-main-foreground, 'secondary'),
+        $color-hover: $nav-main-foreground,
+        $color-active: $nav-main-foreground,
         $autocolor: false
       );
     }
@@ -45,7 +48,7 @@ $nav-sidebar-width: 3;
       $x: right,
       $y: top,
       $size: 1.2rem,
-      $background: $alert-color
+      $background: spheric-color('alert')
     );
     // pull label closer to text (overlapping just slightly)
     > li > a {
@@ -75,7 +78,7 @@ $nav-sidebar-width: 3;
 #nav_main_links {
   // extend panels
   @extend .panel;
-  background-color: $primary-color;
+  background-color: $nav-main-background;
 
   // put them back into the menu-bar when breakpoint is hit
   @include breakpoint($nav-main-breakpoint) {
@@ -94,7 +97,7 @@ $nav-sidebar-width: 3;
     .is-active a::after {
       @include css-triangle(
         $triangle-size: 4px,
-        $triangle-color: $white,
+        $triangle-color: $nav-main-foreground,
         $triangle-direction: bottom
       );
       // position it so it doesn't alter layout
@@ -112,7 +115,7 @@ $nav-sidebar-width: 3;
       flex-basis: 100%;
     }
   	a {
-    	border-left: 1px solid rgba(white, .2);
+    	border-left: 1px solid color-opacity($nav-main-foreground, 'barely');
     	justify-content: space-between;
   	}
   }

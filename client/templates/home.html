@@ -3,8 +3,11 @@ name: home
 url: /
 ---
 
-<section class="page-content grid-block">
-  <div class="grid-block" ng-include="'templates/partials/_guide_colors.html'"></div>
+<section class="page-content grid-block vertical">
+  <div class="grid-content">
+    <div ng-include="'templates/partials/_guide_colors.html'"></div>
+    <div ng-include="'templates/partials/_guide_type.html'"></div>
+  </div>
 </section>
 
 <zf-panel id="sidebar" class="sidebar" position="right">

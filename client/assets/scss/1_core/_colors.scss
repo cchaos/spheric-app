@@ -5,15 +5,17 @@
 //
 */
 
+// make sure to import Foundation's color functions
+@import "helpers/functions";
 
 $spheric-colors: (
-  'primary':  #0088ca, // blue
-  'accent':   #da932c, // gold
-  'alert':    #d65b4a, // red
-  'success':  #4faf51, // green
-  'white':    #f1f5f8,
-  'light':    #dee5ea,
-  'dark':     #4b5862
+  'primary':  $primary-color, // blue
+  'accent':   $info-color,    // gold
+  'alert':    $warning-color, // red
+  'success':  $success-color, // green
+  'white':    $secondary-color,
+  'light':    $gray-light,
+  'dark':     $dark-color
 );
 
 $spheric-opacities: (
@@ -56,39 +58,3 @@ $spheric-opacities: (
 
   @return $color;
 }
-
-
-.color-block {
-  flex: 0 0 auto;
-  padding: 1rem;
-  margin: 2rem;
-
-  > span {
-    display: block;
-    height: 2rem;
-  }
-}
-
-@each $color, $value in $spheric-colors {
-  .color-block.#{$color} {
-    background: $value;
-
-    // check for lightness of background
-    $text: isitlight($value, 'dark', 'white');
-
-    // then apply correct text color in shades
-    @each $color, $value in $spheric-opacities {
-      .content-color.#{$color} {
-        color: spheric-color($text, $color);
-      }
-    }
-
-    @for $i from 1 through 5 {
-      .shade-#{$i} {
-        $shade: 60 - ($i * 20);
-        background-color: spheric-color($color, 1, $shade);
-      }
-    }
-  }
-}
-

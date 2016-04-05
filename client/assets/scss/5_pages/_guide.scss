@@ -1,0 +1,42 @@
+/*
+//
+// STYLE GUIDE
+// Leave out for production
+//
+*/
+
+// COLORS
+.color-block {
+  flex: 0 0 auto;
+  padding: 1rem;
+  margin: 1rem;
+
+  > span {
+    display: block;
+    height: 2rem;
+  }
+}
+
+@each $color, $value in $spheric-colors {
+  .color-block.#{$color} {
+    background: $value;
+
+    // check for lightness of background
+    $text: isitlight($value, 'dark', 'white');
+
+    // then apply correct text color in shades
+    @each $color, $value in $spheric-opacities {
+      .content-color.#{$color} {
+        color: spheric-color($text, $color);
+      }
+    }
+
+    @for $i from 1 through 5 {
+      .shade-#{$i} {
+        $shade: 60 - ($i * 20);
+        background-color: spheric-color($color, 1, $shade);
+      }
+    }
+  }
+}
+
