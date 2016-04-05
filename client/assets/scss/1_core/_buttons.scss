@@ -130,3 +130,11 @@ $button-hover-shade: -20;
     box-shadow: none !important;
   }
 }
+
+
+// Some extra overrides
+.button.tiny {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .65rem;
+}
