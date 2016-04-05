@@ -71,9 +71,120 @@ $sidebar-foreground: spheric-color('dark', 'secondary');
       $color-hover: $sidebar-foreground,
       $color-disabled: color-opacity($sidebar-foreground, 'tertiary'),
       $background: transparent,
-      $background-hover: smartscale($sidebar-background, 4%),
+      $background-hover: spheric-color('primary', 'barely'),
       $border: none,
       $padding: $global-padding
     );
   }
+}
+
+
+// SIDEBAR BLOCK LIST ITEMS
+// Element to display tournament as list item
+
+.sidebar-block-list .item {
+  > a {
+    display: flex !important; // need to override display block
+    @include grid-orient(horizontal);
+    @include grid-align(justify);
+    align-items: flex-end;
+
+    span > *:last-child {
+      margin-bottom: 0;
+    }
+
+    .extra {
+      text-align: right;
+    }
+
+    .expand {
+      flex-basis: 100%;
+    }
+  }
+
+  // TRUNCATING
+  .content {
+    width: 100%;
+
+    h5, h6 {
+      @include force-truncate;
+    }
+
+    p {
+      @include fake-truncate();
+    }
+  }
+
+  &.with-extra {
+    .content {
+      width: 70%;
+    }
+    .extra {
+      width: 30%;
+    }
+  }
+
+  // COLORS AND FONT STYLES
+  h5 {
+    margin-top: 0;
+    color: spheric-color('dark');
+  }
+
+  h5, .extra {
+    font-weight: $font-weight-bold;
+  }
+
+  h6 {
+    color: $sidebar-foreground;
+  }
+
+  // SPECIFIC EXTRAS
+  .stat {
+    color: spheric-color('dark');
+  }
+
+  .date {
+    text-transform: uppercase;
+    font-size: .8rem;
+    text-align: center;
+    margin-bottom: .2rem;
+
+    .icon {
+      display: block;
+      font-size: 1rem;
+    }
+  }
+
+  .timestamp {
+    text-align: right;
+    margin-bottom: .4rem;
+    font-size: .7em;
+    color: color-opacity($sidebar-foreground, 'tertiary');
+    font-weight: $font-weight-bold;
+  }
+
+  .image {
+    align-self: flex-start;
+
+    // TODO: Create component
+    > span {
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: color-opacity($sidebar-foreground, 'barely');
+      display: inline-block;
+      border-radius: $global-radius;
+      font-size: 1rem;
+      text-align: center;
+
+      i {
+        @extend .fa-fw;
+        margin-top: .75rem;
+      }
+    }
+  }
+
+  progress {
+    margin-top: 1rem;
+  }
+
 }

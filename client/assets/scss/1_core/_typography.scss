@@ -26,6 +26,28 @@
 	text-overflow: ellipsis;
 }
 
+// Force-truncate only works with one-line text
+// The following isn't perfect and a library like http://mikeking.io/succinct/ may be a better choice
+@mixin fake-truncate($height: 2) {
+  $height: $paragraph-line-height*$height;
+  height: #{$height}rem;
+  overflow: hidden;
+  position: relative;
+
+  padding-right: 1rem;
+
+  &::after {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+
+    width: 1rem;
+    height: $paragraph-line-height;
+    content: "...";
+    text-align: right;
+  }
+}
+
 @mixin no-break() {
 	white-space: nowrap;
 }
@@ -36,7 +58,7 @@
 
 // make sure all anchor (link) tags have smooth transitions between states
 a {
- @include basic-transition;
+  @include basic-transition;
 }
 
 // adding a class for p tags that sets a max width for ideal line length
