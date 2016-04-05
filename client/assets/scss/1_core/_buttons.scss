@@ -90,15 +90,17 @@ $button-hover-shade: -20;
     border: 0;
   }
 
-  // RAISED
-  @include shadow-2dp;
+  &.raised {
+    // RAISED
+    @include shadow-2dp;
 
-  &:active {
-    @include shadow-4dp();
-  }
+    &:active {
+      @include shadow-4dp();
+    }
 
-  &:focus:not(:active) {
-    @include focus-shadow();
+    &:focus:not(:active) {
+      @include focus-shadow();
+    }
   }
 
   // SIZES AND COLORS
@@ -107,7 +109,7 @@ $button-hover-shade: -20;
   &.large  { @include button-size(large); }
   &.expand { @include button-expand; }
 
-  &.secondary { @include button-style-custom(spheric-color('white'), auto) }
+  &.transparent { @include button-style-custom(transparent, $background-hover: spheric-color('dark', 'barely'), $color: spheric-color('dark')) }
   &.accent    { @include button-style-custom(spheric-color('accent'), auto) }
   &.success   { @include button-style-custom(spheric-color('success'), auto) }
   &.alert     { @include button-style-custom(spheric-color('alert'), auto) }
@@ -115,8 +117,6 @@ $button-hover-shade: -20;
 
   @if $button-style != hollow {
     &.hollow { @include button-style-custom($style: hollow);
-      box-shadow: none !important;
-
       &.secondary { @include button-style-custom(spheric-color('white'), $style: hollow); }
       &.accent    { @include button-style-custom(spheric-color('accent'), $style: hollow); }
       &.success   { @include button-style-custom(spheric-color('success'), $style: hollow); }
