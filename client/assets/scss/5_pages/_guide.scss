@@ -38,7 +38,11 @@
     @for $i from 1 through 5 {
       .shade-#{$i} {
         $shade: (60 - ($i * 20)) * 1%;
-        background-color: spheric-color($color, 1, $shade);
+        @if $color == "light" {
+          background-color: spheric-color($color, 1, -$shade);
+        } @else {
+          background-color: spheric-color($color, 1, $shade);
+        }
       }
     }
   }
