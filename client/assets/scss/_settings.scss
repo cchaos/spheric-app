@@ -83,6 +83,8 @@ $gray: spheric-color('dark', 1, 50);
 $dark-color: #4b5862;
 $gray-dark: $dark-color;
 
+@import "1_core/colors";
+
 // This sets 1rem to be 16px
 $rem-base: 14px;
 
@@ -114,7 +116,7 @@ $body-font-color: $dark-color;
 
 // We use these to make sure border radius matches unless we want it different.
 $global-radius: 2px;
-// $global-rounded: 1000px;
+$global-rounded: 1000px;
 
 // We use this for default spacing
 $global-padding: 1.275rem;
@@ -390,13 +392,13 @@ $button-font-size: 0.9rem;
 // $slider-thumb-radius: 0px;
 
 // Progress and meter
-// $meter-height: 1.5rem;
-// $meter-background: #ccc;
-// $meter-fill: $primary-color;
-// $meter-fill-high: $success-color;
-// $meter-fill-medium: #e7cf00;
-// $meter-fill-low: $alert-color;
-// $meter-radius: 0;
+$meter-height: .5rem;
+$meter-background: transparent;
+$meter-fill: linear-gradient(to right, spheric-color('primary', 0) 6%, spheric-color('primary', 1));
+$meter-fill-high: linear-gradient(to right, spheric-color('success', 0) 6%, spheric-color('success', 1));
+$meter-fill-medium: linear-gradient(to right, spheric-color('accent', 0) 6%, spheric-color('accent', 1));
+$meter-fill-low: linear-gradient(to right, spheric-color('alert', 0) 6%, spheric-color('alert', 1));
+$meter-radius: $global-rounded;
 
 // 14. Iconic
 // - - - - - - - - - - - - - - -
