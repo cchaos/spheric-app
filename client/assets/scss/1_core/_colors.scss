@@ -26,12 +26,6 @@ $spheric-opacities: (
   'hidden':     0,
 );
 
-@function color-shade($color, $shade: 0%) {
-
-  // Use Foundation's smartscale function to scale the color
-  @return smartscale($color, $shade);
-}
-
 @function color-opacity($color, $opacity: 1) {
 
   // Use the number supplied if not a map key
@@ -46,12 +40,12 @@ $spheric-opacities: (
 
 // MAIN FUNCTION TO USE FOR COLORING
 
-@function spheric-color($name, $opacity: 1, $shade: 0) {
+@function spheric-color($name, $opacity: 1, $shade: 0%) {
 
   $color: map-get($spheric-colors, $name);
 
   // first find the shade
-  $color: color-shade($color, ($shade * 1%));
+  $color: smartscale($color, $shade);
 
   // then find the opacity
   $color: color-opacity($color, $opacity);

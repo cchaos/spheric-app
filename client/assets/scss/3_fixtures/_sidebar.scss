@@ -71,7 +71,7 @@ $sidebar-foreground: spheric-color('dark', 'secondary');
       $color-hover: $sidebar-foreground,
       $color-disabled: color-opacity($sidebar-foreground, 'tertiary'),
       $background: transparent,
-      $background-hover: color-shade($sidebar-background, $shade: 4),
+      $background-hover: smartscale($sidebar-background, 4%),
       $border: none,
       $padding: $global-padding
     );

@@ -23,8 +23,9 @@
 // ----------------------
 // Global
 // ----------------------
-   @import "1_core/colors"; // custom colors and functionss
-   @import "1_core/animation";
+   @import "1_core/colors",
+           "1_core/animation",
+           "1_core/shadows";
 // Typography
 // ----------------------
    @import "1_core/typography";
@@ -33,6 +34,7 @@
    @import "font-awesome";
 // Buttons
 // ----------------------
+   @import "1_core/buttons";
 // Forms
 // ----------------------
 // Tables

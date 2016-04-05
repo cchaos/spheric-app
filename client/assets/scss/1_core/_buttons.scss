@@ -1,0 +1,132 @@
+/*
+//
+// BUTTONS
+//
+*/
+
+$button-hover-shade: -20;
+
+// Re-creating custom button-style with custom colors
+@mixin button-style-custom(
+  $background: $button-background,
+  $background-hover: $button-background-hover,
+  $color: $button-color,
+  $style: $button-style,
+  $radius: $button-radius,
+  $btngroup: false
+){
+  @if $style == hollow {
+    border: 1px solid $background;
+    background: transparent;
+    color: $background;
+
+    &:hover, &:focus {
+      border-color: smartscale($background, $button-hover-shade);
+      background: transparent;
+      color: smartscale($background, $button-hover-shade);
+    }
+  }
+  // Solid is the default
+  @else {
+    @if $color == auto {
+      $color: isitlight($background, spheric-color('dark'), spheric-color('light'));
+    }
+
+    background: $background;
+    color: $color;
+
+    &:hover, &:focus {
+      @if $background-hover == auto {
+        background: smartscale($background, $button-hover-shade);
+      }
+      @else {
+        background: $background-hover;
+      }
+      color: $color;
+    }
+  }
+
+  @if $btngroup {
+    border-color: $background;
+    &:hover, &:focus {
+      border-color: smartscale($background, $button-hover-shade+5);
+    }
+  }
+
+  @if using(iconic) {
+    @if $style == hollow {
+      .iconic {
+        @include color-icon($background);
+      }
+      &:hover .iconic {
+        @include color-icon(smartscale($background, $button-hover-shade));
+      }
+    }
+    @else {
+      .iconic {
+        @include color-icon($color);
+      }
+    }
+  }
+}
+
+// Exports taken from Foundation/scss/buttons
+.button {
+  @include button;
+
+  // custom FONT styles
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+  letter-spacing: .05em;
+
+  // standard styles from Material Design Lite
+  will-change: box-shadow, transform;
+  transition: box-shadow 0.2s $animation-curve-fast-out-linear-in,
+              background-color 0.2s $animation-curve-default,
+              color 0.2s $animation-curve-default;
+  outline: none;
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  // RAISED
+  @include shadow-2dp;
+
+  &:active {
+    @include shadow-4dp();
+  }
+
+  &:focus:not(:active) {
+    @include focus-shadow();
+  }
+
+  // SIZES AND COLORS
+  &.tiny   { @include button-size(tiny); }
+  &.small  { @include button-size(small); }
+  &.large  { @include button-size(large); }
+  &.expand { @include button-expand; }
+
+  &.secondary { @include button-style-custom(spheric-color('white'), auto) }
+  &.accent    { @include button-style-custom(spheric-color('accent'), auto) }
+  &.success   { @include button-style-custom(spheric-color('success'), auto) }
+  &.alert     { @include button-style-custom(spheric-color('alert'), auto) }
+  &.dark      { @include button-style-custom(spheric-color('dark'), auto) }
+
+  @if $button-style != hollow {
+    &.hollow { @include button-style-custom($style: hollow);
+      box-shadow: none !important;
+
+      &.secondary { @include button-style-custom(spheric-color('white'), $style: hollow); }
+      &.accent    { @include button-style-custom(spheric-color('accent'), $style: hollow); }
+      &.success   { @include button-style-custom(spheric-color('success'), $style: hollow); }
+      &.alert     { @include button-style-custom(spheric-color('alert'), $style: hollow); }
+      &.dark      { @include button-style-custom(spheric-color('dark'), $style: hollow); }
+    }
+  }
+
+  &.disabled {
+    @include button-disabled;
+    box-shadow: none !important;
+  }
+}

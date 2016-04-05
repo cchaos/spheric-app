@@ -36,34 +36,35 @@
 
 // Change any value in this map from "true" to "false" to disable that component's CSS class output. You'll still be able to use the component's mixins, but none of our pre-written classes will be in your CSS.
 
-// $include-css: (
-//   accordion: true,
-//   action-sheet: true,
-//   block-list: true,
-//   button: true,
-//   button-group: true,
-//   card: true,
-//   coloring: true,
-//   extras: true,
-//   forms: true,
-//   grid: true,
-//   iconic: true,
-//   label: true,
-//   badge: true,
-//   list: true,
-//   menu-bar: true,
-//   modal: true,
-//   motion: true,
-//   notification: true,
-//   off-canvas: true,
-//   panel: true,
-//   popup: true,
-//   switch: true,
-//   tabs: true,
-//   title-bar: true,
-//   typography: true,
-//   utilities: true,
-// );
+// Any false statments means the overrides were too much and just using mixins
+$include-css: (
+  accordion: true,
+  action-sheet: true,
+  block-list: true,
+  button: false,
+  button-group: true,
+  card: true,
+  coloring: true,
+  extras: true,
+  forms: true,
+  grid: true,
+  iconic: true,
+  label: true,
+  badge: true,
+  list: true,
+  menu-bar: true,
+  modal: true,
+  motion: true,
+  notification: true,
+  off-canvas: true,
+  panel: true,
+  popup: true,
+  switch: true,
+  tabs: true,
+  title-bar: true,
+  typography: true,
+  utilities: true,
+);
 
 // 2. Global Styles
 // - - - - - - - - - - - - - - -
@@ -243,19 +244,19 @@ $paragraph-aside-font-size: rem-calc(12);
 // 6. Button
 // - - - - - - - - - - - - - - -
 
-// $button-padding: 0.85em 1em;
+$button-padding: 1.2em 3em 1.1em;
 // $button-margin: 0 $global-padding $global-padding 0;
 // $button-style: solid;
 // $button-background: $primary-color;
 // $button-color: auto;
-// $button-radius: 0;
-// $button-sizes: (
-//   tiny: 0.7,
-//   small: 0.8,
-//   medium: 1,
-//   large: 1.3,
-// );
-// $button-font-size: 0.9rem;
+$button-radius: $global-radius;
+$button-sizes: (
+  tiny: 0.7,
+  small: .9,
+  medium: 1,
+  large: 1.2,
+);
+$button-font-size: 0.9rem;
 // $button-opacity-disabled: 0.5;
 // $button-tag-selector: false;
 
