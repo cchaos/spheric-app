@@ -21,9 +21,12 @@ $sidebar-foreground: spheric-color('dark', 'secondary');
     @include grid-panel-reset;
     @include grid-block($sidebar-width);
 
-    // hard remove drop shadow in case active class stays with during window resize
     &.is-active {
+      // hard remove drop shadow in case active class stays with during window resize
       box-shadow: none !important;
+
+      // Make sure it goes back to being flex as well
+      display: flex;
     }
   }
 }
@@ -32,6 +35,25 @@ $sidebar-foreground: spheric-color('dark', 'secondary');
 .sidebar .close-button,
 .toggle-sidebar {
   @include hide-for($sidebar-breakpoint);
+}
+
+// SIDEBAR ACTION
+// "fixed" button at the bottom of the sidebar
+
+.sidebar-action {
+  padding-top: $global-padding;
+  // create a sudo element to act as a content fade
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: calc(100% - #{$global-padding});
+    height: $global-padding;
+    top: -$global-padding;
+
+    background: linear-gradient(rgba($sidebar-background, 0) 0%, rgba($sidebar-background, 1) 100%);
+  }
+
 }
 
 
@@ -50,6 +72,11 @@ $sidebar-foreground: spheric-color('dark', 'secondary');
     margin: 0 auto;
     height: 1px;
     background-color: color-opacity($sidebar-foreground, 'barely');
+  }
+
+  // remove margins from last items
+  &:last-child {
+    margin-bottom: 0;
   }
 
   header {
