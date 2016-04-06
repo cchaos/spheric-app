@@ -12,8 +12,17 @@ $sidebar-background: spheric-color('light');
 $sidebar-foreground: spheric-color('dark', 'secondary');
 
 .sidebar {
+  .close-button {
+    z-index: 100;
+  }
+
   &.panel {
     background-color: $sidebar-background;
+  }
+
+  &.is-active {
+    // make sure it's always flex
+    display: flex;
   }
 
   // always display once breakpoint is hit
@@ -24,9 +33,6 @@ $sidebar-foreground: spheric-color('dark', 'secondary');
     &.is-active {
       // hard remove drop shadow in case active class stays with during window resize
       box-shadow: none !important;
-
-      // Make sure it goes back to being flex as well
-      display: flex;
     }
   }
 }
@@ -40,7 +46,7 @@ $sidebar-foreground: spheric-color('dark', 'secondary');
 // SIDEBAR ACTION
 // "fixed" button at the bottom of the sidebar
 
-.sidebar-action {
+.sidebar-action .grid-content {
   padding-top: $global-padding;
   // create a sudo element to act as a content fade
   &::before {
@@ -166,6 +172,15 @@ $sidebar-foreground: spheric-color('dark', 'secondary');
   }
 
   // SPECIFIC EXTRAS
+  .quote {
+    padding-left: 1rem;
+    i {
+      font-size: .7rem;
+      margin-left: -1rem;
+      vertical-align: super;
+    }
+  }
+
   .stat {
     color: spheric-color('dark');
   }
@@ -191,7 +206,7 @@ $sidebar-foreground: spheric-color('dark', 'secondary');
   }
 
   .image {
-    align-self: flex-start;
+    align-self: center;
 
     // TODO: Create component
     > span {
