@@ -1,0 +1,17 @@
+/*
+//
+// GRID
+//
+*/
+
+// To give the app a max-width,
+// add the class .grid-container to the .grid-frame in index.html
+
+// The max-width size is set in _settings
+.grid-frame {
+  background-color: spheric-color('white');
+}
+
+.grid-container {
+  @include shadow-4dp;
+}
