@@ -10,8 +10,8 @@
 // The max-width size is set in _settings
 .grid-frame {
   background-color: spheric-color('white');
-}
 
-.grid-container {
-  @include shadow-4dp;
+  &.grid-container {
+    @include shadow-4dp;
+  }
 }
