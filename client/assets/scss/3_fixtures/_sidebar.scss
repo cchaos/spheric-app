@@ -57,11 +57,11 @@ $sidebar-item-hover-color: spheric-color('primary', 'barely');
     position: absolute;
     width: calc(100% - #{$global-padding});
     height: $global-padding;
-    top: -$global-padding;
+    top: -($global-padding*.95);
+    left: 0;
 
     background: linear-gradient(rgba($sidebar-background, 0) 0%, rgba($sidebar-background, 1) 100%);
   }
-
 }
 
 
