@@ -11,6 +11,8 @@ $sidebar-width: $nav-sidebar-width;
 $sidebar-background: spheric-color('light');
 $sidebar-foreground: spheric-color('dark', 'secondary');
 
+$sidebar-item-hover-color: spheric-color('primary', 'barely');
+
 .sidebar {
   .close-button {
     z-index: 100;
@@ -104,10 +106,30 @@ $sidebar-foreground: spheric-color('dark', 'secondary');
       $color-hover: $sidebar-foreground,
       $color-disabled: color-opacity($sidebar-foreground, 'tertiary'),
       $background: transparent,
-      $background-hover: spheric-color('primary', 'barely'),
+      $background-hover: $sidebar-item-hover-color,
       $border: none,
       $padding: $global-padding
     );
+  }
+
+  form {
+    padding-left: $global-padding;
+    padding-right: $global-padding;
+  }
+
+  .accordion-title {
+    padding: $global-padding;
+    text-align: right;
+    // TODO: Make the following a font style mixin
+    text-transform: uppercase;
+    font-size: .8em;
+    font-weight: $font-weight-bold;
+    letter-spacing: .05em;
+    color: color-opacity($sidebar-foreground, 'tertiary');
+
+    &:hover, &:focus {
+      background: $sidebar-item-hover-color;
+    }
   }
 }
 
@@ -188,6 +210,7 @@ $sidebar-foreground: spheric-color('dark', 'secondary');
   .date {
     text-transform: uppercase;
     font-size: .8rem;
+    display: inline-block;
     text-align: center;
     margin-bottom: .2rem;
 
@@ -228,5 +251,31 @@ $sidebar-foreground: spheric-color('dark', 'secondary');
   progress {
     margin-top: 1rem;
   }
+}
 
+// SLIM STYLE
+// less vertical padding
+
+.sidebar-block-list .slim-list {
+
+  li > a,
+  .accordion-title {
+    // reduce vertical padding
+    padding-top: $global-padding/2;
+    padding-bottom: $global-padding/2 + .2;
+  }
+
+  // TODO: Move to Chat specific styles
+  .unavailable {
+    h5 {
+      font-weight: $font-weight-normal;
+      color: $sidebar-foreground;
+    }
+  }
+
+  .available {
+    .extra {
+      color: spheric-color('success');
+    }
+  }
 }
