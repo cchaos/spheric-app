@@ -56,6 +56,23 @@
 /// CUSTOM STYLES
 // ---------------------
 
+// Headers
+h4 {
+  font-weight: bold;
+}
+
+// use extension here to be able to apply same styling to non header elements
+%h6 {
+  font-weight: $font-weight-bold;
+  font-size: .8em;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+h6 {
+  @extend %h6;
+}
+
 // make sure all anchor (link) tags have smooth transitions between states
 a {
   @include basic-transition;

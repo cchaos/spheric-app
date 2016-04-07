@@ -90,10 +90,9 @@ $sidebar-item-hover-color: spheric-color('primary', 'barely');
   header {
     @include block-list-header(
       $color: color-opacity($sidebar-foreground, 'tertiary'),
-      $font-size: .8rem,
-      $uppercase: true,
       $offset: 0
     );
+    @extend %h6;
 
     text-align: center;
     margin-top: 2rem;
@@ -118,13 +117,9 @@ $sidebar-item-hover-color: spheric-color('primary', 'barely');
   }
 
   .accordion-title {
+    @extend %h6;
     padding: $global-padding;
     text-align: right;
-    // TODO: Make the following a font style mixin
-    text-transform: uppercase;
-    font-size: .8em;
-    font-weight: $font-weight-bold;
-    letter-spacing: .05em;
     color: color-opacity($sidebar-foreground, 'tertiary');
 
     &:hover, &:focus {
@@ -144,6 +139,10 @@ $sidebar-item-hover-color: spheric-color('primary', 'barely');
     @include grid-align(justify);
     align-items: flex-end;
 
+    h4 {
+      margin-top: 0;
+    }
+
     span > *:last-child {
       margin-bottom: 0;
     }
@@ -161,7 +160,7 @@ $sidebar-item-hover-color: spheric-color('primary', 'barely');
   .content {
     width: 100%;
 
-    h5, h6 {
+    h4, h5, h6 {
       @include force-truncate;
     }
 
@@ -180,16 +179,11 @@ $sidebar-item-hover-color: spheric-color('primary', 'barely');
   }
 
   // COLORS AND FONT STYLES
-  h5 {
-    margin-top: 0;
-    color: spheric-color('dark');
-  }
-
-  h5, .extra {
+  .extra {
     font-weight: $font-weight-bold;
   }
 
-  h6 {
+  h5 {
     color: $sidebar-foreground;
   }
 
@@ -208,8 +202,7 @@ $sidebar-item-hover-color: spheric-color('primary', 'barely');
   }
 
   .date {
-    text-transform: uppercase;
-    font-size: .8rem;
+    @extend %h6;
     display: inline-block;
     text-align: center;
     margin-bottom: .2rem;
