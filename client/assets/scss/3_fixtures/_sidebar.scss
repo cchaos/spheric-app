@@ -261,12 +261,14 @@ $sidebar-item-hover-color: spheric-color('primary', 'barely');
   // TODO: Move to Chat specific styles
   .unavailable {
     h5 {
-      font-weight: $font-weight-normal;
       color: $sidebar-foreground;
     }
   }
 
   .available {
+    h5 {
+      font-weight: $font-weight-bold;
+    }
     .extra {
       color: spheric-color('success');
     }
