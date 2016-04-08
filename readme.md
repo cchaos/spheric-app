@@ -25,14 +25,9 @@ bower install
 
 #### NOTE:
 
-If this is your first time installing the application, after running `bower install` make sure to change the name of the following file:
-```bash
-bower_components/chosen/chosen.jquery.js
-```
-to
-```
-bower_components/chosen/chosen.js
-```
+If this is your first time installing the application, after running `bower install` make sure to change the name of the following file: `bower_components/chosen/chosen.jquery.js` to `bower_components/chosen/chosen.js`.
+
+## Running
 
 While you're working on your project, run:
 
