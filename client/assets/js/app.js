@@ -8,7 +8,10 @@
     //foundation
     'foundation',
     'foundation.dynamicRouting',
-    'foundation.dynamicRouting.animations'
+    'foundation.dynamicRouting.animations',
+
+    //chosen
+    'localytics.directives'
   ])
     .config(config)
     .run(run)
