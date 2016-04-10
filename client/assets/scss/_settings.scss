@@ -102,14 +102,16 @@ $base-font-size: $rem-base;
 // Text selector helpers
 // $headers: "h1,h2,h3,h4,h5,h6";
 
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,700italic);
+
 // We use these to define default font weights
-// $font-weight-normal: normal;
-// $font-weight-bold: bold;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
 
 // We use these to control various global styles
 $body-background: $gray-light;
 $body-font-color: $dark-color;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 // $body-antialiased: true;
@@ -353,7 +355,7 @@ $accordion-content-padding: 0;
 // - - - - - - - - - - - - - - -
 
 // Basic form variables
-$form-fontsize: .9rem;
+$form-fontsize: 1rem;
 $form-padding: 0.65rem;
 
 // Text fields
