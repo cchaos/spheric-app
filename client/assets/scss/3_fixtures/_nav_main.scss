@@ -39,6 +39,10 @@ $nav-main-foreground: spheric-color('white');
         $color-active: $nav-main-foreground,
         $autocolor: false
       );
+
+      li > a {
+        @extend %h6;
+      }
     }
   }
 
@@ -110,6 +114,7 @@ $nav-main-foreground: spheric-color('white');
 #nav_main_user {
   .username {
     display: none;
+    text-transform: none;
   }
 
   @include breakpoint($nav-main-breakpoint) {

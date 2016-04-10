@@ -75,9 +75,7 @@ $button-hover-shade: -20;
   @include button;
 
   // custom FONT styles
-  text-transform: uppercase;
-  font-weight: $font-weight-bold;
-  letter-spacing: .05em;
+  @extend %h6;
 
   // standard styles from Material Design Lite
   will-change: box-shadow, transform;
