@@ -1,0 +1,15 @@
+/*
+//
+// TABS
+// Based on Foundation's <zf-tabs>
+//
+*/
+
+.tabs {
+  flex-flow: nowrap;
+  overflow-x: auto;
+
+  .is-active {
+    border-bottom: 3px solid $tab-title-color;
+  }
+}

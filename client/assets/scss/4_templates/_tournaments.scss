@@ -97,3 +97,60 @@
   }
 
 }
+
+
+// SINGLE
+
+$tournament-image-size: rem-calc(150);
+$tournament-image-margin: 2rem;
+$tournament-title-margin: (($tournament-image-size + $tournament-image-margin)/2) - ($h1-font-size/2);
+$tournament-header-gradient-stop: $tournament-title-margin + $h1-font-size + ($header-bottom-margin*2);
+
+.tournament-page {
+
+  header {
+    text-align: center;
+
+    background: linear-gradient(spheric-color('primary') 0%,
+                                spheric-color('primary') $tournament-header-gradient-stop,
+                                spheric-color('primary', 0) $tournament-header-gradient-stop,
+                                spheric-color('primary', 0) 100%);
+
+    .thumbnail {
+      @include shadow-6dp;
+      margin-top: $tournament-image-margin;
+      margin-bottom: $tournament-image-margin;
+      background-color: spheric-color('white');
+    }
+  }
+
+  @include breakpoint(small only) {
+    .register {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      margin: 0;
+      box-shadow: $thumbnail-shadow;
+      border-radius: 0;
+    }
+  }
+
+  @include breakpoint(medium) {
+    header {
+      text-align: left;
+
+      .thumbnail {
+        float: left;
+        margin-right: $tournament-image-margin;
+      }
+
+      .title {
+        margin-top: $tournament-title-margin;
+        color: spheric-color('white');
+      }
+    }
+  }
+
+}

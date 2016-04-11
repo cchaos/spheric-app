@@ -17,16 +17,17 @@
           <div class="menu-group">
           	<ul id="nav_main_brand" class="menu-bar primary condense">
           	  <li class="toggle"><a zf-hard-toggle="nav_main_links">MENU</a></li>
-          	  <li class="logo"><img src="assets/img/logo-nav_main.svg" alt="Spheric"></li>
+          	  <li class="logo" ui-sref="home"><img src="assets/img/logo-nav_main.svg" alt="Spheric"></li>
           	</ul>
           </div>
           <div class="menu-group">
           	<zf-panel id="nav_main_links">
             	<ul class="menu-bar primary vertical condense label-corner-custom">
                 <li class="close"><a zf-close="">× Close</a></li>
-            	  <li class="is-active"><a ui-sref="home">Dashboard</a></li>
-            	  <li><a ui-sref="tournaments">Tournaments</a></li>
+            	  <li class="show-for-small-only"><a ui-sref="home">Dashboard</a></li>
+            	  <li class="is-active"><a ui-sref="tournaments">Tournaments</a></li>
             	  <li><a>Groups</a></li>
+            	  <li><a>Players</a></li>
             	  <li><a>Messages <span class="menu-bar-label">5</span></a></li>
             	</ul>
           	</zf-panel>
