@@ -153,16 +153,16 @@ $header-font-color: $body-font-color;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-$h1-font-size: rem-calc(24);
-$h2-font-size: rem-calc(20);
+$h1-font-size: rem-calc(36);
+$h2-font-size: rem-calc(24);
 $h3-font-size: rem-calc(16);
 $h4-font-size: 1rem;
 $h5-font-size: 1rem;
 $h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
-$h1-font-reduction: 0;
-$h2-font-reduction: 0;
+$h1-font-reduction: rem-calc(4);
+$h2-font-reduction: rem-calc(4);
 $h3-font-reduction: 0;
 $h4-font-reduction: 0;
 $h5-font-reduction: 0;
@@ -304,8 +304,8 @@ $accordion-content-padding: 0;
 // $blocklist-fullbleed: true;
 // $blocklist-fontsize: 1rem;
 
-// $blocklist-item-padding: 0.8rem 1rem;
-// $blocklist-item-color: isitlight($blocklist-background, #000, #fff);
+$blocklist-item-padding: 1rem;
+$blocklist-item-color: $body-font-color;
 // $blocklist-item-background-hover: smartscale($blocklist-background, 4.5%);
 // $blocklist-item-color-disabled: #999;
 // $blocklist-item-border: 1px solid smartscale($blocklist-background, 18.5%);

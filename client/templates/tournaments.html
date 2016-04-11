@@ -7,7 +7,7 @@ url: /tournaments
 
 	<header class="grid-block align-center shrink page-header">
 		<div class="grid-content medium-8 large-6">
-		  <h2>Find your tournament</h2>
+		  <h1>Find your tournament</h1>
     	<form class="search-condensed">
     	  <input type="search" placeholder="Search all tournaments">
     	  <button class="button transparent" type="submit"><span class="fa fa-search"></span></button>
@@ -17,16 +17,17 @@ url: /tournaments
 	</header>
 
 	<section class="grid-block">
-		<div class="grid-content">
-      <div id="featured-tournaments" class="grid-container">
+		<div class="grid-container">
+
+      <div id="featured-tournaments" class="grid-content">
         <h2>Featured</h2>
         <ul class="grid-block small-up-1 medium-up-3">
           <li class="grid-content" ng-repeat="i in [1, 2, 3] track by $index">
-            <div class="card linked" ng-click="add-link-here">
+            <div class="card linked" ui-sref="single">
               <div class="card-header">
                 <a class="button tiny hollow success live" ng-if="$index == 0">Live</a>
                 <a class="button tiny hollow accent register" ng-if="$index != 0">Register</a>
-                <h5 class="date">Feb {{$index + 1 * 2}} - Feb {{$index + 1 * 3}}</h5>
+                <h5 class="date">Feb {{$index + 2}} - Feb {{$index + 3}}</h5>
                 <h2 class="title"><strong>District Unite is coming to your town</strong></h2>
               </div>
               <div class="card-section">
@@ -36,6 +37,26 @@ url: /tournaments
           </li>
         </ul>
       </div>
+
+      <div id="upcoming-tournaments" class="grid-content">
+        <h2>Upcoming</h2>
+        <section class="block-list">
+          <ul>
+            <li class="grid-block align-right v-align" ng-repeat="i in [1, 2, 3, 5, 6, 7] track by $index" ui-sref="single">
+              <span class="date align-center"><span class="digit">{{$index + 20}}</span><br>Feb</span>
+              <span class="content">
+                <h3>District Unite Is Awesome</h3>
+                <h4>Mario Kart IV</h4>
+              </span>
+              <span class="action align-center">
+                <a class="button hollow accent register">Register</a>
+              </span>
+            </li>
+          </ul>
+          <a class="button expand raised dark">Load more&hellip;</a>
+        </section>
+      </div>
+
 		</div>
 	</section>
 </div>

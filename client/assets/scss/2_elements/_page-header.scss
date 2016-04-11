@@ -4,12 +4,14 @@
 //
 */
 
+$page-header-background: spheric-color('primary');
+
 .page-header {
 
   padding-top: 3rem;
   padding-bottom: 3rem;
 
-  background-color: $nav-main-background;
+  background-color: $page-header-background;
 
   &, #{$headers} {
     color: spheric-color('light');

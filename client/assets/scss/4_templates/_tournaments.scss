@@ -5,9 +5,7 @@
 */
 
 #featured-tournaments {
-  padding-top: 3rem;
-  padding-right: $global-padding;
-  padding-left: $global-padding;
+  padding: 3rem $global-padding;
 
   ul {
     margin-top: 1rem;
@@ -44,6 +42,57 @@
       color: white;
       border-radius: $global-rounded;
       padding: .3rem;
+    }
+  }
+
+}
+
+
+#upcoming-tournaments {
+
+  .block-list,
+  .grid-block {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  li:hover,
+  li:focus {
+    background-color: spheric-color('primary', .05, -30);
+
+    &, > * {
+      cursor: pointer;
+    }
+  }
+
+  .date {
+    padding: $global-padding;
+    text-align: center;
+    @extend %h6;
+    font-size: 1em;
+
+    .digit {
+      display: inline-block;
+      font-size: $h1-font-size;
+      margin-bottom: $header-bottom-margin;
+    }
+  }
+
+  .content {
+    flex: 1 0 auto;
+
+    > *:first-child {
+      margin-top: 0;
+    }
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .action {
+    .button {
+      margin: 0;
     }
   }
 
