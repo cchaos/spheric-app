@@ -11,11 +11,16 @@ $card-header-foreground: spheric-color('light');
 .card {
 
   @include shadow-2dp;
+  overflow: hidden;
 
   .card-header {
     padding: $card-padding;
     background-color: $card-header-background;
     color: $card-header-foreground;
+    background-clip: border-box;
+
+    // position background image
+    background-size: cover;
   }
 
   .card-section {

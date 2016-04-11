@@ -19,17 +19,18 @@ url: /tournaments
 	<section class="grid-block">
 		<div class="grid-content">
       <div id="featured-tournaments" class="grid-container">
-        <h6>Featured</h6>
-        <ul class="grid-block small-up-2 medium-up-4">
-          <li class="grid-content" ng-repeat="i in [1, 2, 3, 4] track by $index">
+        <h2>Featured</h2>
+        <ul class="grid-block small-up-1 medium-up-3">
+          <li class="grid-content" ng-repeat="i in [1, 2, 3] track by $index">
             <div class="card linked" ng-click="add-link-here">
               <div class="card-header">
-                <p class="text-right" ng-if="$index == 0"><a class="button tiny hollow success">Live</a></p>
-                <h5>Feb {{$index + 1 * 2}} - Feb {{$index + 1 * 3}}</h5>
-                <h2><strong>District Unit</strong></h2>
+                <a class="button tiny hollow success live" ng-if="$index == 0">Live</a>
+                <a class="button tiny hollow accent register" ng-if="$index != 0">Register</a>
+                <h5 class="date">Feb {{$index + 1 * 2}} - Feb {{$index + 1 * 3}}</h5>
+                <h2 class="title"><strong>District Unite is coming to your town</strong></h2>
               </div>
               <div class="card-section">
-                <p>Mario Kart IV <span class="float-right"><strong>$500 <i class="fa fa-trophy"></i></strong></span></p>
+                <p>Mario Kart IV <span class="float-right prize"><strong>$500 <i class="fa fa-trophy"></i></strong></span></p>
               </div>
             </div>
           </li>

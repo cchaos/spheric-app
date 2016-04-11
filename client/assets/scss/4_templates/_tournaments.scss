@@ -6,26 +6,44 @@
 
 #featured-tournaments {
   padding-top: 3rem;
+  padding-right: $global-padding;
+  padding-left: $global-padding;
 
   ul {
     margin-top: 1rem;
   }
 
-  li {
-    align-self: stretch;
+  .card {
+    // position buttons
+    position: relative;
+    .live,
+    .register {
+      position: absolute;
+      right: $global-padding;
+      top: $global-padding;
+      margin: 0;
+    }
   }
 
-  .card {
-    height: 100%;
+  .card-header {
+    height: 12rem;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
 
-    .card-header {
-      flex-grow: 1;
+    .date,
+    .title {
+      @include force-truncate;
     }
+  }
 
-    .card-section {
-      flex-grow: 0;
+  .prize {
+    color: spheric-color('accent');
+    i {
+      background-color: spheric-color('accent');
+      color: white;
+      border-radius: $global-rounded;
+      padding: .3rem;
     }
   }
 
