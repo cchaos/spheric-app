@@ -53,8 +53,11 @@
 // ----------------------
 // Navigation
 // ----------------------
+   @import "2_elements/nav_main",
+           "2_elements/page-header";
 // Blocks
 // ----------------------
+   @import "2_elements/cards";
 // Extras
 // -------------------------
 
@@ -66,8 +69,7 @@
 // distinct section of an interface.
 // -------------------------
 */
-   @import "3_fixtures/nav_main",
-           "3_fixtures/sidebar";
+   @import "3_fixtures/sidebar";
 
 
 /*
@@ -76,6 +78,7 @@
 // Very concrete and provide context to all these relatively abstract Fixtures and elements.
 // -------------------------
 */
+   @import "4_templates/tournaments";
 
 
 /*

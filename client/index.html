@@ -10,8 +10,8 @@
     <script src="./assets/js/routes.js"></script>
     <script src="./assets/js/app.js"></script>
   </head>
-  <body class="noscroll">
-    <div class="grid-frame vertical noscroll">
+  <body>
+    <div class="grid-frame vertical">
       <nav id="nav_main" class="grid-content shrink">
         <div class="menu-group primary-custom">
           <div class="menu-group">
@@ -19,6 +19,8 @@
           	  <li class="toggle"><a zf-hard-toggle="nav_main_links">MENU</a></li>
           	  <li class="logo"><img src="assets/img/logo-nav_main.svg" alt="Spheric"></li>
           	</ul>
+          </div>
+          <div class="menu-group">
           	<zf-panel id="nav_main_links">
             	<ul class="menu-bar primary vertical condense label-corner-custom">
                 <li class="close"><a zf-close="">× Close</a></li>
@@ -28,10 +30,10 @@
             	  <li><a>Messages <span class="menu-bar-label">5</span></a></li>
             	</ul>
           	</zf-panel>
+            <ul id="nav_main_user" class="menu-bar condense icon-right primary">
+              <li class="is-active"><a><span class="username">username</span> <i class="fa fa-user"></i></a></li>
+            </ul>
           </div>
-          <ul id="nav_main_user" class="menu-bar icon-right primary">
-            <li class="is-active"><a zf-hard-toggle="sidebar"><span class="username">username</span> <i class="fa fa-user"></i></a></li>
-          </ul>
         </div>
       </nav>
 

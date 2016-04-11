@@ -255,7 +255,7 @@ $button-padding: 1.2em 3em 1.1em;
 // $button-color: auto;
 $button-radius: $global-radius;
 $button-sizes: (
-  tiny: 0.7,
+  tiny: 0.9,
   small: .9,
   medium: 1,
   large: 1.2,
@@ -329,11 +329,11 @@ $accordion-content-padding: 0;
 // 11. Card
 // - - - - - - - - - - - - - - -
 
-// $card-background: #fff;
-// $card-color: isitlight($card-background);
-// $card-border: 1px solid smartscale($card-background, 7%);
+$card-background: white;
+$card-color: isitlight($card-background, spheric-color('dark'), spheric-color('light'));
+$card-border: none;
 // $card-radius: $global-radius;
-// $card-shadow: 0 1px 2px rgba(#000, 0.2);
+$card-shadow: none; // added using custom mixins
 // $card-padding: $global-padding;
 // $card-margin: 0.5rem;
 
@@ -356,7 +356,7 @@ $accordion-content-padding: 0;
 
 // Basic form variables
 $form-fontsize: 1rem;
-$form-padding: 0.65rem;
+$form-padding: 0.75rem;
 
 // Text fields
 $input-color: $body-font-color;

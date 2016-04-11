@@ -118,15 +118,6 @@ $nav-main-foreground: spheric-color('white');
   }
 
   @include breakpoint($nav-main-breakpoint) {
-  	// set the user (right side) to be the same width as the user sidebar
-    @include grid-block($nav-sidebar-width);
-    li {
-      flex-basis: 100%;
-    }
-  	a {
-    	border-left: 1px solid color-opacity($nav-main-foreground, 'barely');
-    	justify-content: space-between;
-  	}
   	.username {
     	display: inline-block;
   	}

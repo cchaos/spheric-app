@@ -34,3 +34,20 @@ label {
     border-bottom-right-radius: 0;
   }
 }
+
+// TYPES OF CUSTOM FORMS
+
+.search-condensed {
+  position: relative;
+
+  .button {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    margin: 0;
+  }
+}
