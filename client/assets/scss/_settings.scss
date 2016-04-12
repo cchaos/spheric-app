@@ -170,14 +170,14 @@ $h6-font-reduction: 0;
 
 // These control how subheaders are styled.
 // $subheader-line-height: 1.4;
-// $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
-// $subheader-font-weight: $font-weight-normal;
+$subheader-font-color: spheric-color('dark', 'tertiary');
+$subheader-font-weight: inherit;
 // $subheader-top-margin: .2rem;
 // $subheader-bottom-margin: .5rem;
 
 // A general <small> styling
 // $small-font-size: 60%;
-// $small-font-color: scale-color($header-font-color, $lightness: 35%);
+$small-font-color: spheric-color('dark', 'secondary');
 
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
@@ -210,7 +210,7 @@ $paragraph-aside-font-size: rem-calc(12);
 // $hr-border-width: 1px;
 // $hr-border-style: solid;
 // $hr-border-color: #ddd;
-// $hr-margin: rem-calc(20);
+$hr-margin: rem-calc(7);
 
 // We use these to style lists
 // $list-font-family: $paragraph-font-family;
@@ -223,8 +223,8 @@ $paragraph-aside-font-size: rem-calc(12);
 // $list-side-margin-no-bullet: 0;
 // $list-nested-margin: rem-calc(20);
 // $definition-list-header-weight: $font-weight-bold;
-// $definition-list-header-margin-bottom: .3rem;
-// $definition-list-margin-bottom: rem-calc(12);
+$definition-list-header-margin-bottom: .3rem;
+$definition-list-margin-bottom: .3rem;
 
 // We use these to style blockquotes
 // $blockquote-font-color: scale-color($header-font-color, $lightness: 35%);
@@ -330,7 +330,7 @@ $blocklist-item-color: $body-font-color;
 // - - - - - - - - - - - - - - -
 
 $card-background: white;
-$card-color: isitlight($card-background, spheric-color('dark'), spheric-color('light'));
+$card-color: inherit;
 $card-border: none;
 // $card-radius: $global-radius;
 $card-shadow: none; // added using custom mixins

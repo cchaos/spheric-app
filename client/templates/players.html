@@ -44,11 +44,11 @@ url: /players
 
         	<ul class="grid-block small-up-2 medium-up-4">
             <li class="grid-content" ng-repeat="i in [1,2,3,4,5,6,7,8,9,10,11,12] track by $index">
-              <div class="card linked" ui-sref="">
+              <div class="card linked" ui-sref="player">
                 <div class="card-section">
                   <div class="player-image"><i class="fa fa-user"></i></div> <!-- TODO: Create component -->
                   <h3 class="name">Awesome Player</h3>
-                  <h5 class="school">New York University</h5>
+                  <h5 class="school subheader">New York University</h5>
                   <div class="games"><span class="label">Tetris</span> <span class="label" ng-if="$even">League of Legends</span></div>
                 </div>
                 <div class="card-action">
@@ -60,7 +60,7 @@ url: /players
         </div>
 
         <div class="grid-content medium-8">
-          <a href="" class="button expand dark">Show More</a>
+          <a href="" class="button expand transparent">Show More</a>
         </div>
       </div>
 

@@ -27,7 +27,7 @@ url: /tournaments
         <h2>Featured</h2>
         <ul class="grid-block small-up-1 medium-up-3">
           <li class="grid-content" ng-repeat="i in [1, 2, 3] track by $index">
-            <div class="card linked" ui-sref="single">
+            <div class="card linked" ui-sref="tournament">
               <div class="card-header">
                 <a class="button tiny raised success live" ng-if="$index == 0">Live</a>
                 <a class="button tiny raised register" ng-if="$index != 0">Register</a>
@@ -46,7 +46,7 @@ url: /tournaments
         <h2>Upcoming</h2>
         <section class="block-list">
           <ul>
-            <li class="grid-block align-right v-align" ng-repeat="i in [1, 2, 3, 5, 6, 7] track by $index" ui-sref="single">
+            <li class="grid-block align-right v-align" ng-repeat="i in [1, 2, 3, 5, 6, 7] track by $index" ui-sref="tournament">
               <span class="date align-center"><span class="digit">{{$index + 20}}</span><br>Feb</span>
               <span class="content">
                 <h3>District Unite Is Awesome</h3>

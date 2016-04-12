@@ -88,3 +88,13 @@ a {
 		margin-right: auto;
 	}
 }
+
+dl.inline {
+  dt, dd {
+    display: inline-block;
+  }
+
+  dd {
+    margin-left: 1rem;
+  }
+}

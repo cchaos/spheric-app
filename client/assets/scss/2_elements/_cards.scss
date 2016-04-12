@@ -13,6 +13,12 @@ $card-header-foreground: spheric-color('light');
   @include shadow-2dp;
   overflow: hidden;
 
+  #{$headers} {
+    &.subheader {
+      color: $subheader-font-color;
+    }
+  }
+
   .card-header {
     padding: $card-padding;
     background-color: $card-header-background;
