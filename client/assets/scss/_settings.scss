@@ -282,15 +282,15 @@ $accordion-content-padding: 0;
 // 8. Action Sheet
 // - - - - - - - - - - - - - - -
 
-// $actionsheet-background: white;
-// $actionsheet-border-color: #ccc;
+$actionsheet-background: white;
+$actionsheet-border-color: white;
 // $actionsheet-animate: transform opacity;
 // $actionsheet-animation-speed: 0.25s;
 // $actionsheet-width: 300px;
-// $actionsheet-radius: 4px;
+$actionsheet-radius: $global-radius;
 // $actionsheet-shadow: 0 -3px 10px rgba(black, 0.25);
 // $actionsheet-padding: $global-padding;
-// $actionsheet-tail-size: 10px;
+$actionsheet-tail-size: 6px;
 
 // $actionsheet-popup-shadow: 0 0 10px rgba(black, 0.25);
 

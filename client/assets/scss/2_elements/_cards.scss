@@ -29,6 +29,14 @@ $card-header-foreground: spheric-color('light');
     }
   }
 
+  .card-action {
+    .button {
+      margin: 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+
   // linked style (add hover and focus states)
   &.linked {
     @include basic-transition;
