@@ -1,0 +1,87 @@
+---
+name: team
+url: /team
+---
+
+<div class="player-page grid-block vertical nowrap">
+
+  <header class="page-header grid-content shrink">
+    <div class="grid-container">
+      <div class="grid-block">
+        <div class="grid-content medium-8 large-6">
+          <img src="http://placehold.it/150x150" width="150" height="150" alt="" class="thumbnail">
+          <h1 class="name">Awesome Team</h1>
+    		  <h3 class="school subheader">New York University &mdash; CS: GO</h3>
+    		  <a class="button raised register">Follow</a>
+    		  <a class="button accent raised register">Message</a>
+    		</div>
+      </div>
+    </div>
+  </header>
+
+	<section class="grid-content shrink">
+    <div class="grid-container">
+
+      <div class="grid-block">
+        <div class="grid-content text-center">
+          <h6 class="subheader">Rank</h6>
+          <h3>Master</h3>
+        </div>
+        <div class="grid-content text-center">
+          <h6 class="subheader">Win/Loss</h6>
+          <h3>51/25</h3>
+        </div>
+      </div>
+
+      <h6 class="subheader">Players</h6>
+      <div class="grid-block wrap">
+        <div class="grid-content" ng-repeat="i in [1,2,3,4,5,6,7,8]">
+          <a ui-sref="player" class="thumbnail"><i class="fa fa-user"></i></a>
+        </div>
+      </div>
+
+
+    	<zf-tabs>
+
+    	  <zf-tab title="Matches">
+    	    <table>
+      	    <tbody>
+        	    <tr ng-repeat-start="i in [1,2,3,4,5,6,7] track by $index">
+          	    <td><img src="http://placehold.it/32x32" alt=""> Awesome Team</td>
+          	    <td class="versus">vs</td>
+          	    <td><img src="http://placehold.it/32x32" alt=""> Fantastic Team</td>
+          	    <td ng-if="$index < 3" class="date">Feb. {{$index + 5}}</td>
+          	    <td ng-if="$index >= 3" class="score">Win</td>
+        	    </tr>
+        	    <tr ng-repeat-end>
+          	    <td colspan="4" class="text-secondary">
+            	    District Unite – League of Legends
+          	    </td>
+        	    </tr>
+      	    </tbody>
+    	    </table>
+    	  </zf-tab>
+
+    	  <zf-tab title="Tournaments">
+    	  </zf-tab>
+
+    	  <zf-tab title="Statistics">
+    	  </zf-tab>
+
+    	  <zf-tab title="VODS">
+      	  <ul class="grid-block small-up-2 medium-up-4">
+            <li class="grid-content" ng-repeat="i in [1,2,3,4] track by $index">
+              <div class="card linked">
+                <div class="card-section">
+                  <img src="http://placehold.it/160x90" alt="">
+                  <i class="fa fa-youtube-play"></i>
+                </div>
+              </div>
+            </li>
+      	  </ul>
+    	  </zf-tab>
+
+    	</zf-tabs>
+    </div>
+	</section>
+</div>
