@@ -4,7 +4,7 @@
 //
 */
 
-$page-header-background: spheric-color('primary');
+$page-header-background: spheric-color('light');
 
 .page-header {
 
@@ -12,16 +12,6 @@ $page-header-background: spheric-color('primary');
   padding-bottom: 3rem;
 
   background-color: $page-header-background;
-
-  &, #{$headers} {
-    color: spheric-color('light');
-  }
-
-  input,
-  input:hover,
-  input:focus {
-    border: none;
-  }
 
   @include breakpoint(medium) {
     padding-top: 5rem;

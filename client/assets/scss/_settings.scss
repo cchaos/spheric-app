@@ -155,16 +155,16 @@ $header-font-color: $body-font-color;
 // We use these to control header font sizes
 $h1-font-size: rem-calc(36);
 $h2-font-size: rem-calc(24);
-$h3-font-size: rem-calc(16);
-$h4-font-size: 1rem;
+$h3-font-size: rem-calc(20);
+$h4-font-size: rem-calc(16);
 $h5-font-size: 1rem;
 $h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
 $h1-font-reduction: rem-calc(4);
 $h2-font-reduction: rem-calc(4);
-$h3-font-reduction: 0;
-$h4-font-reduction: 0;
+$h3-font-reduction: rem-calc(4);
+$h4-font-reduction: rem-calc(4);
 $h5-font-reduction: 0;
 $h6-font-reduction: 0;
 

@@ -3,21 +3,25 @@ name: tournaments
 url: /tournaments
 ---
 
-<div class="grid-block vertical">
+<div class="tournaments grid-block vertical nowrap">
 
-	<header class="grid-block align-center shrink page-header">
-		<div class="grid-content medium-8 large-6">
-		  <h1>Find your tournament</h1>
-    	<form class="search-condensed">
-    	  <input type="search" placeholder="Search all tournaments">
-    	  <button class="button transparent" type="submit"><span class="fa fa-search"></span></button>
-    	</form>
-    	<p>Authentic small batch distillery, selvage blue bottle direct trade.</p>
-		</div>
-	</header>
+  <header class="page-header grid-content shrink">
+    <div class="grid-container">
+      <div class="grid-block align-center ">
+        <div class="grid-content medium-8 large-6">
+    		  <h1>Find your tournament</h1>
+        	<form class="search-condensed">
+        	  <input type="search" placeholder="Search all tournaments">
+        	  <button class="button transparent" type="submit"><span class="fa fa-search"></span></button>
+        	</form>
+        	<p>Authentic small batch distillery, selvage blue bottle direct trade.</p>
+    		</div>
+      </div>
+    </div>
+  </header>
 
-	<section class="grid-block">
-		<div class="grid-container">
+	<section class="grid-content shrink">
+    <div class="grid-container">
 
       <div id="featured-tournaments" class="grid-content">
         <h2>Featured</h2>
@@ -25,8 +29,8 @@ url: /tournaments
           <li class="grid-content" ng-repeat="i in [1, 2, 3] track by $index">
             <div class="card linked" ui-sref="single">
               <div class="card-header">
-                <a class="button tiny hollow success live" ng-if="$index == 0">Live</a>
-                <a class="button tiny hollow accent register" ng-if="$index != 0">Register</a>
+                <a class="button tiny raised success live" ng-if="$index == 0">Live</a>
+                <a class="button tiny raised register" ng-if="$index != 0">Register</a>
                 <h5 class="date">Feb {{$index + 2}} - Feb {{$index + 3}}</h5>
                 <h2 class="title"><strong>District Unite is coming to your town</strong></h2>
               </div>
@@ -49,7 +53,7 @@ url: /tournaments
                 <h4>Mario Kart IV</h4>
               </span>
               <span class="action align-center">
-                <a class="button hollow accent register">Register</a>
+                <a class="button hollow register">Register</a>
               </span>
             </li>
           </ul>
