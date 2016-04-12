@@ -112,8 +112,8 @@ $sidebar-item-hover-color: spheric-color('primary', 'barely');
   }
 
   form {
-    padding-left: $global-padding;
-    padding-right: $global-padding;
+    margin-left: $global-padding;
+    margin-right: $global-padding;
   }
 
   .accordion-title {
