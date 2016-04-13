@@ -1,0 +1,96 @@
+/*
+//
+// MESSAGES
+//
+*/
+
+$messages-background: spheric-color('white');
+
+#messages-holder {
+  // adding .grid-container messes with vertical heights and scrolling
+  // manually set max-width here and align using flex-box
+  max-width: $container-width;
+  align-self: center;
+}
+
+#messages-sidebar {
+  background: $sidebar-background;
+  > div {
+    padding-top:  $global-padding;
+  }
+}
+
+#messages-title {
+  padding-top: $global-padding/2;
+  padding-bottom: $global-padding/2;
+
+  h2 {
+    @extend %h6;
+  }
+
+  span {
+    margin-right: .5rem;
+  }
+
+  .button {
+    margin: 0;
+    font-size: rem-calc(16);
+  }
+}
+
+#messages-content {
+  padding-top: $global-padding;
+  padding-bottom: $global-padding;
+
+  border-top: 1px solid spheric-color('dark', 'barely');
+  border-bottom: 1px solid spheric-color('dark', 'barely');
+
+  .message {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-right: 3rem;
+
+    .player {
+      padding-top: $global-padding*.6;
+    }
+
+    .content {
+      position: relative;
+
+      &::after {
+        @include css-triangle(
+          $triangle-size: 6px,
+          $triangle-color: $card-background,
+          $triangle-direction: right
+        );
+
+        position: absolute;
+        left: -12px;
+        top: $global-padding*1.3;
+      }
+    }
+
+    .username {
+      margin-bottom: .5rem;
+    }
+    .text {
+      font-size: 1.1em;
+    }
+  }
+
+  .date {
+    p {
+      @extend %h6;
+      margin-top: -1.2rem;
+      span {
+        background-color: $messages-background;
+        padding-left: $global-padding;
+        padding-right: $global-padding;
+      }
+    }
+  }
+}
+
+#messages-input {
+  padding-top: $global-padding;
+}

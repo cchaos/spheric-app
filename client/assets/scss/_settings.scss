@@ -212,7 +212,7 @@ $paragraph-aside-font-size: rem-calc(12);
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
 // $hr-border-style: solid;
-// $hr-border-color: #ddd;
+$hr-border-color: spheric-color('dark', 'barely');
 $hr-margin: rem-calc(7);
 
 // We use these to style lists

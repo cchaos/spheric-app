@@ -43,7 +43,6 @@ label {
 
   .button {
     position: absolute;
-    right: 0;
     top: 0;
     bottom: 0;
 
@@ -52,8 +51,30 @@ label {
     padding-right: 1rem;
   }
 
-  input {
-    padding-right: 5rem;
+  .button:not(:last-child) {
+    left: 0;
+  }
+
+  textarea:not(:first-child),
+  input:not(:first-child) {
+    padding-left: 4rem;
+  }
+
+  .button:last-child {
+    right: 0;
+  }
+
+  textarea:not(:last-child),
+  input:not(:last-child) {
+    padding-right: 4rem;
+  }
+
+  textarea {
+    margin-bottom: 0;
+
+    + .button {
+      padding-right: 2rem; // accomodate for possible scrollbar
+    }
   }
 }
 

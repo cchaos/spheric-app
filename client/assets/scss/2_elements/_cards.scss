@@ -10,8 +10,11 @@ $card-header-foreground: spheric-color('light');
 
 .card {
 
-  @include shadow-2dp;
   overflow: hidden;
+
+  &:not(.flat) {
+    @include shadow-2dp;
+  }
 
   #{$headers} {
     &.subheader {
