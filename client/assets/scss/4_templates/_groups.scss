@@ -6,6 +6,11 @@
 
 $group-post-border: 1px solid spheric-color('dark', 'barely');
 
+.column-title {
+  @extend %h6;
+  color: spheric-color('dark', 'tertiary');
+  text-align: center;
+}
 
 // GROUP POSTS
 

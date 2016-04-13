@@ -10,11 +10,10 @@
 .user-image {
   display: inline-block;
   text-align: center;
-  vertical-align: baseline;
 
   color: spheric-color('light', 'secondary');
 
-  // .no-bg should be added if there is an image so there is no artifacting of the background around the edges
+  // .no-bg should be added automatically if there is an image so there is no artifacting of the background around the edges
   &:not(.no-bg) {
     background-color: spheric-color('dark', 1, 30);
   }
@@ -28,6 +27,7 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+    vertical-align: inherit;
   }
 
   // if it's in a link add some shadows
@@ -55,6 +55,20 @@
     height: 4rem;
     line-height: 4rem;
     font-size: 1.5em;
+  }
+
+  .large & {
+    width: 6rem;
+    height: 6rem;
+    line-height: 6rem;
+    font-size: 2em;
+  }
+
+  .profile & {
+    width: 10rem;
+    height: 10rem;
+    line-height: 10rem;
+    font-size: 3em;
   }
 
 }
