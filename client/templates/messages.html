@@ -11,13 +11,17 @@ url: /messages
     </div>
   </header>
 
-  <div id="messages-holder" class="grid-block">
-
-    <div id="messages-sidebar" class="grid-block medium-3">
-      <div class="grid-content" ng-include="'templates/partials/_messages-sidebar.html'"></div>
+  <section id="messages-holder" class="grid-block vertical medium-horizontal">
+    <div class="grid-block small-12 show-for-small-only">
+      <a zf-toggle="messages-sidebar"><i class="fa fa-bars"></i></a>
     </div>
 
-    <div class="grid-block medium-9">
+    <zf-panel id="messages-sidebar" class="medium-grid-block medium-4">
+      <a zf-close="" class="close-button">x</a>
+      <div class="grid-content" ng-include="'templates/partials/_messages-sidebar.html'"></div>
+    </zf-panel>
+
+    <div class="grid-block medium-8">
       <div class="grid-block vertical">
 
         <div id="messages-title" class="grid-content shrink">
@@ -67,5 +71,5 @@ url: /messages
       </div>
     </div>
 
-  </div>
+  </section>
 </div>
