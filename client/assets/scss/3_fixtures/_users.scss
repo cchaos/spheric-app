@@ -1,0 +1,42 @@
+/*
+//
+// USERS
+// Components specific to dispaly of user info
+//
+*/
+
+// ROUND USER PROFILE IMAGE
+
+.user-image {
+  display: inline-block;
+  text-align: center;
+  vertical-align: baseline;
+
+  color: spheric-color('light', 'secondary');
+
+  // .no-bg should be added if there is an image so there is no artifacting of the background around the edges
+  &:not(.no-bg) {
+    background-color: spheric-color('dark', 1, 30);
+  }
+
+  border-radius: $global-rounded;
+  // make sure the image doesn't peak outside of rounded bounds
+  overflow: hidden;
+
+  // sizing is added to the outer container when placing the component
+  // default is small
+  &,
+  .small & {
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+  }
+
+  .medium & {
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.5em;
+  }
+
+}

@@ -35,6 +35,39 @@ label {
   }
 }
 
+// INLINE LABEL WITH BUTTON
+
+// alter look of inline label so it appears to be inside the input
+.inline-label {
+  .button {
+    @extend .transparent;
+    border: $inlinelabel-border;
+    border-left: none !important;
+    background: $input-background;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-top-right-radius: $global-radius;
+    border-bottom-right-radius: $global-radius;
+  }
+
+  input {
+    border-right: none !important;
+
+    &:hover + .button {
+      border: $input-border-hover;
+    }
+
+    &:focus + .button {
+      border: $input-border-focus;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+
 // TYPES OF CUSTOM FORMS
 
 .search-condensed {

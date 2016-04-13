@@ -1,37 +1,62 @@
 <div class="group-post card">
-  <div class="author">
-    <i class="fa fa-user float-left"></i>
-    <p><a ui-sref="player">User Name</a> <span ng-if="$i < 3">posted in <a ui-sref="group">Fantastic Group</a></span></p>
-    <p class="subheader">2 hours ago</p>
+
+  <div class="author grid-block nowrap v-align">
+    <div class="grid-content shrink collapse">
+      <span ng-include="'templates/components/_user-image.html'" class="small"></span>
+    </div>
+    <div class="grid-content">
+      <p><a ui-sref="player">User Name</a> <span ng-if="$i < 3">posted in <a ui-sref="group">Fantastic Group</a></span>
+         <br><span class="subheader">2 hours ago</span></p>
+    </div>
   </div>
+
   <div class="content">
-    <p>Offal swag kitsch locavore, asymmetrical drinking vinegar plaid cornhole raw denim portland banjo.  Slow-carb selvage hella, meditation food truck forage actually kale chips.</p>
-    <img ng-if="$even" src="http://placehold.it/900x400" alt="">
+    <div class="text">
+    	<p>Offal swag kitsch locavore, asymmetrical drinking vinegar plaid cornhole raw denim portland banjo.  Slow-carb selvage hella, meditation food truck forage actually kale chips.</p>
+    </div>
+    <img ng-if="$even" src="https://source.unsplash.com/random" alt="">
   </div>
+
   <div class="actions">
-    <a><i class="fa fa-share"></i></a>
-    <span class="float-right"><i class="fa fa-comments-o"></i>4</span>
-    <a class="float-right"><i class="fa fa-star-o"></i>6</a>
+    <a title="Share this post"><i class="fa fa-share"></i></a>
+    <span title="There are 4 comments on this post" class="float-right"><i class="fa fa-comments-o"></i>4</span>
+    <a title="4 players have starred this post - click star this post" class="float-right">
+      <i class="fa" ng-class="$odd ? 'fa-star' : 'fa-star-o'"></i>6
+    </a>
   </div>
+
   <ul class="comments no-bullet">
     <zf-accordion auto-open="false">
       <zf-accordion-item title="Show all 4 comments">
-        <li ng-repeat="i in [1,2,3]">
-          <p><i class="fa fa-user"></i> <a ui-sref="player">User Name</a> <span class="time float-right">1 hour ago</span></p>
-          <p>Flannel meggings fashion axe deep!</p>
+        <li class="grid-block v-align nowrap" ng-repeat="i in [1,2,3]">
+          <div class="grid-content shrink">
+            <span ng-include="'templates/components/_user-image.html'" class="small"></span>
+          </div>
+          <div class="grid-content">
+            <p><a ui-sref="player">User Name</a> <span class="time subheader">1 hour ago</span></p>
+            <p>Flannel meggings fashion axe deep!</p>
+          </div>
         </li>
       </zf-accordion-item>
     </zf-accordion>
-    <li>
-      <p><i class="fa fa-user"></i> <a ui-sref="player">User Name</a> <span class="time float-right">1 hour ago</span></p>
-      <p>Flannel meggings fashion axe deep!</p>
+    <li class="grid-block v-align nowrap">
+      <div class="grid-content shrink collapse">
+        <span ng-include="'templates/components/_user-image.html'" class="small"></span>
+      </div>
+      <div class="grid-content">
+        <p><a ui-sref="player">User Name</a> <span class="time subheader">1 hour ago</span></p>
+        <p>Farm-to-table DIY kinfolk shoreditch mlkshk, tilde gluten-free YOLO organic quinoa chartreuse cliche tousled meggings.</p>
+      </div>
     </li>
   </ul>
   <form action="" class="add-comment">
-    <div class="grid-block">
-      <div class="grid-content shrink"><i class="fa fa-user"></i></div>
-      <div class="grid-content"><input type="search"></div>
-      <div class="grid-content shrink"><button class="button transparent"><i class="fa fa-paper-plane"></i></button></div>
+    <div class="grid-block nowrap">
+      <div class="grid-content shrink collapse"><span ng-include="'templates/components/_user-image.html'" class="small"></span></div>
+      <div class="grid-content">
+        <span class="inline-label">
+          <input type="search" placeholder="Comment...">
+        	<button class="button"><i class="fa fa-paper-plane"></i></button></span>
+      </div>
     </div>
   </form>
 </div>

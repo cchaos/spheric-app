@@ -70,7 +70,8 @@
 // distinct section of an interface.
 // -------------------------
 */
-   @import "3_fixtures/sidebar";
+   @import "3_fixtures/sidebar",
+           "3_fixtures/users";
 
 
 /*
@@ -79,7 +80,8 @@
 // Very concrete and provide context to all these relatively abstract Fixtures and elements.
 // -------------------------
 */
-   @import "4_templates/tournaments",
+   @import "4_templates/groups",
+           "4_templates/tournaments",
            "4_templates/players";
 
 

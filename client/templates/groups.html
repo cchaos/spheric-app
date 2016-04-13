@@ -17,10 +17,9 @@ url: /groups
     <div class="grid-container">
 
       <div class="grid-block">
-  	    <div class="grid-content medium-4">
-  	      <div class="card">
-            <!-- <a zf-close="" class="close-button">×</a> -->
-            <div class="sidebar-content grid-block svertical">
+  	    <div class="sidebar-content grid-content medium-4">
+          <!-- <a zf-close="" class="close-button">×</a> -->
+          <div class="sidebar-content grid-block vertical">
                 <div class="grid-block">
                   <div class="grid-content">
                     <section class="sidebar-block-list">
@@ -206,10 +205,10 @@ url: /groups
                   </div>
                 </div>
               </div>
-          </div>
   	    </div>
 
   	  	<div class="grid-content medium-8">
+  	  	  <h2>All Activity</h2>
   	  		<div ng-include="'templates/partials/groups/_post.html'" ng-repeat="$i in [1,2,3] track by $index"></div>
 
     	  	<a class="button expand dark raised">Load More</a>

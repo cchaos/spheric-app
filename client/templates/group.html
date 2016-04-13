@@ -19,14 +19,21 @@ url: /group
 
   	  <div class="grid-block">
   	    <div class="grid-content medium-4">
+  	      <div class="about card">
+    	      <div class="card-section">
+    	      	<h6>About</h6>
+    	      	<p>Meh drinking vinegar cardigan mumblecore listicle etsy.  Umami kickstarter vegan typewriter.  Drinking vinegar franzen tacos normcore viral mixtape selvage, fixie pitchfork XOXO 8-bit.</p>
+    	      </div>
+  	      </div>
   	      <div class="members card">
-    	      <h6>Members</h6>
-    	      <ul class="no-bullet">
-    	      	<li ng-repeat="i in [1,2,3,4,5,6,7,8]">
-      	      	<i class="fa fa-user"></i>
-    	      	</li>
-    	      </ul>
-    	      <a class="button transparent expand small">See all</a>
+    	      <div class="card-section">
+      	      <h6>Members</h6>
+    	      	<ul class="no-bullet">
+    	      		<li ng-repeat="i in [1,2,3,4,5,6,7,8]">
+	      	      	<a ui-sref="player"><span ng-include="'templates/components/_user-image.html'" class="medium"></span></a>
+    	      		</li>
+    	      	</ul>
+    	      </div>
   	      </div>
   	    </div>
 

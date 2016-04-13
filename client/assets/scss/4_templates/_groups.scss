@@ -1,0 +1,112 @@
+/*
+//
+// GROUPS
+//
+*/
+
+$group-post-border: 1px solid spheric-color('dark', 'barely');
+
+// Spacing of all cards on either groups/group page
+.group-page,
+.groups-page {
+  .card {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+}
+
+// GROUP POSTS
+
+.group-post {
+
+  .author,
+  .add-comment,
+  .content > .text {
+    padding: $global-padding;
+
+    // TODO: Create Mixin
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+
+    border-bottom: $group-post-border;
+  }
+
+  .author {
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .content p {
+    font-size: 1.1rem;
+  }
+
+  .actions {
+    padding: $global-padding/1.5 0;
+    border-bottom: $group-post-border;
+
+    a, span {
+      padding: 0 $global-padding;
+    }
+
+    i {
+      margin-right: .5em;
+    }
+  }
+
+  .collapse {
+    padding-left: $global-padding;
+  }
+
+  .comments {
+    background-color: spheric-color('dark', 'barely', 30);
+
+    .accordion-title {
+      padding: $global-padding/1.5;
+      border-bottom: $group-post-border;
+      @extend %h6;
+      color: spheric-color('dark', 'secondary');
+    }
+
+    li {
+      padding: $global-padding/1.5 $global-padding;
+      border-bottom: $group-post-border;
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .add-comment {
+    .inline-label {
+      margin: 0;
+    }
+  }
+
+}
+
+// SINGLE GROUP PAGE
+
+.group-page {
+  .members {
+    li {
+      display: inline-block;
+      margin: .8rem;
+    }
+    .user-image {
+      @include shadow-2dp;
+      @include basic-transition;
+
+      &:focus,
+      &:hover {
+        @include focus-shadow;
+      }
+    }
+  }
+}
+
