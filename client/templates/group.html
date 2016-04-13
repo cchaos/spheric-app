@@ -1,0 +1,60 @@
+---
+name: group
+url: /group
+---
+
+<div class="group-page grid-block vertical nowrap">
+
+  <header class="page-header grid-content shrink">
+    <div class="grid-container">
+      <h1 class="name">Fantastic Group</h1>
+		  <h3 class="school subheader"><i class="fa fa-globe"></i> Public Group</h3>
+		  <a class="button raised" zf-open="create-post">Create Posting</a>
+		  <a class="button raised">Join Group</a>
+    </div>
+  </header>
+
+	<section class="grid-content shrink">
+    <div class="grid-container">
+
+  	  <div class="grid-block">
+  	    <div class="grid-content medium-4">
+  	      <div class="members card">
+    	      <h6>Members</h6>
+    	      <ul class="no-bullet">
+    	      	<li ng-repeat="i in [1,2,3,4,5,6,7,8]">
+      	      	<i class="fa fa-user"></i>
+    	      	</li>
+    	      </ul>
+    	      <a class="button transparent expand small">See all</a>
+  	      </div>
+  	    </div>
+
+  	  	<div class="grid-content medium-8">
+  	  		<div ng-include="'templates/partials/groups/_post.html'" ng-repeat="$i in [3,4,5] track by $index"></div>
+
+    	  	<a class="button expand dark raised">Load More</a>
+  	  	</div>
+  	  </div>
+
+  	  <!-- Add Post Modal -->
+  	  <zf-modal id="create-post" class="collapse">
+        <div class="grid-block vertical">
+          <div class="title-bar">
+            <div class="center title">Create Post in Fantastic Group</div>
+          </div>
+          <div class="grid-content padding">
+            <form action="">
+          	  <textarea name="" id="" rows="3"></textarea>
+              <hr>
+              <button type="submit" zf-close="" class="button raised float-right">Post</button>
+              <a zf-close="" class="button transparent float-right">Cancel</a>
+        	  </form>
+          </div>
+        </div>
+      </zf-modal>
+
+  	</div>
+  </section>
+
+</div>
