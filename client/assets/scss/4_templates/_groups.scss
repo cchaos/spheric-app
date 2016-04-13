@@ -90,6 +90,45 @@ $group-post-border: 1px solid spheric-color('dark', 'barely');
 
 }
 
+// GROUPS INDEX PAGE
+
+.groups-page {
+  .groups-list {
+    .accordion-title {
+      @extend %h6;
+      padding: $global-padding/1.5;
+      border-bottom: 1px solid spheric-color('dark', 'barely');
+
+      @include breakpoint(small only) {
+        background-color: spheric-color('dark', 'barely');
+        border: none;
+
+        &::after {
+          @include css-triangle(4px, $body-font-color, top);
+          float: right;
+        }
+      }
+    }
+
+    .accordion-content {
+      background-color: spheric-color('light', 'tertiary') ;
+
+      @include breakpoint(medium) {
+        background-color: transparent;
+        display: block !important;
+      }
+    }
+
+    .block-list {
+      margin: 0;
+
+      i {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
 // SINGLE GROUP PAGE
 
 .group-page {
