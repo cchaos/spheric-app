@@ -23,6 +23,17 @@
   // make sure the image doesn't peak outside of rounded bounds
   overflow: hidden;
 
+  // if it's in a link add some shadows
+  a & {
+    @include shadow-2dp;
+    @include basic-transition;
+
+    &:focus,
+    &:hover {
+      @include focus-shadow;
+    }
+  }
+
   // sizing is added to the outer container when placing the component
   // default is small
   &,

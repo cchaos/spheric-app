@@ -6,18 +6,11 @@
 
 $group-post-border: 1px solid spheric-color('dark', 'barely');
 
-// Spacing of all cards on either groups/group page
-.group-page,
-.groups-page {
-  .card {
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-  }
-}
 
 // GROUP POSTS
 
 .group-post {
+  margin-bottom: 4rem;
 
   .author,
   .add-comment,
@@ -90,41 +83,60 @@ $group-post-border: 1px solid spheric-color('dark', 'barely');
 
 }
 
-// GROUPS INDEX PAGE
+.groups-extras-accordion {
+  margin-bottom: 4rem;
 
-.groups-page {
-  .groups-list {
-    .accordion-title {
-      @extend %h6;
-      padding: $global-padding/1.5;
-      border-bottom: 1px solid spheric-color('dark', 'barely');
+  .accordion-item:not(.groups-list) {
+    @extend .card;
+  }
 
-      @include breakpoint(small only) {
-        background-color: spheric-color('dark', 'barely');
-        border: none;
+  .accordion-title {
+    @extend .button;
+    @extend .transparent;
+    padding: $global-padding;
+    margin-bottom: 0;
 
-        &::after {
-          @include css-triangle(4px, $body-font-color, top);
-          float: right;
-        }
+    width: 100%;
+    text-align: left;
+
+    @include breakpoint(small only) {
+      &::after {
+        @include css-triangle(4px, $body-font-color, top);
+        float: right;
       }
+    }
+  }
+
+  .accordion-content {
+    padding: $global-padding/2 $global-padding;
+  }
+
+  @include breakpoint(medium) {
+    .accordion-item:not(.groups-list) { // needs to be this specific to override extension of card margin
+      margin-bottom: 4rem;
+    }
+
+    .accordion-title {
+      pointer-events: none;
     }
 
     .accordion-content {
-      background-color: spheric-color('light', 'tertiary') ;
-
-      @include breakpoint(medium) {
-        background-color: transparent;
-        display: block !important;
-      }
+      display: block !important;
     }
+  }
+}
 
-    .block-list {
-      margin: 0;
+// GROUPS INDEX PAGE
 
-      i {
-        margin-right: 1rem;
-      }
+.groups-list {
+  background-color: spheric-color('light', 'secondary');
+
+  @include breakpoint(medium) {
+    background-color: transparent;
+
+    .accordion-title {
+      padding-left: 0;
+      border-bottom: 1px solid spheric-color('light', 'secondary');
     }
   }
 }
@@ -134,18 +146,10 @@ $group-post-border: 1px solid spheric-color('dark', 'barely');
 .group-page {
   .members {
     li {
-      margin-top: $global-padding;
+      margin-top: $global-padding/2;
+      margin-bottom: $global-padding/2;
       justify-content: flex-start;
       flex-grow: 0;
-    }
-    .user-image {
-      @include shadow-2dp;
-      @include basic-transition;
-
-      &:focus,
-      &:hover {
-        @include focus-shadow;
-      }
     }
   }
 }

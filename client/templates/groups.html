@@ -32,21 +32,18 @@ url: /groups
       <!-- BOTTOM -->
       <div class="grid-block">
         <div class="grid-content medium-4">
-          <section class="groups-list">
-            <zf-accordion auto-open="false">
-              <zf-accordion-item title="Your Groups">
-                <ul class="block-list">
-                  <li class="item"><a ui-sref="group">
-                    <i class="fa fa-lock"></i> Fantastic Group
-                  </a></li>
-                  <li class="item"><a ui-sref="group">
-                     <i class="fa fa-globe"></i> Public Group
-                  </a></li>
-                </ul>
-              </zf-accordion-item>
-            </zf-accordion>
-
-          </section>
+          <zf-accordion class="groups-extras-accordion" auto-open="false">
+            <zf-accordion-item class="groups-list" title="Your Groups">
+              <ul class="block-list">
+                <li class="item"><a ui-sref="group">
+                  <i class="fa fa-lock"></i> Fantastic Group
+                </a></li>
+                <li class="item"><a ui-sref="group">
+                   <i class="fa fa-globe"></i> Public Group
+                </a></li>
+              </ul>
+            </zf-accordion-item>
+          </zf-accordion>
         </div>
 
       	<div class="grid-content medium-8">
