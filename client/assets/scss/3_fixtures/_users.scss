@@ -23,6 +23,13 @@
   // make sure the image doesn't peak outside of rounded bounds
   overflow: hidden;
 
+  // make sure the image fills the whole area without stretching the image
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
   // if it's in a link add some shadows
   a & {
     @include shadow-2dp;
