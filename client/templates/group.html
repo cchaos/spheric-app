@@ -9,7 +9,7 @@ url: /group
     <div class="grid-container">
       <h1 class="name">Fantastic Group</h1>
 		  <h3 class="school subheader"><i class="fa fa-globe"></i> Public Group</h3>
-		  <a class="button raised" zf-open="create-post">Create Posting</a>
+		  <a class="button raised" zf-open="create-post">Create a Post</a>
 		  <a class="button raised">Join Group</a>
     </div>
   </header>
@@ -28,8 +28,8 @@ url: /group
   	      <div class="members card">
     	      <div class="card-section">
       	      <h6>Members</h6>
-    	      	<ul class="no-bullet">
-    	      		<li ng-repeat="i in [1,2,3,4,5,6,7,8]">
+    	      	<ul class="no-bullet grid-block">
+    	      		<li class="grid-content" ng-repeat="i in [1,2,3,4,5,6,7,8]">
 	      	      	<a ui-sref="player"><span ng-include="'templates/components/_user-image.html'" class="medium"></span></a>
     	      		</li>
     	      	</ul>
@@ -45,14 +45,15 @@ url: /group
   	  </div>
 
   	  <!-- Add Post Modal -->
-  	  <zf-modal id="create-post" class="collapse">
+  	  <zf-modal id="create-post" class="collapse large" >
         <div class="grid-block vertical">
-          <div class="title-bar">
-            <div class="center title">Create Post in Fantastic Group</div>
-          </div>
           <div class="grid-content padding">
+            <h3 class="text-center title">Create a Post in <strong>Fantastic Group</strong></h3>
             <form action="">
-          	  <textarea name="" id="" rows="3"></textarea>
+          	  <textarea name="" id="" rows="5" placeholder="What do you have to say?"></textarea>
+          	  <span class="inline-label">
+                <input type="search" placeholder="Add attachment">
+              	<button class="button"><i class="fa fa-paperclip"></i></button></span>
               <hr>
               <button type="submit" zf-close="" class="button raised float-right">Post</button>
               <a zf-close="" class="button transparent float-right">Cancel</a>

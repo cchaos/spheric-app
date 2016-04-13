@@ -95,8 +95,9 @@ $group-post-border: 1px solid spheric-color('dark', 'barely');
 .group-page {
   .members {
     li {
-      display: inline-block;
-      margin: .8rem;
+      margin-top: $global-padding;
+      justify-content: flex-start;
+      flex-grow: 0;
     }
     .user-image {
       @include shadow-2dp;
@@ -110,3 +111,19 @@ $group-post-border: 1px solid spheric-color('dark', 'barely');
   }
 }
 
+// MODAL FOR CREATING A NEW POST
+
+#create-post {
+  .modal {
+    .title {
+      margin-top: $global-padding;
+      margin-bottom: $global-padding;
+    }
+    hr {
+      margin-bottom: $global-padding;
+    }
+    button {
+      margin-right: 0;
+    }
+  }
+}

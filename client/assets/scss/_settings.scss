@@ -30,6 +30,7 @@
 //  25. Title Bar
 
 @import "helpers/functions";
+@import "1_core/shadows";
 
 // 1. CSS Exports
 // - - - - - - - - - - - - - - -
@@ -450,7 +451,7 @@ $label-color: isitlight($label-background);
 
 // $modal-background: #fff;
 // $modal-border: 0;
-// $modal-radius: 0px;
+$modal-radius: $global-radius;
 // $modal-shadow: none;
 // $modal-zindex: 1000;
 // $modal-sizes: (
@@ -459,6 +460,10 @@ $label-color: isitlight($label-background);
 //   medium: 600px,
 //   large: 800px,
 // );
+
+.modal {
+  @include shadow-4dp;
+}
 
 // $modal-overlay-class: 'modal-overlay';
 // $modal-overlay-background: rgba(#333, 0.7);
