@@ -93,9 +93,14 @@ gulp.task('copy:foundation', function(cb) {
     .pipe(gulp.dest('./build/assets/js'))
   ;
 
-  // Iconic SVG icons
-  gulp.src('./bower_components/foundation-apps/iconic/**/*')
-    .pipe(gulp.dest('./build/assets/img/iconic/'))
+  // Iconic SVG icons -- USING FontAwesome Instead
+  // gulp.src('./bower_components/foundation-apps/iconic/**/*')
+  //   .pipe(gulp.dest('./build/assets/img/iconic/'))
+  // ;
+
+  // FontAwesome fonts
+  gulp.src('./bower_components/font-awesome/fonts/**/*')
+    .pipe(gulp.dest('./build/assets/fonts/'))
   ;
 
   cb();
