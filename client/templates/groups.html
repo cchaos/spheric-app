@@ -17,11 +17,12 @@ url: /groups
       <!-- TOP -->
       <div class="grid-block">
         <div class="grid-content medium-4">
-          <form>
-        	  <span class="inline-label">
-              <input type="search" placeholder="Find more groups">
-            	<button class="button"><i class="fa fa-search"></i></button></span>
-        	</form>
+          <section class="sidebar-block-list">
+            <form>
+          	  <span class="inline-label"><input type="search" placeholder="Find more groups">
+          	    <button class="button" type="submit"><span class="fa fa-search"></span></button></span>
+          	</form>
+          </section>
         </div>
 
         <div class="grid-content medium-8 hide-for-small-only">
@@ -34,14 +35,31 @@ url: /groups
         <div class="grid-content medium-4">
           <zf-accordion class="groups-extras-accordion" auto-open="false">
             <zf-accordion-item class="groups-list" title="Your Groups">
-              <ul class="block-list">
-                <li class="item"><a ui-sref="group">
-                  <i class="fa fa-lock"></i> Fantastic Group
-                </a></li>
-                <li class="item"><a ui-sref="group">
-                   <i class="fa fa-globe"></i> Public Group
-                </a></li>
-              </ul>
+
+              <section class="sidebar-block-list">
+                <ul class="slim-list">
+                  <li class="item" ng-repeat="$i in [1,2] track by $index"><a ui-sref="group">
+                    <span class="img">
+                      <span ng-include="'templates/components/_group-image.html'" class="small hide-for-medium-up"></span>
+                    </span>
+                    <span class="content">
+                      <h5>Public Group</h5>
+                    </span>
+                  </a></li>
+                  <li class="item" ng-repeat="$i in [1,2] track by $index"><a ui-sref="group">
+                    <span class="img">
+                      <span ng-include="'templates/components/_team-image.html'" class="small hide-for-medium-up"></span>
+                    </span>
+                    <span class="content">
+                      <h5>Private Team</h5>
+                    </span>
+                    <span class="extra">
+                      <span class="label">4</span>
+                    </span>
+                  </a></li>
+                </ul>
+              </section>
+
             </zf-accordion-item>
           </zf-accordion>
         </div>
