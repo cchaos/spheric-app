@@ -10,11 +10,14 @@ animationOut: slideOutRight
   <div id="messages-title" class="grid-content shrink">
     <h2><a ui-sref="messages.navigation" class="show-for-small-only float-left"><i class="fa fa-angle-left"></i></a> &emsp; NYU – League of Legends</h2>
 
-    <div class="grid-block v-align">
-      <div class="grid-content">
-        <a ui-sref="player" ng-repeat="$i in [1,2,3,4]"><span ng-include="'templates/components/_user-image.html'" class="small"></span></a>
-      </div>
+    <div class="grid-block v-align nowrap">
       <div class="grid-content shrink">
+        <h6 class="subheader">Online:</h6>
+      </div>
+      <div id="messages-online-players" class="grid-content collapse">
+        <a ui-sref="player" ng-repeat="$i in [1,2,3,4,5]"><span ng-include="'templates/components/_user-image.html'" class="small"></span></a>
+      </div>
+      <div class="grid-content shrink collapse">
         <a id="more-players-button" class="button tiny transparent float-right" title="view all online"><i class="fa fa-ellipsis-h"></i></a>
       </div>
     </div>

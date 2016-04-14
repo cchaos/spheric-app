@@ -66,6 +66,10 @@ $messages-background: spheric-color('white');
   }
 }
 
+#messages-online-players {
+  @include force-truncate;
+}
+
 #messages-content {
 
   .message {
