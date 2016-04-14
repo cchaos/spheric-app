@@ -1,0 +1,10 @@
+<span class="img">
+  <span ng-include="'templates/components/_user-image.html'" class="small hide-for-medium-up"></span>
+  <i ng-if="$index <= 1" class="fa fa-circle"></i>
+</span>
+<span class="content">
+  <h5><span ng-if="$index > 1">Un</span>Available User</h5>
+</span>
+<span ng-if="$odd" class="extra">
+  <span class="label">4</span>
+</span>

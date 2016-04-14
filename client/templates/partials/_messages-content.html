@@ -1,0 +1,38 @@
+<div id="message-title" class="grid-content shrink">
+  <div class="grid-block v-align nowrap">
+    <div class="grid-content shrink collapse show-for-small-only">
+      <a class="back button transparent tiny" ui-sref="messages_mobile"><i class="fa fa-angle-left"></i></a>
+    </div>
+    <div class="grid-content truncate collapse">
+      <h2>NYU – League of Legends</h2>
+    </div>
+    <div class="grid-content shrink collapse">
+      <a class="button transparent tiny"><i class="fa fa-ellipsis-v"></i></a>
+    </div>
+  </div>
+
+  <div class="grid-block v-align nowrap">
+    <div class="grid-content shrink">
+      <h6 class="subheader">Online:</h6>
+    </div>
+    <div class="grid-content collapse truncate">
+      <span ng-include="'templates/components/_user-image.html'" class="small" ng-repeat="$i in [1,2,3,4,5]"></span>
+    </div>
+    <div class="grid-content shrink collapse">
+      <a id="more-players-button" class="button tiny transparent float-right" title="view all online"><i class="fa fa-ellipsis-h"></i></a>
+    </div>
+  </div>
+</div>
+
+<div id="messages-content" class="grid-content">
+  <div ng-include="'templates/components/_message.html'" ng-repeat="$i in [1,2,3,4,5,6,7]"></div>
+</div>
+
+<div id="messages-input" class="grid-content shrink">
+  <form action="">
+    <span class="inline-label">
+      <a class="button" title="Add attachment"><i class="fa fa-paperclip"></i></a>
+      <textarea name="" id="" rows="2"></textarea>
+      <button class="button primary" type="submit" title="Send message"><i class="fa fa-paper-plane"></i></button></span>
+  </form>
+</div>

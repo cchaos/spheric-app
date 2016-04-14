@@ -5,70 +5,18 @@ url: /messages
 
 <div class="messages-page grid-block vertical nowrap">
 
-  <header class="page-header grid-content shrink">
+  <header class="page-header grid-content shrink hide-for-small-only">
     <div class="grid-container">
       <h1 class="name">Messages</h1>
     </div>
   </header>
 
   <section id="messages-holder" class="grid-block vertical medium-horizontal">
-    <div class="grid-block small-12 show-for-small-only">
-      <a zf-toggle="messages-sidebar"><i class="fa fa-bars"></i></a>
-    </div>
 
-    <zf-panel id="messages-sidebar" class="medium-grid-block medium-4">
-      <a zf-close="" class="close-button">x</a>
-      <div class="grid-content" ng-include="'templates/partials/_messages-sidebar.html'"></div>
-    </zf-panel>
+    <div class="grid-content hide-for-small-only" ng-include="'templates/partials/_messages-sidebar.html'"></div>
 
-    <div class="grid-block medium-8">
-      <div class="grid-block vertical">
-
-        <div id="messages-title" class="grid-content shrink">
-          <div class="grid-block v-align">
-            <div class="grid-content shrink">
-              <h2>NYU – League of Legends</h2>
-            </div>
-            <div class="grid-content text-right">
-              <a ui-sref="player"><span ng-include="'templates/components/_user-image.html'" ng-repeat="$i in [1,2,3,4]" class="small"></span></a>
-              <a id="more-players-button" class="button tiny transparent float-right"><i class="fa fa-ellipsis-h"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div id="messages-content" class="grid-content">
-
-          <div class="message grid-block nowrap" ng-repeat-start="i in [1,2,3,4,5,6,7,8,9,10] track by $index">
-            <div class="player grid-content shrink">
-              <a ui-sref="player"><span ng-include="'templates/components/_user-image.html'" class="small"></span></a>
-            </div>
-            <div class="content grid-content collapse">
-              <div class="card flat">
-                <div class="card-section">
-                  <p class="username"><a ui-sref="player">User Name</a> &emsp; <span class="subheader">3:{{((10 * ($index + 1))/2)+5}}</span></p>
-                  <p class="text">Pinterest kickstarter retro waistcoat kinfolk, slow-carb pug forage plaid normcore.  Meditation kogi chia tofu, brunch marfa sriracha ethical. <span ng-if="$even">Asymmetrical meditation twee fixie, wayfarers yr sartorial DIY readymade flannel stumptown.  Everyday carry pork belly raw denim.</span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div ng-if="$index === 4" class="date grid-content small-12">
-            <hr>
-            <p class="text-center"><span>Feb 28</span></p>
-          </div>
-          <div ng-repeat-end></div>
-
-        </div>
-
-        <div id="messages-input" class="grid-content shrink">
-          <form action="">
-            <span class="inline-label">
-              <a class="button" title="Add attachment"><i class="fa fa-paperclip"></i></a>
-              <textarea name="" id="" rows="2"></textarea>
-              <button class="button" type="submit" title="Send message"><i class="fa fa-paper-plane"></i></button></span>
-      	  </form>
-        </div>
-
-      </div>
+    <div id="messages-content-holder" class="grid-block medium-8">
+      <div class="grid-block vertical" ng-include="'templates/partials/_messages-content.html'"></div>
     </div>
 
   </section>

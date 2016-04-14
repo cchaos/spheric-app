@@ -1,13 +1,15 @@
 /*
 //
-// USERS
-// Components specific to dispaly of user info
+// IMAGES
+// Styles for the group,user,team, and tournament images
 //
 */
 
 // ROUND USER PROFILE IMAGE
 
-.user-image {
+$all-images: ".user-image, .group-image, .team-image";
+
+#{$all-images} {
   display: inline-block;
   text-align: center;
 
@@ -18,7 +20,6 @@
     background-color: spheric-color('dark', 1, 30);
   }
 
-  border-radius: $global-rounded;
   // make sure the image doesn't peak outside of rounded bounds
   overflow: hidden;
 
@@ -71,4 +72,13 @@
     font-size: 3em;
   }
 
+}
+
+.user-image {
+  border-radius: $global-rounded;
+}
+
+.team-image,
+.group-image {
+  border-radius: $global-radius;
 }

@@ -33,6 +33,7 @@
 // Images
 // ----------------------
    @import "font-awesome";
+   @import "1_core/images";
 // Buttons
 // ----------------------
    @import "1_core/buttons";
@@ -70,8 +71,7 @@
 // distinct section of an interface.
 // -------------------------
 */
-   @import "3_fixtures/sidebar",
-           "3_fixtures/users";
+   @import "3_fixtures/sidebar";
 
 
 /*

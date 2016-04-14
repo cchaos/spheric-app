@@ -4,13 +4,13 @@
 //
 */
 
-$page-header-background: spheric-color('primary');
-$page-header-foreground: spheric-color('white');
+$page-header-background: spheric-color('light');
+$page-header-foreground: spheric-color('dark');
 
 .page-header {
 
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: $global-padding/2;
+  padding-bottom: $global-padding/2;
 
   background-color: $page-header-background;
 
@@ -20,13 +20,8 @@ $page-header-foreground: spheric-color('white');
   }
 
   h1 {
-    font-weight: $font-weight-extra;
-    text-transform: uppercase;
+    font-weight: $font-weight-normal;
+    //text-transform: uppercase;
     color: $page-header-foreground;
   }
-
-  + section {
-    margin-top: 2rem;
-  }
-
 }
