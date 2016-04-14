@@ -39,6 +39,8 @@ $card-header-foreground: spheric-color('light');
   }
 
   .card-action {
+    border-top: 1px solid spheric-color('light', 'secondary');
+
     .button {
       margin: 0;
       border-top-left-radius: 0;

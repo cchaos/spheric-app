@@ -113,6 +113,9 @@ $button-hover-shade: -20;
   &.alert     { @include button-style-custom(spheric-color('alert'), auto) }
   &.dark      { @include button-style-custom(spheric-color('dark'), auto) }
 
+  // like regular transparent but with primary text color
+  &.primary { @include button-style-custom(transparent, $background-hover: spheric-color('dark', 'barely'), $color: spheric-color('primary')) }
+
   @if $button-style != hollow {
     &.hollow { @include button-style-custom($style: hollow);
       &.secondary { @include button-style-custom(spheric-color('white'), $style: hollow); }
