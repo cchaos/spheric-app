@@ -17,20 +17,27 @@ $messages-background: spheric-color('white');
   }
 }
 
-#messages-sidebar {
-  //background: $sidebar-background;
-  > div {
-    padding-top:  $global-padding;
+#messages-content-holder {
+  @include breakpoint(medium) {
+    // style the main content like a card
+    background-color: $card-background;
+    @include shadow-2dp;
+    border-radius: $global-radius;
   }
 
-  @include breakpoint(medium) {
-    // style the main content like a card but only when it's next to the sidebar
-    + div {
-      background-color: $card-background;
-      @include shadow-2dp;
-      border-radius: $global-radius;
-      margin-bottom: $global-padding;
-    }
+  @media screen and (min-width: $container-width) {
+    margin: $global-padding;
+  }
+}
+
+#messages-list {
+  form {
+    margin-top: $global-padding;
+  }
+
+  @include breakpoint(small only) {
+    padding-left: $block-padding;
+    padding-right: $block-padding;
   }
 }
 
@@ -75,7 +82,7 @@ $messages-background: spheric-color('white');
 
   @include breakpoint(medium) {
     h2 {
-      //@extend %h6;
+      padding-left: $global-padding;
     }
   }
 }

@@ -7,16 +7,17 @@ url: /messages
 
   <header class="page-header grid-content shrink hide-for-small-only">
     <div class="grid-container">
-      <h1 class="name">
-          <a ui-sref="messages.navigation" class="show-for-small-only float-left"><i class="fa fa-angle-left"></i></a> &emsp;
-          Messages</h1>
+      <h1 class="name">Messages</h1>
     </div>
   </header>
 
-  <div id="messages-holder" class="grid-block">
+  <section id="messages-holder" class="grid-block vertical medium-horizontal">
 
-    <!-- ONLY ON SMALL SCREENS, USE SUB-VIEWS -->
-    <div ng-class="[currentSlug, 'ui-animation']" class="grid-block show-for-small-only" ui-view></div>
+    <div class="grid-content hide-for-small-only" ng-include="'templates/partials/_messages-sidebar.html'"></div>
 
-  </div>
+    <div id="messages-content-holder" class="grid-block medium-8">
+      <div class="grid-block vertical" ng-include="'templates/partials/_messages-content.html'"></div>
+    </div>
+
+  </section>
 </div>

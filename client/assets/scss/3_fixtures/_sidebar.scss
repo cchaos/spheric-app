@@ -94,9 +94,9 @@ $sidebar-item-hover-color: spheric-color('primary', 'barely');
     );
     @extend %h6;
 
-    text-align: center;
     margin-top: 2rem;
     margin-bottom: 1rem;
+    padding-left: $global-padding;
   }
 
   li {
@@ -158,23 +158,13 @@ $sidebar-item-hover-color: spheric-color('primary', 'barely');
 
   // TRUNCATING
   .content {
-    width: 100%;
 
-    h4, h5, h6 {
+    #{$headers} {
       @include force-truncate;
     }
 
     p {
       @include fake-truncate();
-    }
-  }
-
-  &.with-extra {
-    .content {
-      width: 70%;
-    }
-    .extra {
-      width: 30%;
     }
   }
 
@@ -258,19 +248,51 @@ $sidebar-item-hover-color: spheric-color('primary', 'barely');
     padding-bottom: $global-padding/2 + .2;
   }
 
-  // TODO: Move to Chat specific styles
-  .unavailable {
-    h5 {
-      color: $sidebar-foreground;
+  .item > a {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .img,
+  .extra {
+    flex: 0 0 auto;
+  }
+
+  .img {
+    position: relative;
+    padding-right: $global-padding/2;
+
+    #{$all-images} {
+      box-shadow: none;
+    }
+
+    > i {
+      color: spheric-color('primary');
+      position: absolute;
+      top: 0;
+      right: $global-padding/4;
     }
   }
 
-  .available {
-    h5 {
-      font-weight: $font-weight-bold;
+  .content {
+    flex: 1 1 auto;
+    @include force-truncate;
+  }
+
+  .extra {
+    padding-left: $global-padding/2;
+
+    .label {
+      background-color: spheric-color('primary');
     }
-    .extra {
-      color: spheric-color('success');
-    }
+  }
+
+  h5 {
+    font-weight: $font-weight-bold;
+    color: $sidebar-foreground;
+  }
+
+  .unavailable h5 {
+    font-weight: $font-weight-normal;
   }
 }
