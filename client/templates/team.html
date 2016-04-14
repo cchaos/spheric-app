@@ -16,11 +16,6 @@ url: /team
     		  <a class="button accent raised register">Message</a>
     		</div>
       </div>
-    </div>
-  </header>
-
-	<section class="grid-content shrink">
-    <div class="grid-container">
 
       <div class="grid-block">
         <div class="grid-content text-center">
@@ -32,44 +27,44 @@ url: /team
           <h3>51/25</h3>
         </div>
       </div>
+    </div>
+  </header>
 
-      <h6 class="subheader">Players</h6>
-      <div class="grid-block wrap">
-        <div class="grid-content" ng-repeat="i in [1,2,3,4,5,6,7,8]">
-          <a ui-sref="player" class="thumbnail"><i class="fa fa-user"></i></a>
-        </div>
-      </div>
+	<section class="grid-content shrink">
+    <div class="grid-container">
 
-
-    	<zf-tabs>
-
-    	  <zf-tab title="Matches">
-    	    <table>
+      <div class="grid-block">
+        <div class="grid-content medium-8">
+          <h2>Matches</h2>
+          <table>
       	    <tbody>
-        	    <tr ng-repeat-start="i in [1,2,3,4,5,6,7] track by $index">
-          	    <td><img src="http://placehold.it/32x32" alt=""> Awesome Team</td>
+        	    <tr ng-repeat="i in [1,2,3,4,5,6,7] track by $index">
+          	    <td class="tournament">District Unite</td>
           	    <td class="versus">vs</td>
-          	    <td><img src="http://placehold.it/32x32" alt=""> Fantastic Team</td>
+          	    <td class="team">Fantastic Team</td>
           	    <td ng-if="$index < 3" class="date">Feb. {{$index + 5}}</td>
           	    <td ng-if="$index >= 3" class="score">Win</td>
         	    </tr>
-        	    <tr ng-repeat-end>
-          	    <td colspan="4" class="text-secondary">
-            	    District Unite – League of Legends
-          	    </td>
-        	    </tr>
       	    </tbody>
     	    </table>
-    	  </zf-tab>
+        </div>
+        <div class="grid-content medium-4">
+          <h2>Roster</h2>
+          <ul class="no-bullet grid-block">
+	      		<li class="grid-content" ng-repeat="i in [1,2,3,4,5,6,7,8]">
+    	      	<a ui-sref="player"><span ng-include="'templates/components/_user-image.html'" class="medium"></span></a>
+	      		</li>
+	      	</ul>
+        </div>
+      </div>
 
-    	  <zf-tab title="Tournaments">
-    	  </zf-tab>
-
-    	  <zf-tab title="Statistics">
-    	  </zf-tab>
-
-    	  <zf-tab title="VODS">
-      	  <ul class="grid-block small-up-2 medium-up-4">
+      <div class="grid-block">
+        <div class="grid-content medium-4 medium-order-2">
+          <h2>Stats</h2>
+        </div>
+        <div class="grid-content medium-8 medium-order-1">
+          <h2>VODS</h2>
+          <ul class="grid-block small-up-2 medium-up-4">
             <li class="grid-content" ng-repeat="i in [1,2,3,4] track by $index">
               <div class="card linked">
                 <div class="card-section">
@@ -79,9 +74,9 @@ url: /team
               </div>
             </li>
       	  </ul>
-    	  </zf-tab>
+        </div>
+      </div>
 
-    	</zf-tabs>
     </div>
 	</section>
 </div>
