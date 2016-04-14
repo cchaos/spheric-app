@@ -1,30 +1,36 @@
 ---
 name: messages.content
 url: /content
-animationIn: slideInRight
+animationIn: slideInLeft
 animationOut: slideOutRight
 ---
 
 <div class="grid-block vertical">
 
   <div id="messages-title" class="grid-content shrink">
-    <h2>NYU – League of Legends</h2>
+    <h2><a ui-sref="messages.navigation" class="show-for-small-only float-left"><i class="fa fa-angle-left"></i></a> &emsp; NYU – League of Legends</h2>
+
+    <div class="grid-block v-align">
+      <div class="grid-content">
+        <a ui-sref="player" ng-repeat="$i in [1,2,3,4]"><span ng-include="'templates/components/_user-image.html'" class="small"></span></a>
+      </div>
+      <div class="grid-content shrink">
+        <a id="more-players-button" class="button tiny transparent float-right" title="view all online"><i class="fa fa-ellipsis-h"></i></a>
+      </div>
+    </div>
   </div>
 
   <div id="messages-content" class="grid-content">
-
-    <div class="message grid-block nowrap">
-      <div class="content grid-content">
-        <div class="card flat">
-          <h3>Message</h3>
-        </div>
-      </div>
-    </div>
-
+    <div ng-include="'templates/components/_message.html'" ng-repeat="$i in [1,2,3,4,5,6,7]"></div>
   </div>
 
   <div id="messages-input" class="grid-content shrink">
-    <textarea name="" id="" rows="2"></textarea>
+    <form action="">
+      <span class="inline-label">
+        <a class="button" title="Add attachment"><i class="fa fa-paperclip"></i></a>
+        <textarea name="" id="" rows="2"></textarea>
+        <button class="button primary" type="submit" title="Send message"><i class="fa fa-paper-plane"></i></button></span>
+	  </form>
   </div>
 
 </div>

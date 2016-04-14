@@ -5,7 +5,7 @@ url: /messages
 
 <div class="messages-page grid-block vertical nowrap">
 
-  <header class="page-header grid-content shrink">
+  <header class="page-header grid-content shrink hide-for-small-only">
     <div class="grid-container">
       <h1 class="name">
           <a ui-sref="messages.navigation" class="show-for-small-only float-left"><i class="fa fa-angle-left"></i></a> &emsp;
@@ -16,7 +16,7 @@ url: /messages
   <div id="messages-holder" class="grid-block">
 
     <!-- ONLY ON SMALL SCREENS, USE SUB-VIEWS -->
-    <div ng-class="[currentSlug, 'ui-animation']" class="grid-content show-for-small-only" ui-view></div>
+    <div ng-class="[currentSlug, 'ui-animation']" class="grid-block show-for-small-only" ui-view></div>
 
   </div>
 </div>

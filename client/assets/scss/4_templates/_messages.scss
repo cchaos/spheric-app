@@ -7,12 +7,14 @@
 $messages-background: spheric-color('white');
 
 #messages-holder {
-  // adding .grid-container messes with vertical heights and scrolling
-  // manually set max-width here and align using flex-box
-  max-width: $container-width;
-  align-self: center;
+  @include breakpoint(medium) {
+    // adding .grid-container messes with vertical heights and scrolling
+    // manually set max-width here and align using flex-box
+    max-width: $container-width;
+    align-self: center;
 
-  overflow: visible; // make sure the content's shadow is visible
+    overflow: visible; // make sure the content's shadow is visible
+  }
 }
 
 #messages-sidebar {
@@ -21,20 +23,31 @@ $messages-background: spheric-color('white');
     padding-top:  $global-padding;
   }
 
-  + div {
-    background-color: #fff;
-    @include shadow-2dp;
-    border-radius: $global-radius;
-    margin-bottom: $global-padding;
+  @include breakpoint(medium) {
+    // style the main content like a card but only when it's next to the sidebar
+    + div {
+      background-color: $card-background;
+      @include shadow-2dp;
+      border-radius: $global-radius;
+      margin-bottom: $global-padding;
+    }
   }
 }
 
 #messages-title {
   padding-top: $global-padding/2;
   padding-bottom: $global-padding/2;
+  border-bottom: 1px solid spheric-color('dark', 'barely');
 
   h2 {
-    @extend %h6;
+    margin-bottom: 0;
+    padding-bottom: $global-padding/2;
+    line-height: 2.4rem;
+
+    + div {
+      padding-top: $global-padding/2;
+      border-top: 1px solid spheric-color('dark', 'barely');
+    }
   }
 
   span {
@@ -45,50 +58,44 @@ $messages-background: spheric-color('white');
     margin: 0;
     font-size: rem-calc(16);
   }
+
+  @include breakpoint(medium) {
+    h2 {
+      //@extend %h6;
+    }
+  }
 }
 
 #messages-content {
-  padding-top: $global-padding;
-  padding-bottom: $global-padding;
-
-  border-top: 1px solid spheric-color('dark', 'barely');
-  border-bottom: 1px solid spheric-color('dark', 'barely');
 
   .message {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    padding-right: 3rem;
+    margin-top: $global-padding;
+    margin-bottom: $global-padding;
+    padding-right: $global-padding;
+  }
 
-    .player {
-      padding-top: $global-padding*.6;
-    }
+  .player {
+    padding-top: $global-padding*.6;
+  }
 
-    .content {
-      position: relative;
+  .content {
+    position: relative;
 
-      &::after {
-        @include css-triangle(
-          $triangle-size: 6px,
-          $triangle-color: spheric-color('light'),
-          $triangle-direction: right
-        );
+    &::after {
+      @include css-triangle(
+        $triangle-size: 8px,
+        $triangle-color: $card-background,
+        $triangle-direction: right
+      );
 
-        position: absolute;
-        left: -11px;
-        top: $global-padding*1.3;
-      }
-    }
-
-    .username {
-      margin-bottom: .5rem;
-    }
-    .text {
-      font-size: 1.1em;
+      position: absolute;
+      left: -16px;
+      top: 20px;
     }
   }
 
-  .card {
-    border: 1px solid spheric-color('light');
+  .username {
+    margin-bottom: .5rem;
   }
 
   .date {
@@ -102,8 +109,29 @@ $messages-background: spheric-color('white');
       }
     }
   }
+
+  @include breakpoint(medium) {
+    .message {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      padding-right: 3rem;
+    }
+
+    .content::after {
+      border-right-color: spheric-color('light');
+    }
+
+    .card {
+      border: 1px solid spheric-color('light');
+    }
+
+    .text {
+      font-size: 1.1em;
+    }
+  }
 }
 
 #messages-input {
   padding-top: $global-padding;
+  border-top: 1px solid spheric-color('dark', 'barely');
 }

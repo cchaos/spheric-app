@@ -9,8 +9,8 @@ $page-header-foreground: spheric-color('dark');
 
 .page-header {
 
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: $global-padding/2;
+  padding-bottom: $global-padding/2;
 
   background-color: $page-header-background;
 
