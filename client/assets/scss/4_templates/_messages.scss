@@ -18,15 +18,18 @@ $messages-background: spheric-color('white');
 }
 
 #messages-content-holder {
-  @include breakpoint(medium) {
-    // style the main content like a card
-    background-color: $card-background;
-    @include shadow-2dp;
-    border-radius: $global-radius;
-  }
+}
 
-  @media screen and (min-width: $container-width) {
-    margin: $global-padding;
+#messages-content-holder {
+  @include breakpoint(medium) {
+    padding: $global-padding;
+
+    > div {
+      // style the main content like a card
+      background-color: $card-background;
+      @include shadow-2dp;
+      border-radius: $global-radius;
+    }
   }
 }
 
