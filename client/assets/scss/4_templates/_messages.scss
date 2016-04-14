@@ -18,9 +18,6 @@ $messages-background: spheric-color('white');
 }
 
 #messages-content-holder {
-}
-
-#messages-content-holder {
   @include breakpoint(medium) {
     padding: $global-padding;
 
@@ -31,6 +28,10 @@ $messages-background: spheric-color('white');
       border-radius: $global-radius;
     }
   }
+}
+
+#messages-sidebar-medium {
+  width: 300px;
 }
 
 #messages-list {

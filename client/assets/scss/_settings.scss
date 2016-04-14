@@ -310,6 +310,7 @@ $actionsheet-tail-size: 6px;
 $blocklist-item-padding: 1rem;
 $blocklist-item-color: $body-font-color;
 $blocklist-item-background-hover: spheric-color('dark', 'barely');
+$blocklist-item-background-active: $blocklist-item-background-hover;
 // $blocklist-item-color-disabled: #999;
 $blocklist-item-border: none;
 

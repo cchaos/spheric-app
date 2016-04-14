@@ -49,7 +49,7 @@
   <section class="sidebar-block-list">
     <header>Groups</header>
     <ul class="slim-list">
-      <li class="item" ng-repeat="$i in [1,2] track by $index"><a ui-sref="messages">
+      <li class="item" ng-repeat="$i in [1,2] track by $index" ng-class="{'is-active': $first}"><a ui-sref="messages">
         <span class="img">
           <span ng-include="'templates/components/_group-image.html'" class="small hide-for-medium-up"></span>
         </span>

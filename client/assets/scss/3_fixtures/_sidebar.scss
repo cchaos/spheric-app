@@ -109,6 +109,12 @@ $sidebar-item-hover-color: spheric-color('primary', 'barely');
       $border: none,
       $padding: $global-padding
     );
+
+    &.is-active {
+      > a {
+        background-color: $blocklist-item-background-active;
+      }
+    }
   }
 
   form {
@@ -120,7 +126,7 @@ $sidebar-item-hover-color: spheric-color('primary', 'barely');
     @extend %h6;
     padding: $global-padding;
     text-align: right;
-    color: color-opacity($sidebar-foreground, 'tertiary');
+    color: spheric-color('primary', 'tertiary');
 
     &:hover, &:focus {
       background: $sidebar-item-hover-color;
