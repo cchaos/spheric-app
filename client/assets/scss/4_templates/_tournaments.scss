@@ -91,6 +91,12 @@
     }
   }
 
+  @include breakpoint(medium) {
+    .card-header {
+      height: 16rem;
+    }
+  }
+
 }
 
 

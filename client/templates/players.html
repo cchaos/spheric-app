@@ -38,14 +38,18 @@ url: /players
             </zf-accordion-item>
         	</zf-accordion>
 
-        	<ul class="grid-block small-up-2 medium-up-3 large-up-4">
+        	<ul class="grid-block wrap">
             <li class="grid-content" ng-repeat="i in [1,2,3,4,5,6,7,8,9,10,11,12] track by $index">
               <div class="card linked" ui-sref="player">
-                <div class="card-section">
-                  <div class="player-image"><span ng-include="'templates/components/_user-image.html'" class="large"></span></div>
-                  <h3 class="name">Awesome Player</h3>
-                  <h5 class="school subheader">New York University</h5>
-                  <div class="games"><span class="label">Tetris</span> <span class="label" ng-if="$even">League of Legends</span></div>
+                <div class="clearfix">
+                  <div class="card-section image">
+                    <span ng-include="'templates/components/_user-image.html'" class="large"></span>
+                  </div>
+                  <div class="card-section text">
+                    <h3 class="name">Awesome Player</h3>
+                    <h5 class="subheader">New York University</h5>
+                    <div class="games"><span class="label">Tetris</span> <span class="label" ng-if="$even">League of Legends</span></div>
+                  </div>
                 </div>
                 <div class="card-action">
                   <a class="button primary expand"><i class="fa fa-bolt"></i> Instant Connect</a>
