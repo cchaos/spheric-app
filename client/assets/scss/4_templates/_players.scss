@@ -57,6 +57,15 @@
     li {
       min-width: 33%;
       margin-bottom: $global-padding;
+
+      @include breakpoint(medium) {
+        // Safari will render too many in a row by just setting a min width
+        // so to make sure there is only 3, set the flex-basis to 33% as well
+        // but only when on larger screens
+        flex-basis: 33%;
+      }
+
+
     }
   }
 
