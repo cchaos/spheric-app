@@ -85,13 +85,14 @@ $nav-panel-zindex: 20;
     );
     // pull label closer to text (overlapping just slightly)
     > li > a {
-      padding-right: $menubar-item-padding*1.7;
+      padding-right: $menubar-item-padding*1.5;
       // match the same padding on the left
-      padding-left: $menubar-item-padding*1.7;
+      padding-left: $menubar-item-padding*1.5;
     }
     .menu-bar-label {
       // Foundation doesn't correctly align label-corner to the top
-    	top: $menubar-item-padding/1.7;
+    	top: $menubar-item-padding/2;
+    	right: $menubar-item-padding/1.5;
     	// alter font
     	font-size: .7rem;
     	font-weight: $font-weight-bold;

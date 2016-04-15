@@ -1,0 +1,88 @@
+---
+name: teams
+url: /teams
+---
+
+<div id="teams-page" class="grid-block vertical nowrap">
+
+  <div class="page-header image grid-content shrink">
+    <div ng-include="'templates/partials/_nav-main.html'"></div>
+  </div>
+
+	<section class="grid-content shrink">
+    <div class="grid-container">
+
+      <div class="grid-block vertical">
+
+        <div id="players-search" class="grid-content">
+        	<form>
+        	  <span class="inline-label"><input type="search" placeholder="Search for teams...">
+        	  	<button class="button primary" type="submit"><span class="fa fa-search"></span></button></span>
+
+          	<zf-accordion class="small-extras-accordion" auto-open="false">
+              <zf-accordion-item class="flat" title="Show Filters">
+                <div class="grid-block v-align">
+                  <div class="grid-content">
+                    <select name="" id="">
+                      <option value="">School</option>
+                      <option ng-repeat="i in ['Rochester', 'New York', 'Johannesburg', 'Illinois', 'Maryland']" value="">University of {{i}}</option>
+                    </select>
+                  </div>
+                  <div class="grid-content">
+                    <select name="" id="">
+                      <option value="">Game</option>
+                      <option ng-repeat="i in ['Mario Kart IV', 'League of Legends', 'Tetris', 'Gears of War']" value="">{{i}}</option>
+                    </select>
+                  </div>
+                  <div class="grid-content">
+                    <input id="checkbox1" type="checkbox"><label for="checkbox1">My teams only</label>
+                  </div>
+                </div>
+              </zf-accordion-item>
+            </zf-accordion>
+        	</form>
+
+        	<h5 id="players-search-description">Showing suggested teams from <strong>New York University</strong></h5>
+
+        </div>
+
+        <div id="players-results" class="grid-content">
+        	<div class="card">
+        		<table class="zebra selectable">
+            	<thead>
+            	  <th class="team">Team <i class="fa fa-caret-down sort-arrow"></i></th>
+              	<th class="image"></th>
+              	<th class="rank">Rank</th>
+              	<th class="wins">Wins</th>
+              	<th class="losses">Losses</th>
+              	<th class="actions"></th>
+            	</thead>
+            	<tbody>
+              	<tr ng-repeat="$i in [1,2,3,4,5,6,7,8,9,10]" ui-sref="team">
+              		<td class="image">
+                		<span ng-include="'templates/components/_team-image.html'" class="large"></span>
+              		</td>
+              		<td class="team">
+                  	<h3 class="name">Awesome Team</h3>
+                  	<h5 class="subheader">New York University &emsp; <strong>CS:GO</strong></h5>
+              		</td>
+              		<td class="rank">Master</td>
+              		<td class="wins">51</td>
+              		<td class="losses">25</td>
+              		<td class="actions"><a ui-sref="team" class="button small hollow">View</a></td>
+              	</tr>
+            	</tbody>
+        		</table>
+        	</div>
+
+          <br>
+
+          <p class="text-center">
+          	<a href="" class="button expand transparent">Show More</a>
+          </p>
+        </div>
+      </div>
+
+		</div>
+	</section>
+</div>

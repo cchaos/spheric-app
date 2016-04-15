@@ -5,6 +5,8 @@
 */
 
 $table-striped-background: spheric-color('light', .4);
+$table-hover-background: spheric-color('primary', .1, -10);
+$table-border-color: spheric-color('light', .7);
 
 // BASIC STYLES
 // None are included in Foundation for Apps
@@ -20,11 +22,27 @@ table {
     }
   }
 
+  thead,
+  tr {
+    border-bottom: 1px solid $table-border-color;
+    @include basic-transition;
+  }
+
   th {
     @extend %h6;
     text-align: left;
+  }
 
-    border-bottom: 1px solid $table-striped-background;
+  .actions {
+    text-align: right;
+  }
+
+  .button {
+    margin-bottom: 0;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 
   &.zebra {
@@ -33,11 +51,9 @@ table {
     }
   }
 
-  .button {
-    margin-bottom: 0;
-
-    &:last-of-type {
-      margin-right: 0;
+  &.selectable {
+    tbody tr:hover {
+      background-color: $table-hover-background;
     }
   }
 

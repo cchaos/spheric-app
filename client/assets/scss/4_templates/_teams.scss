@@ -1,0 +1,61 @@
+/*
+//
+// PLAYERS
+//
+*/
+
+
+// BOTH PAGES
+
+#team-page,
+#teams-page {
+  .page-header {
+    @include page-header-margin-after;
+  }
+}
+
+// SEARCH PAGE
+
+#teams-page {
+  table {
+   .rank,
+   .wins,
+   .losses {
+      text-align: center;
+    }
+
+    .wins,
+    .losses {
+      font-weight: $font-weight-bold;
+    }
+
+    td.losses {
+      color: spheric-color('dark', 'tertiary');
+    }
+
+    @include breakpoint(small only) {
+      .image,
+      .actions,
+      .rank {
+        display: none;
+      }
+
+      .losses {
+        padding-right: $global-padding;
+      }
+
+      th {
+        font-size: .8em;
+      }
+    }
+  }
+}
+
+
+// INDIVIDUAL PAGE
+
+#team-page {
+  .page-header.image::before {
+    background-image: url(https://source.unsplash.com/featured/nature);
+  }
+}
