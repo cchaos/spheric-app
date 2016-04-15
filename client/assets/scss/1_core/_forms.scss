@@ -23,18 +23,6 @@ label {
   }
 }
 
-// remove rounded corners of inputs near inline labels
-.inline-label {
-  input:not(:first-child) {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-  input:not(:last-child) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-}
-
 // INLINE LABEL WITH BUTTON
 
 // alter position of inline label so it appears inside the input

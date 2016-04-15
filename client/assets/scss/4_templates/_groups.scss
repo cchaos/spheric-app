@@ -137,6 +137,10 @@ $group-post-border: 1px solid spheric-color('dark', 'barely');
 
 // GROUPS INDEX PAGE
 
+.groups-page .page-header + section {
+  padding-top: 2rem;
+}
+
 .groups-list {
   background-color: spheric-color('light', 'secondary');
 
