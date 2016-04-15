@@ -6,6 +6,14 @@
 
 $messages-background: spheric-color('white');
 
+#messages-page .page-header + section {
+  padding-top: $nav-main-small-height;
+
+  @include breakpoint(medium) {
+    padding-top: 0;
+  }
+}
+
 #messages-holder {
   @include breakpoint(medium) {
     // adding .grid-container messes with vertical heights and scrolling

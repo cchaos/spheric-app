@@ -3,34 +3,29 @@ name: messages_mobile
 url: /messages_mobile
 ---
 
-<div class="messages-page grid-block vertical nowrap hide-for-medium">
-  <div id="messages-holder" class="grid-block">
+<div id="messages-page" class="grid-block vertical nowrap">
 
-    <div class="grid-block vertical">
+  <header class="page-header image grid-content shrink">
+    <div ng-include="'templates/partials/_nav-main.html'"></div>
+  </header>
 
-      <div id="message-title" class="grid-content shrink">
+  <section id="messages-holder" class="grid-block">
 
-        <div class="grid-block">
-          <div class="grid-content truncate">
-            <h2>Messages</h2>
-          </div>
-        </div>
-
-      </div>
+    <div class="grid-block vertical hide-for-medium">
 
       <div ng-include="'templates/partials/_messages-sidebar.html'"></div>
 
     </div>
 
-  </div>
-</div>
+    <div class="grid-content show-for-medium">
+      <br>
+      <br>
+      <br>
+      <h1 class="text-center">
+        Whoops, we lost ya there. <br>
+        <a ui-sref="messages">Get back to the messages page.</a>
+      </h1>
+    </div>
 
-<div class="grid-content show-for-medium">
-  <br>
-  <br>
-  <br>
-  <h1 class="text-center">
-    Whoops, we lost ya there. <br>
-    <a ui-sref="messages">Get back to the messages page.</a>
-  </h1>
+  </section>
 </div>

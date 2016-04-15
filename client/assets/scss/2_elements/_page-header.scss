@@ -7,11 +7,13 @@
 $page-header-background: spheric-color('primary');
 $page-header-foreground: spheric-color('white');
 
+$nav-main-small-height: rem-calc(56);
+
 $cta-zindex: $nav-panel-zindex - 1;
 
 @mixin page-header-margin-after($padding: 2rem) {
   + section {
-    padding-top: $padding + 3rem;
+    padding-top: $padding + $nav-main-small-height;
 
     @include breakpoint(medium) {
       padding-top: $padding;
