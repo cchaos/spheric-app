@@ -1,0 +1,32 @@
+/*
+//
+// TABLES
+//
+*/
+
+$table-striped-background: spheric-color('light', .4);
+
+// BASIC STYLES
+// None are included in Foundation for Apps
+
+table {
+  width: 100%;
+
+  th, td {
+    padding: $global-padding;
+  }
+
+  th {
+    @extend %h6;
+    text-align: left;
+
+    border-bottom: 1px solid $table-striped-background;
+  }
+
+  &.zebra {
+    tr:nth-child(even) {
+      background-color: $table-striped-background;
+    }
+  }
+
+}
