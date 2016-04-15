@@ -8,6 +8,9 @@
 // ROUND USER PROFILE IMAGE
 
 $all-images: ".user-image, .group-image, .team-image";
+$images-size-small: 2.5rem;
+$images-size-medium: 4rem;
+$images-size-large: 6rem;
 
 #{$all-images} {
   display: inline-block;
@@ -46,22 +49,22 @@ $all-images: ".user-image, .group-image, .team-image";
   // default is small
   &,
   .small & {
-    width: 2.5rem;
-    height: 2.5rem;
-    line-height: 2.5rem;
+    width: $images-size-small;
+    height: $images-size-small;
+    line-height: $images-size-small;
   }
 
   .medium & {
-    width: 4rem;
-    height: 4rem;
-    line-height: 4rem;
+    width: $images-size-medium;
+    height: $images-size-medium;
+    line-height: $images-size-medium;
     font-size: 1.5em;
   }
 
   .large & {
-    width: 6rem;
-    height: 6rem;
-    line-height: 6rem;
+    width: $images-size-large;
+    height: $images-size-large;
+    line-height: $images-size-large;
     font-size: 2em;
   }
 
