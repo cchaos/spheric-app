@@ -19,8 +19,8 @@ url: /groups
         	  	<button class="button primary" type="submit"><span class="fa fa-search"></span></button></span>
         	</form>
 
-          <zf-accordion class="groups-extras-accordion" auto-open="false">
-            <zf-accordion-item class="groups-list" title="Your Groups">
+          <zf-accordion id="groups-list" class="small-extras-accordion" auto-open="false">
+            <zf-accordion-item class="flat" title="Your Groups">
               <section class="sidebar-block-list">
                 <ul class="slim-list">
                   <li class="item" ng-repeat="$i in [1,2,3,4,5] track by $index"><a ui-sref="groups.single">

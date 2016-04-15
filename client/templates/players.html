@@ -12,32 +12,41 @@ url: /players
 	<section class="grid-content shrink">
     <div class="grid-container">
 
-      <div id="players-results" class="grid-block align-center">
+      <div class="grid-block vertical">
 
-        <div class="grid-content small-12">
+        <div id="players-search" class="grid-content small-12">
         	<form>
         	  <span class="inline-label"><input type="search" placeholder="Search for players...">
         	  	<button class="button primary" type="submit"><span class="fa fa-search"></span></button></span>
+
+          	<zf-accordion class="small-extras-accordion" auto-open="false">
+              <zf-accordion-item class="flat" title="Show Filters">
+                <div class="grid-block v-align">
+                  <div class="grid-content">
+                    <select name="" id="">
+                      <option value="">School</option>
+                      <option ng-repeat="i in ['Rochester', 'New York', 'Johannesburg', 'Illinois', 'Maryland']" value="">University of {{i}}</option>
+                    </select>
+                  </div>
+                  <div class="grid-content">
+                    <select name="" id="">
+                      <option value="">Game</option>
+                      <option ng-repeat="i in ['Mario Kart IV', 'League of Legends', 'Tetris', 'Gears of War']" value="">{{i}}</option>
+                    </select>
+                  </div>
+                  <div class="grid-content">
+                    <input id="checkbox1" type="checkbox"><label for="checkbox1">My connections only</label>
+                  </div>
+                </div>
+              </zf-accordion-item>
+            </zf-accordion>
         	</form>
 
-        	<h5>Showing suggested connections from <strong>New York University</strong></h5>
+        	<h5 id="players-search-description">Showing suggested connections from <strong>New York University</strong></h5>
 
-        	<zf-accordion auto-open="false">
-            <zf-accordion-item title="Filters">
-              <form>
-                <select name="" id="">
-                  <option value="">School</option>
-                  <option ng-repeat="i in ['Rochester', 'New York', 'Johannesburg', 'Illinois', 'Maryland']" value="">University of {{i}}</option>
-                </select>
-                <select name="" id="">
-                  <option value="">Game</option>
-                  <option ng-repeat="i in ['Mario Kart IV', 'League of Legends', 'Tetris', 'Gears of War']" value="">{{i}}</option>
-                </select>
-                <input id="checkbox1" type="checkbox"><label for="checkbox1">My connections only</label>
-              </form>
-            </zf-accordion-item>
-        	</zf-accordion>
+        </div>
 
+        <div id="players-results" class="grid-content small-12">
         	<ul class="grid-block wrap">
             <li class="grid-content" ng-repeat="i in [1,2,3,4,5,6,7,8,9,10,11,12] track by $index">
               <div class="card linked" ui-sref="player">

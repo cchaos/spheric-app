@@ -16,11 +16,40 @@
 
 #player-page {
   .page-header.image::before {
-    background-image: url(https://source.unsplash.com/category/people);
+    background-image: url(https://source.unsplash.com/featured/people);
   }
 }
 
 // SEARCH PAGE
+
+#players-search {
+  form {
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include breakpoint(medium) {
+    form {
+      margin-bottom: 4rem;
+    }
+
+    .accordion-title {
+      display: none;
+    }
+
+    select {
+      margin-bottom: 0;
+      background-color: transparent;
+      border-width: 0 0 1px 0;
+    }
+  }
+}
+
+#players-search-description {
+  margin-bottom: 2rem;
+  color: spheric-color('dark', 'secondary');
+}
 
 #players-results {
 

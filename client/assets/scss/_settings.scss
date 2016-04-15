@@ -112,7 +112,7 @@ $font-weight-bold: 700;
 $font-weight-extra: 800;
 
 // We use these to control various global styles
-$body-background: spheric-color('light');
+$body-background: spheric-color('white');
 $body-font-color: $dark-color;
 $body-font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $headline-font-family: "Work Sans", "Source Sans Pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -375,11 +375,11 @@ $input-border-hover: 1px solid spheric-color('dark', 'tertiary');
 $input-border-focus: 1px solid spheric-color('dark', 'secondary');
 
 // Select menus
-// $select-color: #000;
-// $select-background: #fafafa;
-// $select-background-hover: smartscale($select-background, 4%);
+$select-color: $input-color;
+$select-background: $input-background;
+$select-background-hover: $select-background;
 // $select-arrow: true;
-// $select-arrow-color: $select-color;
+$select-arrow-color: color-opacity($select-color, 'tertiary');
 
 // Labels
 $form-label-fontsize: $form-fontsize;

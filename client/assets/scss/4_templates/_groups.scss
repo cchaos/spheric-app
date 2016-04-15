@@ -92,64 +92,18 @@ $group-post-border: 1px solid spheric-color('dark', 'barely');
 
 }
 
-.groups-extras-accordion {
-  margin-bottom: 2rem;
-
-  .accordion-item:not(.groups-list) {
-    @extend .card;
-  }
-
-  .accordion-title {
-    @extend .button;
-    @extend .transparent;
-    padding: $global-padding;
-    margin-bottom: 0;
-
-    width: 100%;
-    text-align: left;
-
-    @include breakpoint(small only) {
-      &::after {
-        @include css-triangle(4px, $body-font-color, top);
-        float: right;
-      }
-    }
-  }
-
-  .accordion-content {
-    padding: $global-padding/2 $global-padding;
-  }
-
-  @include breakpoint(medium) {
-    .accordion-item:not(.groups-list) { // needs to be this specific to override extension of card margin
-      margin-bottom: 4rem;
-    }
-
-    .accordion-title {
-      pointer-events: none;
-    }
-
-    .accordion-content {
-      display: block !important;
-    }
-  }
-}
-
 // GROUPS INDEX PAGE
 
 #groups-header {
   @include page-header-margin-after;
 }
 
-.groups-list {
-  background-color: spheric-color('light', 'secondary');
-
+#groups-list {
   @include breakpoint(medium) {
-    background-color: transparent;
-
     .accordion-title {
       padding-left: 0;
       border-bottom: 1px solid spheric-color('light', 'secondary');
+      margin-bottom:  1rem;
     }
   }
 }
@@ -169,6 +123,10 @@ $group-post-border: 1px solid spheric-color('dark', 'barely');
       flex-grow: 0;
     }
   }
+}
+
+#group-extras {
+  background-color: transparent;
 }
 
 // MODAL FOR CREATING A NEW POST
