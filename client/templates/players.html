@@ -5,12 +5,9 @@ url: /players
 
 <div id="players-page" class="grid-block vertical nowrap">
 
-  <header class="page-header image default-search grid-content shrink">
-  	<form>
-  	  <span class="inline-label"><input type="search" placeholder="Search for players...">
-  	  	<button class="button primary" type="submit"><span class="fa fa-search"></span></button></span>
-  	</form>
-  </header>
+  <div class="page-header image grid-content shrink">
+    <div ng-include="'templates/partials/_nav-main.html'"></div>
+  </div>
 
 	<section class="grid-content shrink">
     <div class="grid-container">
@@ -18,6 +15,11 @@ url: /players
       <div id="players-results" class="grid-block align-center">
 
         <div class="grid-content small-12">
+        	<form>
+        	  <span class="inline-label"><input type="search" placeholder="Search for players...">
+        	  	<button class="button primary" type="submit"><span class="fa fa-search"></span></button></span>
+        	</form>
+
         	<h5>Showing suggested connections from <strong>New York University</strong></h5>
 
         	<zf-accordion auto-open="false">

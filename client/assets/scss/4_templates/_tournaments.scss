@@ -4,28 +4,42 @@
 //
 */
 
+#tournaments-page,
+#tournament-page {
+
+  .subheader {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  @include breakpoint(medium) {
+
+    h1 {
+      font-size: 4rem;
+      line-height: .8em;
+    }
+
+  }
+}
+
 #tournaments-page {
-  .page-header {
-    padding-top: 3rem;
+  .page-header header {
+    padding-top: 6rem;
     padding-bottom: 3rem;
 
-    h1, h2 {
+    h1, .subheader {
       max-width: 30rem;
       margin-left: auto;
       margin-right: auto;
-    }
-
-    h2 {
-      margin-bottom: 3rem;
     }
 
     @include breakpoint(medium) {
       padding-top: 5rem;
       padding-bottom: 5rem;
 
-      h1, h2 {
-        padding-left: 2rem;
-        padding-right: 2rem;
+      h1 {
+        font-size: 4rem;
+        line-height: .8em;
       }
     }
   }
@@ -131,14 +145,19 @@
 #tournament-page {
 
   .page-header {
+
     // tournaments should have their own custom image
     &.image::before {
       background-image: url(https://source.unsplash.com/category/technology);
-      opacity: 1;
+      opacity: .8;
     }
 
-    h1 {
-      padding-right: 5rem;
+    header {
+      padding-top:  11rem;
+
+      @include breakpoint(medium) {
+        padding-top:  15rem;
+      }
     }
   }
 

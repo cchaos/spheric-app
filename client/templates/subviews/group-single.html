@@ -1,78 +1,77 @@
 ---
 name: groups.single
-url: /groups/single
+url: /single
 ---
 
-<div id="group-page" class="grid-block vertical nowrap">
 
-  <header class="page-header image profile with-back grid-content shrink">
-    <a ui-sref="groups" class="back"><i class="fa fa-angle-left"></i></a>
-    <div class="grid-container">
-      <div class="grid-block vertical medium-horizontal v-align nowrap">
-        <div class="grid-content shrink align-center">
-          <div ng-include="'templates/components/_team-image.html'" class="profile"></div>
-        </div>
-        <div class="grid-content align-center">
-          <h1 class="name">Fantastic Group</h1>
-    		  <h3 class="subheader"><i class="fa fa-globe fa-fw"></i> Public Group</strong></h3>
-    		</div>
-    		<div class="grid-content shrink align-center">
-    		  <ul class="cta-buttons no-bullet">
-    		  	<li><a class="button raised register"><i class="fa fa-plus fa-fw"></i> Create a Post</a></li>
-    		  	<li><a class="button accent raised register"><span class="fa fa-comment fa-fw"></span> Message</a></li>
-    		  </ul>
-    		</div>
+<div id="group-header" class="page-header image with-back with-ctas grid-content shrink">
+  <div ng-include="'templates/partials/_nav-main.html'"></div>
+
+  <a ui-sref="groups" class="back"><i class="fa fa-angle-left"></i></a>
+  <header class="grid-container profile">
+    <div class="grid-block vertical medium-horizontal v-align nowrap">
+      <div class="grid-content shrink align-center">
+        <div ng-include="'templates/components/_team-image.html'" class="profile"></div>
       </div>
+      <div class="grid-content align-center">
+        <h2 class="name">Fantastic Group</h2>
+  		  <h3 class="subheader"><i class="fa fa-globe fa-fw"></i> Public Group</strong></h3>
+  		</div>
+  		<div class="grid-content shrink align-center">
+  		  <ul class="cta-buttons no-bullet">
+  		  	<li><a class="button raised register"><i class="fa fa-plus fa-fw"></i> Create a Post</a></li>
+  		  	<li><a class="button accent raised register"><span class="fa fa-comment fa-fw"></span> Message</a></li>
+  		  </ul>
+  		</div>
     </div>
   </header>
-
-	<section class="grid-content shrink">
-    <div class="grid-container">
-
-  	  <div class="grid-block">
-  	    <div class="grid-content medium-4">
-
-          <zf-accordion class="groups-extras-accordion" auto-open="false" multi-open="true">
-            <zf-accordion-item class="about" title="About">
-    	      	<p>Meh drinking vinegar cardigan mumblecore listicle etsy.  Umami kickstarter vegan typewriter.  Drinking vinegar franzen tacos normcore viral mixtape selvage, fixie pitchfork XOXO 8-bit.</p>
-            </zf-accordion-item>
-            <zf-accordion-item class="members" title="Members">
-    	      	<ul class="no-bullet grid-block">
-    	      		<li class="grid-content" ng-repeat="i in [1,2,3,4,5,6,7,8]">
-	      	      	<a ui-sref="player"><span ng-include="'templates/components/_user-image.html'" class="medium"></span></a>
-    	      		</li>
-    	      	</ul>
-            </zf-accordion-item>
-          </zf-accordion>
-
-  	    </div>
-
-  	  	<div class="grid-content medium-8">
-  	  		<div ng-include="'templates/components/_post.html'" ng-repeat="$i in [4,5,6] track by $index"></div>
-
-    	  	<a class="button expand dark raised">Load More</a>
-  	  	</div>
-  	  </div>
-
-  	  <!-- Add Post Modal -->
-  	  <zf-modal id="create-post" class="collapse large" >
-        <div class="grid-block vertical">
-          <div class="grid-content padding">
-            <h3 class="text-center title">Create a Post in <strong>Fantastic Group</strong></h3>
-            <form action="">
-          	  <textarea name="" id="" rows="5" placeholder="What do you have to say?"></textarea>
-          	  <span class="inline-label">
-                <input type="search" placeholder="Add attachment">
-              	<button class="button"><i class="fa fa-paperclip"></i></button></span>
-              <hr>
-              <button type="submit" zf-close="" class="button raised float-right">Post</button>
-              <a zf-close="" class="button transparent float-right">Cancel</a>
-        	  </form>
-          </div>
-        </div>
-      </zf-modal>
-
-  	</div>
-  </section>
-
 </div>
+
+<section id="group-content" class="grid-content shrink">
+  <div class="grid-container">
+
+	  <div class="grid-block">
+	    <div class="grid-content medium-4">
+
+        <zf-accordion class="groups-extras-accordion" auto-open="false" multi-open="true">
+          <zf-accordion-item class="about" title="About">
+  	      	<p>Meh drinking vinegar cardigan mumblecore listicle etsy.  Umami kickstarter vegan typewriter.  Drinking vinegar franzen tacos normcore viral mixtape selvage, fixie pitchfork XOXO 8-bit.</p>
+          </zf-accordion-item>
+          <zf-accordion-item class="members" title="Members">
+  	      	<ul class="no-bullet grid-block">
+  	      		<li class="grid-content" ng-repeat="i in [1,2,3,4,5,6,7,8]">
+      	      	<a ui-sref="player"><span ng-include="'templates/components/_user-image.html'" class="medium"></span></a>
+  	      		</li>
+  	      	</ul>
+          </zf-accordion-item>
+        </zf-accordion>
+
+	    </div>
+
+	  	<div class="grid-content medium-8">
+	  		<div ng-include="'templates/components/_post.html'" ng-repeat="$i in [4,5,6] track by $index"></div>
+
+  	  	<a class="button expand dark raised">Load More</a>
+	  	</div>
+	  </div>
+
+	  <!-- Add Post Modal -->
+	  <zf-modal id="create-post" class="collapse large" >
+      <div class="grid-block vertical">
+        <div class="grid-content padding">
+          <h3 class="text-center title">Create a Post in <strong>Fantastic Group</strong></h3>
+          <form action="">
+        	  <textarea name="" id="" rows="5" placeholder="What do you have to say?"></textarea>
+        	  <span class="inline-label">
+              <input type="search" placeholder="Add attachment">
+            	<button class="button"><i class="fa fa-paperclip"></i></button></span>
+            <hr>
+            <button type="submit" zf-close="" class="button raised float-right">Post</button>
+            <a zf-close="" class="button transparent float-right">Cancel</a>
+      	  </form>
+        </div>
+      </div>
+    </zf-modal>
+
+	</div>
+</section>

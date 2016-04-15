@@ -12,10 +12,22 @@ $nav-sidebar-width: 3;
 $nav-main-background: spheric-color('primary');
 $nav-main-foreground: spheric-color('white');
 
+$nav-panel-zindex: 20;
+
 #nav_main {
 	// stretch full to sides of window
 	padding-left: 0;
 	padding-right: 0;
+	margin-left: -$block-padding;
+	margin-right: -$block-padding;
+
+	// on small screens, affix it to the top of the window
+	@include breakpoint(small only) {
+  	position: fixed;
+  	width: 100%;
+  	z-index: $nav-panel-zindex - 1;
+  	@include shadow-3dp;
+	}
 
 	.logo > img {
 	  // override menu bar image sizing
@@ -29,6 +41,7 @@ $nav-main-foreground: spheric-color('white');
 	// Use Foundation's mixin for colors(style) since there will be a lot of adjustments
 	.primary-custom {
     background-color: $nav-main-background;
+
     .menu-bar {
       @include menu-bar-style(
         $background: $nav-main-background,
@@ -43,6 +56,17 @@ $nav-main-foreground: spheric-color('white');
       li > a {
         @extend %h6;
       }
+    }
+
+    @include breakpoint($nav-main-breakpoint) {
+      // remove background on larger screens
+      &, .menu-bar {
+        background: none;
+      }
+
+      // and increase height
+      padding-top: $global-padding;
+      padding-bottom: $global-padding;
     }
   }
 
@@ -82,6 +106,7 @@ $nav-main-foreground: spheric-color('white');
 #nav_main_links {
   // extend panels
   @extend .panel;
+  position: fixed;
   background-color: $nav-main-background;
 
   // put them back into the menu-bar when breakpoint is hit

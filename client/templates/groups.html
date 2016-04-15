@@ -3,53 +3,48 @@ name: groups
 url: /groups
 ---
 
-<div ng-class="[currentSlug, 'ui-animation']" ui-view>
+<div ng-class="[currentSlug, 'ui-animation']" class="grid-block vertical nowrap" ui-view>
 
-  <div class="groups-page grid-block vertical nowrap">
-
-    <header class="page-header image default-search grid-content shrink">
-    	<form>
-    	  <span class="inline-label"><input type="search" placeholder="Find groups...">
-    	  	<button class="button primary" type="submit"><span class="fa fa-search"></span></button></span>
-    	</form>
-    </header>
-
-  	<section class="grid-content shrink">
-      <div class="grid-container">
-
-        <!-- BOTTOM -->
-        <div class="grid-block">
-          <div class="grid-content medium-4">
-            <zf-accordion class="groups-extras-accordion" auto-open="false">
-              <zf-accordion-item class="groups-list" title="Your Groups">
-
-                <section class="sidebar-block-list">
-                  <ul class="slim-list">
-                    <li class="item" ng-repeat="$i in [1,2,3,4,5] track by $index"><a ui-sref="groups.single">
-                      <span class="img">
-                        <span ng-include="'templates/components/_group-image.html'" class="small hide-for-medium-up"></span>
-                      </span>
-                      <span class="content">
-                        <h5>Public Group</h5>
-                      </span>
-                    </a></li>
-                  </ul>
-                </section>
-
-              </zf-accordion-item>
-            </zf-accordion>
-          </div>
-
-        	<div class="grid-content medium-8">
-        		<div ng-include="'templates/components/_post.html'" ng-repeat="$i in [1,2,3] track by $index"></div>
-
-          	<a class="button expand dark raised">Load More</a>
-        	</div>
-        </div>
-
-      </div>
-    </section>
-
+  <div id="groups-header" class="page-header image grid-content shrink">
+    <div ng-include="'templates/partials/_nav-main.html'"></div>
   </div>
 
+	<section id="groups-content" class="grid-content shrink">
+    <div class="grid-container">
+      <div class="grid-block">
+        <div class="grid-content medium-4">
+
+        	<form>
+        	  <span class="inline-label"><input type="search" placeholder="Find groups...">
+        	  	<button class="button primary" type="submit"><span class="fa fa-search"></span></button></span>
+        	</form>
+
+          <zf-accordion class="groups-extras-accordion" auto-open="false">
+            <zf-accordion-item class="groups-list" title="Your Groups">
+              <section class="sidebar-block-list">
+                <ul class="slim-list">
+                  <li class="item" ng-repeat="$i in [1,2,3,4,5] track by $index"><a ui-sref="groups.single">
+                    <span class="img">
+                      <span ng-include="'templates/components/_group-image.html'" class="small hide-for-medium-up"></span>
+                    </span>
+                    <span class="content">
+                      <h5>Public Group</h5>
+                    </span>
+                  </a></li>
+                </ul>
+              </section>
+
+            </zf-accordion-item>
+          </zf-accordion>
+        </div>
+
+      	<div class="grid-content medium-8">
+      		<div ng-include="'templates/components/_post.html'" ng-repeat="$i in [1,2,3] track by $index"></div>
+
+        	<a class="button expand dark raised">Load More</a>
+      	</div>
+      </div>
+
+    </div>
+  </section>
 </div>

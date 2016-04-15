@@ -5,14 +5,18 @@ url: /team
 
 <div id="team-page" class="grid-block vertical nowrap">
 
-  <header class="page-header image profile grid-content shrink">
-    <div class="grid-container">
+  <div class="page-header image with-back with-ctas grid-content shrink">
+    <div ng-include="'templates/partials/_nav-main.html'"></div>
+
+<!--     <a ui-sref="teams" class="back"><i class="fa fa-angle-left"></i></a> -->
+
+    <header class="grid-container profile">
       <div class="grid-block vertical medium-horizontal v-align nowrap">
         <div class="grid-content shrink align-center">
           <div ng-include="'templates/components/_team-image.html'" class="profile"></div>
         </div>
         <div class="grid-content align-center">
-          <h1 class="name">Awesome Team has a long name</h1>
+          <h2 class="name">Awesome Team has a long name</h2>
     		  <h3 class="school subheader">New York University &emsp; <strong>CS:GO</strong></h3>
     		</div>
     		<div class="grid-content shrink align-center">
@@ -32,8 +36,8 @@ url: /team
           <h3><strong>51/25</strong></h3>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
+  </div>
 
 	<section class="grid-content shrink">
     <div class="grid-container">

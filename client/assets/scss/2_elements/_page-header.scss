@@ -7,23 +7,33 @@
 $page-header-background: spheric-color('primary');
 $page-header-foreground: spheric-color('white');
 
-@mixin page-header-margin-after($padding: $global-padding) {
-  .page-header + section {
-    margin-top: $padding;
+$cta-zindex: $nav-panel-zindex - 1;
+
+@mixin page-header-margin-after($padding: 2rem) {
+  + section {
+    padding-top: $padding + 3rem;
+
+    @include breakpoint(medium) {
+      padding-top: $padding;
+    }
   }
 }
 
 .page-header {
 
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-
-  @include breakpoint(medium) {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
   background: $page-header-background;
+
+  header {
+
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+
+    @include breakpoint(medium) {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+
+  }
 
   #{$headers} {
     color: $page-header-foreground;
@@ -118,7 +128,7 @@ $page-header-foreground: spheric-color('white');
     }
   }
 
-  &.profile {
+  .profile {
     text-align: center;
 
     #{$all-images} {
@@ -127,6 +137,9 @@ $page-header-foreground: spheric-color('white');
     }
 
     @include breakpoint(medium) {
+      h2 {
+        font-size: $h1-font-size;
+      }
       text-align: left;
       #{$all-images} {
         margin-bottom: 0;
@@ -141,7 +154,7 @@ $page-header-foreground: spheric-color('white');
       position: absolute;
       z-index: 10;
       left: 0;
-      top: 0;
+      top: 3rem;
       color: $page-header-foreground;
       font-size: 2em;
       @extend .show-for-small-only;
@@ -154,20 +167,24 @@ $page-header-foreground: spheric-color('white');
 // CUSTOM CTA BUTTONS
 // they are fixed to the bottom of the window and expand when on small devices
 @include breakpoint(small only) {
-  .page-header .cta-buttons {
+  .page-header.with-ctas .cta-buttons {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     border-radius: 0;
     @include shadow-4dp;
-    z-index: 2000;
+    z-index: $cta-zindex;
 
     @include button-group-expand($stretch: true);
     .button {
       margin: 0;
       border-radius: 0;
     }
+  }
 
+  // accomodate for cta buttons being fixed to the bottom of small screens
+  .page-header.with-ctas + * {
+    padding-bottom: 3rem;
   }
 }

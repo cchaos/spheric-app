@@ -137,8 +137,8 @@ $group-post-border: 1px solid spheric-color('dark', 'barely');
 
 // GROUPS INDEX PAGE
 
-.groups-page .page-header + section {
-  padding-top: 2rem;
+#groups-header {
+  @include page-header-margin-after;
 }
 
 .groups-list {
@@ -156,9 +156,11 @@ $group-post-border: 1px solid spheric-color('dark', 'barely');
 
 // SINGLE GROUP PAGE
 
-#group-page {
-  @include page-header-margin-after;
+#group-header + section {
+  padding-top: 2rem;
+}
 
+#group-content {
   .members {
     li {
       margin-top: $global-padding/2;
