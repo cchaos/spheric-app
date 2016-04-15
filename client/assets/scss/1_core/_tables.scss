@@ -14,6 +14,10 @@ table {
 
   th, td {
     padding: $global-padding;
+
+    &:not(:last-child) {
+      padding-right: 0;
+    }
   }
 
   th {
@@ -26,6 +30,14 @@ table {
   &.zebra {
     tr:nth-child(even) {
       background-color: $table-striped-background;
+    }
+  }
+
+  .button {
+    margin-bottom: 0;
+
+    &:last-of-type {
+      margin-right: 0;
     }
   }
 
