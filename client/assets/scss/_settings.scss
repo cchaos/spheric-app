@@ -103,18 +103,19 @@ $base-font-size: $rem-base;
 // Text selector helpers
 // $headers: "h1,h2,h3,h4,h5,h6";
 
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,400italic,700,700italic,900);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,400italic,700,700italic|Work+Sans:800);
 
 // We use these to define default font weights
 $font-weight-light: 200;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
-$font-weight-extra: 900;
+$font-weight-extra: 800;
 
 // We use these to control various global styles
 $body-background: $gray-light;
 $body-font-color: $dark-color;
 $body-font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$headline-font-family: "Work Sans", "Source Sans Pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 // $body-antialiased: true;

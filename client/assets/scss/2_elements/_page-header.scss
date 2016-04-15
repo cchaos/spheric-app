@@ -4,24 +4,54 @@
 //
 */
 
-$page-header-background: spheric-color('light');
-$page-header-foreground: spheric-color('dark');
+$page-header-background: spheric-color('primary');
+$page-header-foreground: spheric-color('white');
 
 .page-header {
 
-  padding-top: $global-padding/2;
-  padding-bottom: $global-padding/2;
+  padding-top: $global-padding;
+  padding-bottom: $global-padding;
 
-  background-color: $page-header-background;
+  background: $page-header-background;
 
   @include breakpoint(medium) {
     padding-top: 3rem;
     padding-bottom: 2rem;
   }
 
-  h1 {
-    font-weight: $font-weight-normal;
-    //text-transform: uppercase;
+  #{$headers} {
     color: $page-header-foreground;
   }
+
+  h1 {
+    font-family: $headline-font-family;
+    font-weight: $font-weight-extra;
+    text-transform: uppercase;
+  }
+
+  // TYPES
+  &.image {
+    background: linear-gradient(160deg, spheric-color('primary') 10%, spheric-color('dark', 1, -20) 90%);
+
+    position: relative;
+    z-index: 1;
+
+    // add an image behind both this but above the background color
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+
+      background: url(https://source.unsplash.com/category/technology) no-repeat center center;
+      background-size: cover;
+      opacity: .2;
+    }
+
+  }
+
 }
