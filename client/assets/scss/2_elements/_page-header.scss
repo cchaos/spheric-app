@@ -12,10 +12,19 @@ $page-header-foreground: spheric-color('white');
   padding-top: 2rem;
   padding-bottom: 2rem;
 
+  @include breakpoint(medium) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
   background: $page-header-background;
 
   #{$headers} {
     color: $page-header-foreground;
+
+    &.subheader {
+      color: color-opacity($page-header-foreground, 'secondary');
+    }
   }
 
   h1 {
@@ -43,9 +52,36 @@ $page-header-foreground: spheric-color('white');
     }
   }
 
-  @include breakpoint(medium) {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+  .cta-buttons {
+    margin: 0;
+    text-align: right;
+
+    > li:last-child .button {
+      margin-bottom: 0;
+    }
+  }
+
+  .stats {
+    margin-top: 2rem;
+
+    h6 {
+      font-size: .8em;
+      margin-bottom: .25rem;
+    }
+
+    h3 {
+      margin-bottom: 0;
+      font-size: $h2-font-size;
+    }
+
+    @include breakpoint(medium) {
+      // align right of image
+      margin-left: $images-size-profile + $global-padding;
+
+      .grid-content {
+        flex-grow: 0;
+      }
+    }
   }
 
   // TYPES
@@ -56,7 +92,7 @@ $page-header-foreground: spheric-color('white');
     z-index: 1;
 
     // add an image behind both this but above the background color
-    &::after {
+    &::before {
       content: "";
       display: block;
       position: absolute;
@@ -70,7 +106,44 @@ $page-header-foreground: spheric-color('white');
       background-size: cover;
       opacity: .2;
     }
-
   }
 
+  &.profile {
+    text-align: center;
+
+    #{$all-images} {
+      @include shadow-3dp;
+      margin-bottom: 2rem;
+    }
+
+    @include breakpoint(medium) {
+      text-align: left;
+      #{$all-images} {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}
+
+
+// CUSTOM CTA BUTTONS
+// they are fixed to the bottom of the window and expand when on small devices
+@include breakpoint(small only) {
+  .page-header .cta-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+    @include shadow-4dp;
+    z-index: 2000;
+
+    @include button-group-expand($stretch: true);
+    .button {
+      margin: 0;
+      border-radius: 0;
+    }
+
+  }
 }

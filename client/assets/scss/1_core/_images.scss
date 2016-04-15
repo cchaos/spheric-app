@@ -11,6 +11,7 @@ $all-images: ".user-image, .group-image, .team-image";
 $images-size-small: 2.5rem;
 $images-size-medium: 4rem;
 $images-size-large: 6rem;
+$images-size-profile: 8rem;
 
 #{$all-images} {
   display: inline-block;
@@ -69,9 +70,9 @@ $images-size-large: 6rem;
   }
 
   .profile & {
-    width: 10rem;
-    height: 10rem;
-    line-height: 10rem;
+    width: $images-size-profile;
+    height: $images-size-profile;
+    line-height: $images-size-profile;
     font-size: 3em;
   }
 

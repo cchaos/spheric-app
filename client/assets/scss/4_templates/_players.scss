@@ -4,6 +4,20 @@
 //
 */
 
+
+// BOTH PAGES
+
+#players-page,
+#player-page {
+
+  .page-header.image::before {
+    background-image: url(https://source.unsplash.com/category/people);
+  }
+
+}
+
+// SEARCH PAGE
+
 #players-results {
 
   .card-section {
@@ -18,3 +32,4 @@
   }
 
 }
+
