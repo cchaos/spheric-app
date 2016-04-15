@@ -7,6 +7,12 @@
 $page-header-background: spheric-color('primary');
 $page-header-foreground: spheric-color('white');
 
+@mixin page-header-margin-after($padding: $global-padding) {
+  .page-header + section {
+    margin-top: $padding;
+  }
+}
+
 .page-header {
 
   padding-top: 2rem;
@@ -55,6 +61,10 @@ $page-header-foreground: spheric-color('white');
   .cta-buttons {
     margin: 0;
     text-align: right;
+
+    .button {
+      @include button-expand;
+    }
 
     > li:last-child .button {
       margin-bottom: 0;
@@ -121,6 +131,20 @@ $page-header-foreground: spheric-color('white');
       #{$all-images} {
         margin-bottom: 0;
       }
+    }
+  }
+
+  &.with-back {
+    position: relative;
+    a.back {
+      padding: 1rem;
+      position: absolute;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      color: $page-header-foreground;
+      font-size: 2em;
+      @extend .show-for-small-only;
     }
   }
 

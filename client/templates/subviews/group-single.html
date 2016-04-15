@@ -1,16 +1,28 @@
 ---
-name: group
-url: /group
+name: groups.single
+url: /groups/single
 ---
 
-<div class="group-page grid-block vertical nowrap">
+<div id="group-page" class="grid-block vertical nowrap">
 
-  <header class="page-header grid-content shrink">
+  <header class="page-header image profile with-back grid-content shrink">
+    <a ui-sref="groups" class="back"><i class="fa fa-angle-left"></i></a>
     <div class="grid-container">
-      <h1 class="name">Fantastic Group</h1>
-		  <h3 class="school subheader"><i class="fa fa-globe"></i> Public Group</h3>
-		  <a class="button raised" zf-open="create-post">Create a Post</a>
-		  <a class="button raised">Join Group</a>
+      <div class="grid-block vertical medium-horizontal v-align nowrap">
+        <div class="grid-content shrink align-center">
+          <div ng-include="'templates/components/_team-image.html'" class="profile"></div>
+        </div>
+        <div class="grid-content align-center">
+          <h1 class="name">Fantastic Group</h1>
+    		  <h3 class="subheader"><i class="fa fa-globe fa-fw"></i> Public Group</strong></h3>
+    		</div>
+    		<div class="grid-content shrink align-center">
+    		  <ul class="cta-buttons no-bullet">
+    		  	<li><a class="button raised register"><i class="fa fa-plus fa-fw"></i> Create a Post</a></li>
+    		  	<li><a class="button accent raised register"><span class="fa fa-comment fa-fw"></span> Message</a></li>
+    		  </ul>
+    		</div>
+      </div>
     </div>
   </header>
 

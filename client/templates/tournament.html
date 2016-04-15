@@ -3,17 +3,21 @@ name: tournament
 url: /tournament
 ---
 
-<div class="tournament-page grid-block vertical nowrap">
+<div id="tournament-page" class="grid-block vertical nowrap">
 
-  <header class="page-header grid-content shrink">
+  <header class="page-header image with-back grid-content shrink">
+    <a ui-sref="tournaments" class="back"><i class="fa fa-angle-left"></i></a>
     <div class="grid-container">
-      <div class="grid-block">
-        <div class="grid-content medium-8 large-6">
-          <img src="http://placehold.it/150x150" width="150" height="150" alt="" class="thumbnail">
-          <h1 class="title">District Unite</h1>
-    		  <h2 class="date">February 2-3, 2016</h2>
+      <div class="grid-block vertical medium-horizontal align-center v-align nowrap">
+        <div class="grid-content align-center shrink">
+          <h1 class="name">District Unite</h1>
+    		  <h2 class="subheader">February 2-3, 2016</h2>
     		  <h4>Hosted by the Cool Company</h4>
-    		  <a class="button accent large raised register">Register &mdash; $50</a>
+    		</div>
+    		<div class="grid-content shrink align-center">
+    		  <ul class="cta-buttons no-bullet">
+    		  	<li><a class="button accent large raised register">Register &mdash; $50</a></li>
+    		  </ul>
     		</div>
       </div>
     </div>

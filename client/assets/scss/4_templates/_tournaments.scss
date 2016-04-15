@@ -128,58 +128,17 @@
 
 // SINGLE
 
-$tournament-image-size: rem-calc(150);
-$tournament-image-margin: 2rem;
-$tournament-title-margin: (($tournament-image-size + $tournament-image-margin)/2) - ($h1-font-size/2);
-
-.tournament-page {
+#tournament-page {
 
   .page-header {
-    text-align: center;
-
-    .thumbnail {
-      @include shadow-6dp;
-      margin-top: $tournament-image-margin;
-      margin-bottom: $tournament-image-margin;
-      background-color: spheric-color('white');
+    // tournaments should have their own custom image
+    &.image::before {
+      background-image: url(https://source.unsplash.com/category/technology);
+      opacity: 1;
     }
-  }
 
-  @include breakpoint(small only) {
-    .register {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      text-align: center;
-      margin: 0;
-      box-shadow: $thumbnail-shadow;
-      border-radius: 0;
-    }
-  }
-
-  @include breakpoint(medium) {
-    .page-header {
-      text-align: left;
-      padding-top: 4rem;
-      padding-bottom: 4rem;
-
-      .thumbnail {
-        float: left;
-        margin-right: $tournament-image-margin;
-      }
-
-      .title {
-        margin-top: $tournament-title-margin;
-      }
-
-      // position register button
-      position: relative;
-      .register {
-        position: absolute;
-        right: 0;
-        bottom: -7rem;
-      }
+    h1 {
+      padding-right: 5rem;
     }
   }
 
