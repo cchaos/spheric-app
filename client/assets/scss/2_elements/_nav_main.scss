@@ -59,14 +59,19 @@ $nav-panel-zindex: 20;
     }
 
     @include breakpoint($nav-main-breakpoint) {
+      border-bottom: 1px solid spheric-color('light', 'barely');
+
       // remove background on larger screens
       &, .menu-bar {
         background: none;
       }
 
-      // and increase height
-      padding-top: $global-padding;
-      padding-bottom: $global-padding;
+      .menu-bar:last-child {
+        // and increase height
+        padding-top: $global-padding;
+        padding-bottom: $global-padding;
+        border-left: 1px solid spheric-color('light', 'barely');
+      }
     }
   }
 
@@ -143,18 +148,6 @@ $nav-panel-zindex: 20;
   }
 
   .user-image {
-    margin-right: .5rem;
     box-shadow: none;
-  }
-
-  .username {
-    display: none;
-    text-transform: none;
-  }
-
-  @include breakpoint($nav-main-breakpoint) {
-  	.username {
-    	display: inline-block;
-  	}
   }
 }

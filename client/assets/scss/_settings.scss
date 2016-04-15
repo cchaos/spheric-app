@@ -112,7 +112,7 @@ $font-weight-bold: 700;
 $font-weight-extra: 800;
 
 // We use these to control various global styles
-$body-background: $secondary-color;
+$body-background: spheric-color('light');
 $body-font-color: $dark-color;
 $body-font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $headline-font-family: "Work Sans", "Source Sans Pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;

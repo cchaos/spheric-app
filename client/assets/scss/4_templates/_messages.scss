@@ -77,6 +77,8 @@ $messages-background: spheric-color('white');
 
   h2 {
     line-height: 1.4em;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
     @include force-truncate;
   }
 
