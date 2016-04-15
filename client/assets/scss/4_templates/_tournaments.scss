@@ -70,6 +70,11 @@
     flex-direction: column;
     justify-content: flex-end;
 
+    // each tournament should have their own photo
+    background: linear-gradient(160deg, color-opacity($card-header-background, 'secondary'), color-opacity($card-header-background, 'secondary')),
+                url(https://source.unsplash.com/featured/?crowd) no-repeat center;
+    background-size: auto, cover;
+
     .date,
     .title {
       @include force-truncate;

@@ -7,15 +7,16 @@
 
 // BOTH PAGES
 
-#players-page,
-#player-page {
-
-  .page-header.image::before {
-    background-image: url(https://source.unsplash.com/category/people);
-  }
-
+#player-page,
+#players-page {
   .page-header {
     @include page-header-margin-after;
+  }
+}
+
+#player-page {
+  .page-header.image::before {
+    background-image: url(https://source.unsplash.com/category/people);
   }
 }
 
