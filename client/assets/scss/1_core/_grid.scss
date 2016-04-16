@@ -18,3 +18,11 @@ body {
     @include shadow-4dp;
   }
 }
+
+
+// custom class for allowing the content to dictate when it should break to it's only row
+.no-max {
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: none;
+}

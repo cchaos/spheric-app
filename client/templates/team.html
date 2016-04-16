@@ -43,7 +43,8 @@ url: /team
     <div class="grid-container">
 
       <div class="grid-block">
-        <div class="grid-content medium-8">
+
+        <div class="grid-content small-7 no-max">
           <h2>Matches</h2>
           <table class="zebra">
 <!--
@@ -63,21 +64,35 @@ url: /team
           	    <td ng-if="$index >= 3" class="score">Win</td>
         	    </tr>
       	    </tbody>
-    	    </table>
+          </table>
         </div>
-        <div class="grid-content medium-4">
+
+        <div class="grid-content small-5 no-max">
           <h2>Roster</h2>
-          <div ng-include="'templates/components/_members-list.html'"></div>
+          <ul class="roster no-bullet">
+          	<li ng-repeat="i in [1,2,3,4,5,6,7,8]">
+            	<a ui-sref="player"><span ng-include="'templates/components/_user-image.html'" class="medium"></span> <br> User Name</a>
+          	</li>
+          </ul>
         </div>
       </div>
 
+
+
       <div class="grid-block">
-        <div class="grid-content medium-4 medium-order-2">
+
+        <div class="grid-content small-7 no-max">
           <h2>Stats</h2>
+          <div class="card">
+            <div class="card-section">
+              <h6 class="text-center">TBD</h6>
+            </div>
+          </div>
         </div>
-        <div class="grid-content medium-8 medium-order-1">
+
+        <div class="grid-content small-5 no-max">
           <h2>VODS</h2>
-          <ul class="grid-block small-up-2 medium-up-4">
+          <ul class="grid-block small-up-2">
             <li class="grid-content" ng-repeat="i in [1,2,3,4] track by $index">
               <div class="card linked vod">
                 <img src="http://placehold.it/160x90" alt="">
@@ -86,7 +101,6 @@ url: /team
             </li>
       	  </ul>
         </div>
-      </div>
 
     </div>
 	</section>

@@ -59,6 +59,7 @@ $card-header-foreground: spheric-color('light');
   }
 
   &.vod {
+    min-width: rem-calc(160);
     position: relative;
     i {
       position: absolute;
