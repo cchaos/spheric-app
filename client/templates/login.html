@@ -1,0 +1,43 @@
+---
+name: login
+url: /login
+---
+
+<div id="login-page" class="grid-block">
+
+	<section class="grid-block vertical">
+
+    <div id="login-main" class="grid-block v-align">
+    	<div class="grid-content">
+    		<p class="text-center logo">
+    			<img src="assets/img/logo-nav_main.svg" width="200" alt="Spheric">
+    		</p>
+
+    		<!--  Subviews for different forms -->
+    		<div ng-class="['ui-animation']" ui-view>
+
+    		  <form action="">
+    		    <input type="text" placeholder="username">
+    		    <input type="password" placeholder="password">
+    		    <button class="button expand raised large" type="submit">Login</button>
+    		  </form>
+
+    		  <p class="text-center help">
+    		    <a href="">Forgot Password?</a> &emsp; | &emsp; <a ui-sref="login.signup">Need to signup?</a>
+    		  </p>
+
+    		</div>
+    	</div>
+    </div>
+
+   	<footer class="grid-content shrink">
+     	<ul class="no-bullet">
+     		<li><a href="">About</a></li>
+     		<li><a href="">Legal</a></li>
+     	</ul>
+     	<p class="copy"><small>&copy; National Collegiate E-Sport Players Association</small></p>
+   	</footer>
+
+ 	</section>
+
+</div>

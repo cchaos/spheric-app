@@ -1,0 +1,55 @@
+/*
+//
+// LOGIN
+// and Signup
+//
+*/
+
+
+#login-page {
+  background: $blue-gray-gradient-transparent,
+              url(https://source.unsplash.com/featured/?sky?night?stars) no-repeat center;
+  background-size: auto, cover;
+
+  .logo,
+  form {
+    margin-bottom: 4rem;
+  }
+
+  input {
+    border: none !important;
+  }
+
+  .help {
+    a {
+      @extend %h6;
+      color: spheric-color('primary',1,20);
+    }
+  }
+
+  footer {
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: 1rem;
+    }
+
+    a {
+      text-decoration: underline;
+      font-weight: $font-weight-bold;
+      color: spheric-color('light', 'tertiary');
+    }
+
+    small {
+      color: spheric-color('light', 'secondary');
+    }
+  }
+}
+
+#login-main {
+  @include breakpoint(medium) {
+    width: 30rem;
+    align-self: center;
+  }
+}
