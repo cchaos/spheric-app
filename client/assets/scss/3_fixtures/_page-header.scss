@@ -112,7 +112,7 @@ $cta-zindex: $nav-panel-zindex - 1;
 
   // TYPES
   &.image {
-    background: linear-gradient(160deg, spheric-color('primary', 1, -30) 10%, spheric-color('dark', 1, -20) 90%);
+    background: $blue-gray-gradient;
 
     position: relative;
     z-index: 1;

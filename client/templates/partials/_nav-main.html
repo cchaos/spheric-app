@@ -9,7 +9,16 @@
     <div class="menu-group">
     	<zf-panel id="nav_main_links">
       	<ul class="menu-bar primary vertical condense label-corner-custom">
-          <li class="close"><a zf-close="">× Close</a></li>
+          <li class="show-for-small-only close"><a zf-close="">× Close</a></li>
+          <div id="small_nav_main_user" class="show-for-small-only">
+            <div class="inner">
+            	<span ng-include="'templates/components/_user-image.html'" class="medium float-left"></span>
+            	<span class="text">
+            		<span class="user-name">User Name</span> <br>
+            		<a ui-sref="profile">Edit</a> <a href="">Logout</a>
+            	</span>
+            </div>
+          </div>
       	  <li ui-sref-active="is-active" class="show-for-small-only"><a ui-sref="home">Dashboard</a></li>
       	  <li ui-sref-active="is-active"><a ui-sref="tournaments">Tournaments</a></li>
       	  <li ui-sref-active="is-active"><a ui-sref="teams">Teams</a></li>
@@ -21,7 +30,7 @@
     	    </li>
       	</ul>
     	</zf-panel>
-      <ul id="nav_main_user" class="menu-bar condense icon-left primary">
+      <ul id="nav_main_user" class="menu-bar condense icon-left primary hide-for-small-only">
         <li class="is-active"><a><span ng-include="'templates/components/_user-image.html'" class="small"></span></a></li>
       </ul>
     </div>

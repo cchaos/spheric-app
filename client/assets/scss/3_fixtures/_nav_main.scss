@@ -44,7 +44,7 @@ $nav-panel-zindex: 20;
 
     .menu-bar {
       @include menu-bar-style(
-        $background: $nav-main-background,
+        $background: transparent,
         $background-hover: transparent,
         $background-active: transparent,
         $color: color-opacity($nav-main-foreground, 'secondary'),
@@ -62,9 +62,7 @@ $nav-panel-zindex: 20;
       border-bottom: 1px solid spheric-color('light', 'barely');
 
       // remove background on larger screens
-      &, .menu-bar {
-        background: none;
-      }
+      background: none;
 
       .menu-bar:last-child {
         // and increase height
@@ -96,6 +94,11 @@ $nav-panel-zindex: 20;
     	// alter font
     	font-size: .7rem;
     	font-weight: $font-weight-bold;
+
+    	@include breakpoint(small only) {
+      	position: static;
+      	display: inline-block;
+    	}
   	}
   }
 }
@@ -113,7 +116,26 @@ $nav-panel-zindex: 20;
   // extend panels
   @extend .panel;
   position: fixed;
-  background-color: $nav-main-background;
+  background: $nav-main-background;
+
+  li.close {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  // add triangle pointing up to active nav item
+  .is-active a::after {
+    @include css-triangle(
+      $triangle-size: 4px,
+      $triangle-color: $nav-main-foreground,
+      $triangle-direction: left
+    );
+    // position it so it doesn't alter layout
+    position: absolute;
+    left: .8rem;
+    bottom: 1.5rem;
+  }
 
   // put them back into the menu-bar when breakpoint is hit
   @include breakpoint($nav-main-breakpoint) {
@@ -124,20 +146,45 @@ $nav-panel-zindex: 20;
       flex-flow: row nowrap;
     }
 
-    .close {
-      display: none;
-    }
-
-    // add triangle pointing up to active nav item
     .is-active a::after {
-      @include css-triangle(
-        $triangle-size: 4px,
-        $triangle-color: $nav-main-foreground,
-        $triangle-direction: bottom
-      );
-      // position it so it doesn't alter layout
-      position: absolute;
+      // position underneath for larger screens and rotate
+      transform: rotate(-90deg);
+      transform-origin: center;
       left: calc(50% - 4px);
+      bottom: 0;
+    }
+  }
+}
+
+#small_nav_main_user {
+  height: $panel-size-horizontal/1.7;
+  background: $blue-gray-gradient-transparent,
+              url(https://source.unsplash.com/featured/?sky?night?stars) no-repeat center;
+  background-size: auto, cover;
+  padding: $global-padding*2.2 $global-padding $global-padding;
+
+  .inner {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+  .user-image {
+    margin-right: 1rem;
+  }
+
+  .user-name {
+    font-size: $h3-font-size;
+    color: $nav-main-foreground;
+  }
+
+  a {
+    @extend %h6;
+    font-size: .8em;
+    color: spheric-color('white', 'tertiary');
+    &:first-of-type {
+      display: inline-block;
+      margin-right: 1.5rem;
     }
   }
 }

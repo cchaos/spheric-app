@@ -55,9 +55,7 @@
 // ----------------------
 // Navigation
 // ----------------------
-   @import "2_elements/nav_main",
-           "2_elements/page-header",
-           "2_elements/tabs";
+   @import "2_elements/tabs";
 // Blocks
 // ----------------------
    @import "2_elements/cards";
@@ -75,7 +73,9 @@
 // distinct section of an interface.
 // -------------------------
 */
-   @import "3_fixtures/sidebar";
+   @import "3_fixtures/nav_main",
+           "3_fixtures/page-header",
+           "3_fixtures/sidebar";
 
 
 

@@ -52,3 +52,6 @@ $spheric-opacities: (
 
   @return $color;
 }
+
+$blue-gray-gradient: linear-gradient(160deg, spheric-color('primary', 1, -30) 10%, spheric-color('dark', 1, -20) 90%);
+$blue-gray-gradient-transparent: linear-gradient(160deg, spheric-color('primary', .7, -30) 10%, spheric-color('dark', .7, -20) 90%);
