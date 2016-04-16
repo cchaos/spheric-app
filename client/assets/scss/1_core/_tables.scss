@@ -31,6 +31,7 @@ table {
   th {
     @extend %h6;
     text-align: left;
+    color: spheric-color('dark', 'tertiary')
   }
 
   .actions {

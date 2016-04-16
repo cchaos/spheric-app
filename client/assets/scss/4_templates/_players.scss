@@ -7,7 +7,6 @@
 
 // BOTH PAGES
 
-#player-page,
 #players-page {
   .page-header {
     @include page-header-margin-after;
@@ -94,6 +93,70 @@
       }
     }
 
+  }
+
+}
+
+// INDIVIDUAL PAGE
+
+// let the content dictate when they should be on their own row
+#player-recent-matches,
+#player-gaming-profile {
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: none;
+}
+
+#player-gaming-profile {
+  dt,
+  .track .header {
+    @extend %h6;
+    color: spheric-color('dark', 'tertiary');
+  }
+
+  .card {
+    margin-bottom: 2rem;
+  }
+
+  .poster {
+    background: $blue-gray-gradient-transparent,
+                url(https://source.unsplash.com/1600x900/?game) no-repeat center;
+    background-size: cover;
+  }
+
+  .title,
+  .track .stat {
+    font-family: $headline-font-family;
+    font-weight: $font-weight-extra;
+    text-transform: uppercase;
+  }
+
+  .title {
+    margin-top: $global-padding;
+  }
+
+  dl {
+    margin-bottom: $global-padding;
+  }
+
+  .track {
+    align-self: center;
+    text-align: center;
+    margin-right: $global-padding;
+
+    .stat {
+      font-size: 2em;
+      color: spheric-color('primary');
+    }
+  }
+
+  @include breakpoint(small only) {
+    .poster {
+      display: none;
+    }
+    .content {
+      margin-left: $global-padding;
+    }
   }
 
 }

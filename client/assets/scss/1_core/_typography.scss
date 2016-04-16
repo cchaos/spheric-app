@@ -73,6 +73,15 @@ h6 {
   @extend %h6;
 }
 
+// section headers
+section h2 {
+  font-weight: $font-weight-bold;
+  //text-transform: uppercase;
+  color: spheric-color('dark', 'secondary');
+  font-size: $h2-font-size*.8;
+  margin: 2rem 0 1rem;
+}
+
 // make sure all anchor (link) tags have smooth transitions between states
 a {
   @include basic-transition;

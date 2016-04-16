@@ -31,17 +31,19 @@ url: /player
 
 	<section class="grid-content noscroll">
     <div class="grid-container">
-    	<zf-tabs>
 
-    	  <zf-tab title="Gaming Profile">
-    	    <ul>
-            <li class="grid-block v-align" ng-repeat="i in [1, 2, 3]">
-              <div class="grid-content shrink">
-                <img src="http://placehold.it/50x50" width="50" height="50" alt="">
+      <div class="grid-block">
+
+        <div id="player-gaming-profile" class="grid-content small-8">
+          <h2>Gaming Profile</h2>
+          <div class="card"  ng-repeat="i in [1, 2, 3]">
+            <div class="grid-block">
+              <div class="grid-content medium-2 poster">
               </div>
-              <div class="grid-content">
-                <h3>League of Legends</h3>
+              <div class="grid-content content">
+                <h3 class="title">League of Legends</h3>
                 <dl class="inline">
+                  <hr>
                   <dt>Rank/Skill Level:</dt>
                   <dd>Master</dd>
                   <hr>
@@ -50,18 +52,21 @@ url: /player
                   <hr>
                   <dt>ID:</dt>
                   <dd>1535-4531-5552</dd>
+                  <hr>
                 </dl>
               </div>
-              <div class="grid-content shrink">
-                <h5>Track History</h5>
-                <h3>15-8</h3>
+              <div class="grid-content shrink track">
+                <h5 class="header">Track History</h5>
+                <h3 class="stat">15-8</h3>
               </div>
-            </li>
-    	    </ul>
-    	  </zf-tab>
+            </div>
+          </div>
 
-    	  <zf-tab title="Recent Matches">
-    	    <table>
+        </div>
+
+        <div id="player-recent-matches" class="grid-content small-4">
+          <h2>Recent Matches</h2>
+    	    <table class="zebra">
     	    	<thead>
       	    	<th>Game</th>
       	    	<th>Type</th>
@@ -70,16 +75,18 @@ url: /player
     	    	</thead>
     	    	<tbody>
       	    	<tr ng-repeat="i in [1,2,3,4,5,6,7,8,9,10]">
-        	    	<td>DOTSA</td>
+        	    	<td><strong>DOTSA</strong></td>
         	    	<td>Team</td>
         	    	<td>JMU</td>
-        	    	<td>Win</td>
+        	    	<td><strong>Win</strong></td>
       	    	</tr>
     	    	</tbody>
     	    </table>
-    	  </zf-tab>
+        </div>
 
-    	  <zf-tab title="Replays">
+        <div id="player-vods" class="grid-content small-12">
+          <h2>Replays</h2>
+
       	  <ul class="grid-block small-up-2 medium-up-4">
             <li class="grid-content" ng-repeat="i in [1,2,3,4] track by $index">
               <div class="card linked vod">
@@ -88,9 +95,8 @@ url: /player
               </div>
             </li>
       	  </ul>
-    	  </zf-tab>
-
-    	</zf-tabs>
+        </div>
+      </div>
     </div>
 	</section>
 
