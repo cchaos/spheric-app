@@ -140,6 +140,7 @@ $cta-zindex: $nav-panel-zindex - 1;
     #{$all-images} {
       @include shadow-3dp;
       margin-bottom: 2rem;
+      border: 3px solid spheric-color('white', .6);
     }
 
     @include breakpoint(medium) {
