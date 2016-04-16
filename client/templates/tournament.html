@@ -31,11 +31,14 @@ url: /tournament
     	  <zf-tab title="Schedule">
     	    <p>Crucifix affogato before they sold out fap roof party.  Pork belly knausgaard sriracha, cardigan bicycle rights tumblr marfa direct trade.  Blue bottle hashtag microdosing, kinfolk meditation keffiyeh waistcoat hammock umami.  Literally man bun ennui gastropub man braid narwhal pickled PBR&amp;B, gluten-free pinterest pitchfork cronut asymmetrical.  Hella chia 3 wolf moon actually.  Locavore seitan actually asymmetrical williamsburg, narwhal echo park.  Mumblecore raw denim knausgaard biodiesel, neutra ugh blog keytar brooklyn portland tofu disrupt try-hard tattooed.</p>
     	  </zf-tab>
-    	  <zf-tab title="Brackets"></zf-tab>
     	  <zf-tab title="Participants">
-    	    <a ui-sref="team"><img class="thumbnail" src="http://placehold.it/50x50" alt=""></a>
+    	    <div class="card">
+        		<div ng-include="'templates/components/_teams-table.html'"></div>
+        	</div>
     	  </zf-tab>
-    	  <zf-tab title="About"></zf-tab>
+    	  <zf-tab title="About">
+    	    <div ng-include="'templates/partials/_tournament-about.html'"></div>
+    	  </zf-tab>
     	</zf-tabs>
     </div>
 	</section>

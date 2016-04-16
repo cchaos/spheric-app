@@ -33,6 +33,10 @@
       color: spheric-color('dark', 'tertiary');
     }
 
+    .name {
+      color: spheric-color('primary');
+    }
+
     @include breakpoint(small only) {
       .image,
       .actions,

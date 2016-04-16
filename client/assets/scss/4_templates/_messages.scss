@@ -54,6 +54,7 @@ $messages-background: spheric-color('white');
 }
 
 #message-title {
+  background-color: $card-background;
 
   > div {
     padding-top: $global-padding/2;
@@ -86,7 +87,7 @@ $messages-background: spheric-color('white');
   h2 {
     line-height: 1.4em;
     font-weight: $font-weight-bold;
-    text-transform: uppercase;
+    //text-transform: uppercase;
     @include force-truncate;
   }
 

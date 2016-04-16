@@ -76,6 +76,7 @@ $cta-zindex: $nav-panel-zindex - 1;
 
     .button {
       @include button-expand;
+      @include shadow-6dp;
     }
 
     > li:last-child .button {

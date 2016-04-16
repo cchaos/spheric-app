@@ -46,33 +46,9 @@ url: /teams
 
         </div>
 
-        <div id="players-results" class="grid-content">
+        <div id="teams-results" class="grid-content">
         	<div class="card">
-        		<table class="zebra selectable">
-            	<thead>
-            	  <th class="team">Team <i class="fa fa-caret-down sort-arrow"></i></th>
-              	<th class="image"></th>
-              	<th class="rank">Rank</th>
-              	<th class="wins">Wins</th>
-              	<th class="losses">Losses</th>
-              	<th class="actions"></th>
-            	</thead>
-            	<tbody>
-              	<tr ng-repeat="$i in [1,2,3,4,5,6,7,8,9,10]" ui-sref="team">
-              		<td class="image">
-                		<span ng-include="'templates/components/_team-image.html'" class="large"></span>
-              		</td>
-              		<td class="team">
-                  	<h3 class="name">Awesome Team</h3>
-                  	<h5 class="subheader">New York University &emsp; <strong>CS:GO</strong></h5>
-              		</td>
-              		<td class="rank">Master</td>
-              		<td class="wins">51</td>
-              		<td class="losses">25</td>
-              		<td class="actions"><a ui-sref="team" class="button small hollow">View</a></td>
-              	</tr>
-            	</tbody>
-        		</table>
+        		<div ng-include="'templates/components/_teams-table.html'"></div>
         	</div>
 
           <br>
