@@ -18,14 +18,3 @@ body {
     @include shadow-4dp;
   }
 }
-
-// quick footer styles
-main + footer {
-  background-color: spheric-color('light');
-
-  p {
-    text-align: center;
-    padding: 3rem 0;
-    margin-bottom: 0;
-  }
-}

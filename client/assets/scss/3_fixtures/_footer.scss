@@ -1,0 +1,54 @@
+/*
+//
+// FOOTER
+// Site-wide footer
+//
+*/
+
+$footer-background: spheric-color('primary', 1, -20);
+$footer-foreground: spheric-color('light');
+
+// quick footer styles
+#main-footer {
+  background: $footer-background;
+  padding-top: $global-padding*2;
+  padding-bottom: $global-padding*2;
+
+  #{$headers}, p, a, small {
+    color: $footer-foreground;
+  }
+
+  h5 {
+    font-size: $h2-font-size;
+    font-family: $headline-font-family;
+    font-weight: $font-weight-extra;
+  }
+
+  .social {
+    li {
+      display: inline-block;
+      a {
+        padding: $global-padding;
+        font-size: 1.5rem;
+
+        color: color-opacity($footer-foreground, 'tertiary');
+      }
+    }
+  }
+
+  .copy {
+    margin-bottom: 0;
+  }
+}
+
+#footer-links {
+  padding-left: $block-padding;
+  padding-right: $block-padding;
+
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  a {
+    @extend %h6;
+  }
+}
