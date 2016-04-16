@@ -48,21 +48,31 @@ url: /tournaments
 
       <div id="upcoming-tournaments" class="grid-content">
         <h2>Upcoming</h2>
-        <section class="block-list">
-          <ul>
-            <li class="grid-block align-right v-align" ng-repeat="i in [1, 2, 3, 5, 6, 7] track by $index" ui-sref="tournament">
-              <span class="date align-center"><span class="digit">{{$index + 20}}</span><br>Feb</span>
-              <span class="content">
-                <h3>District Unite Is Awesome</h3>
-                <h4>Mario Kart IV</h4>
-              </span>
-              <span class="action align-center">
-                <a class="button hollow register">Register</a>
-              </span>
-            </li>
-          </ul>
-          <a class="button expand raised dark">Load more&hellip;</a>
-        </section>
+        <table class="zebra selectable">
+        	<thead>
+        	  <th class="date">Date <i class="fa fa-caret-down sort-arrow"></i></th>
+          	<th class="tournament">Event</th>
+          	<th class="provider">Provider</th>
+          	<th class="payout">Payout</th>
+          	<th class="actions"></th>
+        	</thead>
+        	<tbody>
+          	<tr ng-repeat="$i in [1,2,3,4,5,6,7,8,9,10]" ui-sref="tournament">
+          		<td class="date">
+            		<span class="digit">{{$index + 20}}</span><br>Feb
+          		</td>
+          		<td class="tournament">
+              	<h3 class="name">District Unite Is Awesome</h3>
+              	<h5 class="subhead">Mario Kart IV</h5>
+          		</td>
+          		<td class="provider">Cool Co.</td>
+          		<td class="payout">$500</td>
+          		<td class="actions"><a class="button hollow register">Register &mdash; $50</a></td>
+          	</tr>
+        	</tbody>
+        </table>
+        <br>
+        <a class="button expand primary">Load more&hellip;</a>
       </div>
 
 		</div>

@@ -102,21 +102,6 @@
 
 #upcoming-tournaments {
 
-  .block-list,
-  .grid-block {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  li:hover,
-  li:focus {
-    background-color: spheric-color('primary', .05, -30);
-
-    &, > * {
-      cursor: pointer;
-    }
-  }
-
   .date {
     padding: $global-padding;
     text-align: center;
@@ -130,22 +115,12 @@
     }
   }
 
-  .content {
-    flex: 1 0 auto;
-
-    > *:first-child {
-      margin-top: 0;
-    }
-
-    > *:last-child {
-      margin-bottom: 0;
-    }
+  .name {
+    color: spheric-color('primary');
   }
 
-  .action {
-    .button {
-      margin: 0;
-    }
+  .payout {
+    font-weight: $font-weight-bold;
   }
 
 }
