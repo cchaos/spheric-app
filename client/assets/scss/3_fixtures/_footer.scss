@@ -13,6 +13,7 @@ $footer-foreground: spheric-color('light');
   background: $footer-background;
   padding-top: $global-padding*2;
   padding-bottom: $global-padding*2;
+  margin-top: $global-padding*2;
 
   #{$headers}, p, a, small {
     color: $footer-foreground;

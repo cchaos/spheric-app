@@ -31,7 +31,8 @@
       	</ul>
     	</zf-panel>
       <ul id="nav_main_user" class="menu-bar condense icon-left primary hide-for-small-only">
-        <li class="is-active"><a><span ng-include="'templates/components/_user-image.html'" class="small"></span></a></li>
+        <li class="is-active"><a zf-hard-toggle="separate-actionsheet"><span ng-include="'templates/components/_user-image.html'" class="small"></span></a></li>
+        <!-- TODO: Create a dropdown component with navigation for Dashboard, Profile, Logout -->
       </ul>
     </div>
   </div>
