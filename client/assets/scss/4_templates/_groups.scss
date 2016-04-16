@@ -114,17 +114,6 @@ $group-post-border: 1px solid spheric-color('dark', 'barely');
   padding-top: 2rem;
 }
 
-#group-content {
-  .members {
-    li {
-      margin-top: $global-padding/2;
-      margin-bottom: $global-padding/2;
-      justify-content: flex-start;
-      flex-grow: 0;
-    }
-  }
-}
-
 #group-extras {
   background-color: transparent;
 }

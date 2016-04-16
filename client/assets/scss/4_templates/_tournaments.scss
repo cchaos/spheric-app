@@ -46,7 +46,8 @@
 }
 
 #featured-tournaments {
-  padding: 3rem $global-padding;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 
   ul {
     margin-top: 1rem;
@@ -101,7 +102,6 @@
 
 
 #upcoming-tournaments {
-
   .date {
     padding: $global-padding;
     text-align: center;
@@ -121,6 +121,20 @@
 
   .payout {
     font-weight: $font-weight-bold;
+  }
+
+  @include breakpoint(small only) {
+    margin-left: -$block-padding;
+    margin-right: -$block-padding;
+
+    h2 {
+      padding-left: $block-padding;
+    }
+
+    .actions,
+    .provider {
+      display: none;
+    }
   }
 
 }

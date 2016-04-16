@@ -62,4 +62,19 @@
   .page-header.image::before {
     background-image: url(https://source.unsplash.com/featured/nature);
   }
+
+  table {
+    .tournament {
+      text-align: right;
+    }
+
+    .vs {
+      text-align: center;
+    }
+
+    td.tournament {
+      font-weight: $font-weight-bold;
+      font-size: 1.1em;
+    }
+  }
 }

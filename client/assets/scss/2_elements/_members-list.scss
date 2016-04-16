@@ -1,0 +1,15 @@
+/*
+//
+// MEMBERS LIST
+// List of players used in groups and teams
+//
+*/
+
+.members-list {
+  li {
+    margin-top: $global-padding/2;
+    margin-bottom: $global-padding/2;
+    justify-content: flex-start;
+    flex-grow: 0;
+  }
+}

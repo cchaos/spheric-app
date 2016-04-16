@@ -45,12 +45,20 @@ url: /team
       <div class="grid-block">
         <div class="grid-content medium-8">
           <h2>Matches</h2>
-          <table>
+          <table class="zebra">
+<!--
+            <thead>
+        	    <th class="tournament">Tournament</th>
+        	    <th class="vs">vs</th>
+        	    <th class="team">Team</th>
+      	    </thead>
+-->
       	    <tbody>
         	    <tr ng-repeat="i in [1,2,3,4,5,6,7] track by $index">
-          	    <td class="tournament">District Unite</td>
-          	    <td class="versus">vs</td>
-          	    <td class="team">Fantastic Team</td>
+          	    <td class="tournament"><a href="" ui-sref="tournament">District Unite</a></td>
+          	    <td class="vs">vs</td>
+          	    <td class="image" width="50"><span ng-include="'templates/components/_team-image.html'" class="small"></span></td>
+          	    <td width="50%" class="team">Fantastic Team</td>
           	    <td ng-if="$index < 3" class="date">Feb. {{$index + 5}}</td>
           	    <td ng-if="$index >= 3" class="score">Win</td>
         	    </tr>
@@ -59,11 +67,7 @@ url: /team
         </div>
         <div class="grid-content medium-4">
           <h2>Roster</h2>
-          <ul class="no-bullet grid-block">
-	      		<li class="grid-content" ng-repeat="i in [1,2,3,4,5,6,7,8]">
-    	      	<a ui-sref="player"><span ng-include="'templates/components/_user-image.html'" class="medium"></span></a>
-	      		</li>
-	      	</ul>
+          <div ng-include="'templates/components/_members-list.html'"></div>
         </div>
       </div>
 
@@ -75,11 +79,9 @@ url: /team
           <h2>VODS</h2>
           <ul class="grid-block small-up-2 medium-up-4">
             <li class="grid-content" ng-repeat="i in [1,2,3,4] track by $index">
-              <div class="card linked">
-                <div class="card-section">
-                  <img src="http://placehold.it/160x90" alt="">
-                  <i class="fa fa-youtube-play"></i>
-                </div>
+              <div class="card linked vod">
+                <img src="http://placehold.it/160x90" alt="">
+                <i class="fa fa-youtube-play fa-inverse fa-2x"></i>
               </div>
             </li>
       	  </ul>
