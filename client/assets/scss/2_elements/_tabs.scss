@@ -8,8 +8,15 @@
 .tabs {
   flex-flow: nowrap;
   overflow-x: auto;
+  border-bottom: 1px solid spheric-color('dark', 'barely');
+
+  .tab-item {
+    @extend %h6;
+    opacity: .7;
+  }
 
   .is-active {
     border-bottom: 3px solid $tab-title-color;
+    opacity: 1;
   }
 }

@@ -1,0 +1,42 @@
+/*
+//
+// TEAMS TABLE
+//
+*/
+
+.teams-table {
+  .rank,
+  .wins,
+  .losses {
+    text-align: center;
+  }
+
+  .wins,
+  .losses {
+    font-weight: $font-weight-bold;
+  }
+
+  td.losses {
+    color: spheric-color('dark', 'tertiary');
+  }
+
+  .name {
+    color: spheric-color('primary');
+  }
+
+  @include breakpoint(small only) {
+    .image,
+    .actions,
+    .rank {
+      display: none;
+    }
+
+    .losses {
+      padding-right: $global-padding;
+    }
+
+    th {
+      font-size: .8em;
+    }
+  }
+}

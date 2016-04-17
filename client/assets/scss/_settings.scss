@@ -601,8 +601,8 @@ $tab-title-background-active: $tabstrip-background;;
 $tab-title-color: spheric-color('primary');
 $tab-title-color-active: $tab-title-color;
 
-// $tab-title-padding: $global-padding;
-// $tab-content-padding: $global-padding;
+$tab-title-padding: $global-padding;
+$tab-content-padding: $global-padding 0;
 
 // 25. Title Bar
 // - - - - - - - - - - - - - - -
