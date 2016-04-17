@@ -70,6 +70,10 @@ $cta-zindex: $nav-panel-zindex - 1;
     }
   }
 
+  ul {
+    margin-bottom: 0;
+  }
+
   .cta-buttons {
     margin: 0;
     text-align: right;
@@ -141,6 +145,11 @@ $cta-zindex: $nav-panel-zindex - 1;
       @include shadow-3dp;
       margin-bottom: 2rem;
       border: 3px solid spheric-color('white', .6);
+    }
+
+    .secondary {
+      margin-bottom: 0;
+      opacity: .5;
     }
 
     @include breakpoint(medium) {

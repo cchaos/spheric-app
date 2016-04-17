@@ -1,0 +1,25 @@
+/*
+//
+// DASHBOARD
+// (Homepage)
+//
+*/
+
+
+// INDEX PAGE
+
+#dashboard-page .page-header {
+  + section {
+    margin-top: 2rem;
+  }
+
+  @include breakpoint(small only) {
+    header ul {
+      text-align: center;
+      li {
+        display: inline-block;
+        margin: 0 .5rem;
+      }
+    }
+  }
+}

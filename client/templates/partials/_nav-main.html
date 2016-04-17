@@ -15,14 +15,13 @@
             	<span ng-include="'templates/components/_user-image.html'" class="medium float-left"></span>
             	<span class="text">
             		<span class="user-name">User Name</span> <br>
-            		<a ui-sref="profile">Edit</a> <a href="">Logout</a>
+            		<a ui-sref="profile">Account</a> <a href="">Logout</a>
             	</span>
             </div>
           </div>
       	  <li ui-sref-active="is-active" class="show-for-small-only"><a ui-sref="home">Dashboard</a></li>
       	  <li ui-sref-active="is-active"><a ui-sref="tournaments">Tournaments</a></li>
       	  <li ui-sref-active="is-active"><a ui-sref="teams">Teams</a></li>
-      	  <li ui-sref-active="is-active"><a ui-sref="groups">Groups</a></li>
       	  <li ui-sref-active="is-active"><a ui-sref="players">Players</a></li>
       	  <li ui-sref-active="is-active">
       	    <a class="show-for-small-only" ui-sref="messages_mobile">Messages <span class="menu-bar-label">5</span></a>
@@ -31,8 +30,7 @@
       	</ul>
     	</zf-panel>
       <ul id="nav_main_user" class="menu-bar condense icon-left primary hide-for-small-only">
-        <li class="is-active"><a ui-sref="login"><span ng-include="'templates/components/_user-image.html'" class="small"></span></a></li>
-        <!-- TODO: Create a dropdown component with navigation for Dashboard, Profile, Logout -->
+        <li class="is-active"><a ui-sref="home"><span ng-include="'templates/components/_user-image.html'" class="small"></span></a></li>
       </ul>
     </div>
   </div>
