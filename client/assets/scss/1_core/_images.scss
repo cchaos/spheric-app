@@ -13,6 +13,12 @@ $images-size-medium: 4rem;
 $images-size-large: 6rem;
 $images-size-profile: 8rem;
 
+@mixin image-sizing($size: $images-size-small) {
+  width: $size;
+  height: $size;
+  line-height: $size;
+}
+
 #{$all-images} {
   display: inline-block;
   text-align: center;
@@ -50,29 +56,21 @@ $images-size-profile: 8rem;
   // default is small
   &,
   .small & {
-    width: $images-size-small;
-    height: $images-size-small;
-    line-height: $images-size-small;
+    @include image-sizing;
   }
 
   .medium & {
-    width: $images-size-medium;
-    height: $images-size-medium;
-    line-height: $images-size-medium;
+    @include image-sizing($images-size-medium);
     font-size: 1.5em;
   }
 
   .large & {
-    width: $images-size-large;
-    height: $images-size-large;
-    line-height: $images-size-large;
+    @include image-sizing($images-size-large);
     font-size: 2em;
   }
 
   .profile & {
-    width: $images-size-profile;
-    height: $images-size-profile;
-    line-height: $images-size-profile;
+    @include image-sizing($images-size-profile);
     font-size: 3em;
   }
 

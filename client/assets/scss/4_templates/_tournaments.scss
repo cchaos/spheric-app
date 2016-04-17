@@ -162,4 +162,37 @@
     }
   }
 
+  .matchup {
+
+    margin-bottom: 1rem;
+
+    .teams {
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    .vs {
+      display: none;
+      vertical-align: middle;
+      margin: -3rem .5rem 0;
+    }
+
+    .status {
+      .button {
+        margin: 0;
+      }
+    }
+
+    @include breakpoint(medium) {
+      .team-image {
+        @include image-sizing($images-size-medium);
+      }
+      .vs {
+        display: inline-block;
+      }
+    }
+
+  }
+
 }

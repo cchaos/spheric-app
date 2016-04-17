@@ -45,26 +45,6 @@ $sidebar-item-hover-color: spheric-color('primary', 'barely');
   @include hide-for($sidebar-breakpoint);
 }
 
-// SIDEBAR ACTION
-// "fixed" button at the bottom of the sidebar
-
-.sidebar-action .grid-content {
-  padding-top: $global-padding;
-  // create a sudo element to act as a content fade
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: calc(100% - #{$global-padding});
-    height: $global-padding;
-    top: -($global-padding*.95);
-    left: 0;
-
-    background: linear-gradient(rgba($sidebar-background, 0) 0%, rgba($sidebar-background, 1) 100%);
-  }
-}
-
-
 // SIDEBAR BLOCK LIST
 // based on Foundation's block-list via mixins
 

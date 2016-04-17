@@ -29,7 +29,32 @@ url: /tournament
     <div class="grid-container">
     	<zf-tabs>
     	  <zf-tab title="Schedule">
-    	    <p>Crucifix affogato before they sold out fap roof party.  Pork belly knausgaard sriracha, cardigan bicycle rights tumblr marfa direct trade.  Blue bottle hashtag microdosing, kinfolk meditation keffiyeh waistcoat hammock umami.  Literally man bun ennui gastropub man braid narwhal pickled PBR&amp;B, gluten-free pinterest pitchfork cronut asymmetrical.  Hella chia 3 wolf moon actually.  Locavore seitan actually asymmetrical williamsburg, narwhal echo park.  Mumblecore raw denim knausgaard biodiesel, neutra ugh blog keytar brooklyn portland tofu disrupt try-hard tattooed.</p>
+    	    <div class="grid-block">
+
+      	    <div class="matchup grid-content" ng-repeat="$i in [1,2,3,4,5,6]">
+      	    	<div class="card">
+      	    		<div class="card-section">
+        	    		<div class="grid-block nowrap v-align">
+          	    		<div class="images grid-content shrink align-center">
+            	    		<span ng-include="'templates/components/_team-image.html'" class="small"></span>
+            	    		<h6 class="vs">vs</h6>
+            	    		<span ng-include="'templates/components/_team-image.html'" class="small"></span>
+          	    		</div>
+          	    		<div class="teams grid-content align-center">
+            	    		<p><a ui-sref="team">Awesome Team</a></p>
+            	    		<p><a ui-sref="team">Fantastic team</a></p>
+          	    		</div>
+          	    		<div class="status grid-content shrink align-center">
+            	    		<a ng-if="$i < 3" class="button tiny raised success">Live</a>
+            	    		<a ng-if="$i == 3 || $i == 4" class="button tiny transparent disabled" disabled>Feb. 2</a>
+            	    		<a ng-if="$i > 4" class="button hollow tiny">Replay</a>
+          	    		</div>
+        	    		</div>
+      	    		</div>
+      	    	</div>
+      	    </div>
+
+    	    </div>
     	  </zf-tab>
     	  <zf-tab title="Participants">
     	    <div class="card">
