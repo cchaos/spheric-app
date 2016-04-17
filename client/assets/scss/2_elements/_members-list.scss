@@ -6,10 +6,16 @@
 */
 
 .members-list {
+  text-align: center;
+
   li {
-    margin-top: $global-padding/2;
-    margin-bottom: $global-padding/2;
-    justify-content: flex-start;
-    flex-grow: 0;
+    display: inline-block;
+    text-align: center;
+    padding: 1rem;
+
+    a {
+      display: block;
+      padding: .5rem;
+    }
   }
 }

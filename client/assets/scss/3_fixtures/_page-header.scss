@@ -201,6 +201,6 @@ $cta-zindex: $nav-panel-zindex - 1;
 
   // accomodate for cta buttons being fixed to the bottom of small screens
   .page-header.with-ctas + * {
-    padding-bottom: 3rem;
+    margin-bottom: 3rem;
   }
 }

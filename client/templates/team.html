@@ -69,11 +69,7 @@ url: /team
 
         <div class="grid-content small-5 no-max">
           <h2>Roster</h2>
-          <ul class="roster no-bullet">
-          	<li ng-repeat="i in [1,2,3,4,5,6,7,8]">
-            	<a ui-sref="player"><span ng-include="'templates/components/_user-image.html'" class="medium"></span> <br> User Name</a>
-          	</li>
-          </ul>
+          <div ng-include="'templates/components/_members-list.html'"></div>
         </div>
       </div>
 
