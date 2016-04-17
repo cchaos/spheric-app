@@ -19,7 +19,7 @@ url: /
     		</div>
     		<div class="grid-content shrink medium-align-bottom">
     		  <ul class="no-bullet">
-    		  	<li><a class="button hollow expand tiny" ui-sref="account">Account</a></li>
+    		  	<li><a class="button hollow expand tiny" ui-sref="home.account">Account</a></li>
     		  	<li><a class="button hollow expand secondary tiny" ui-sref="login">Logout</a></li>
     		  </ul>
     		</div>
@@ -29,9 +29,9 @@ url: /
 
 	<section class="grid-content noscroll">
     <div class="grid-container">
-      <div class="grid-block">
+      <div class="grid-block" ui-view>
 
-        <div id="sidebar" class="grid-content medium-4" position="right">
+        <div class="grid-content medium-4">
         	<section class="sidebar-block-list">
             <header>Current</header>
               <ul>
